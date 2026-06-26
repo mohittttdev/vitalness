@@ -1,0 +1,350 @@
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Outfit',sans-serif;
+  background:#f4fff8;
+  color:#1c2b22;
+}
+
+/* NAVBAR */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:white;
+  position:sticky;
+  top:0;
+  border-bottom:1px solid #dceee3;
+  z-index: 1;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+  color:#20b26b;
+}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:#4d6658;
+  font-weight:500;
+}
+
+.btn{
+  background:#20b26b;
+  color:white;
+  padding:12px 22px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  padding:80px 8%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:70px;
+  line-height:1;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#20b26b;
+}
+
+.hero p{
+  color:#5f7468;
+  margin-bottom:30px;
+  line-height:1.8;
+}
+
+.hero img{
+  width:100%;
+  border-radius:25px;
+}
+
+/* BLOGS */
+
+.blog-section{
+  padding:80px 8%;
+}
+
+.section-title{
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.blog-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.blog-card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.blog-card:hover{
+  transform:translateY(-5px);
+}
+
+.blog-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.blog-content{
+  padding:25px;
+}
+
+.blog-category{
+  color:#20b26b;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.blog-title{
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+.blog-text{
+  color:#617267;
+  line-height:1.7;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+  margin:80px 8%;
+  background:linear-gradient(135deg,#20b26b,#49d38f);
+  padding:60px;
+  border-radius:30px;
+  color:white;
+  text-align:center;
+}
+
+.newsletter h2{
+  font-size:45px;
+  margin-bottom:15px;
+}
+
+.newsletter p{
+  margin-bottom:30px;
+}
+
+.newsletter input{
+  width:300px;
+  max-width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  margin-right:10px;
+}
+
+.newsletter button{
+  padding:15px 25px;
+  border:none;
+  border-radius:10px;
+  background:#102117;
+  color:white;
+  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#6b7d72;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  nav ul{
+    display:none;
+  }
+
+  .newsletter{
+    padding:40px 20px;
+  }
+
+}
+
+/* HERO VIDEO */
+
+.hero-video{
+  width:100%;
+  height:500px
+  
+
+
+}
+
+
+/* Footer -  */
+footer {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    color: #ccc;
+   padding: 70px 30px 30px;
+
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+    width: 100%;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-center {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-center.active {
+        display: flex;
+    }
+    
+    .mobile-toggle {
+        display: flex;
+    }
+    
+    .nav-right {
+        gap: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}

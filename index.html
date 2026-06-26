@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VitalNess </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+
+<body>
+
+
+
+
+    <!-- AUTH MODAL -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-card">
+
+            <span class="close-btn" onclick="closeAuth()">✖</span>
+
+            <!-- SIGNUP -->
+            <form class="form signup-form active" action="backend/sign.php" method="post" enctype="multipart/form-data">
+                <h2>Create Account</h2>
+
+                <div class="input-box">
+                    <i class="fa fa-user"></i>
+                    <input type="text" required name="name" placeholder="Name">
+
+                </div>
+
+                <div class="input-box">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" required name="email" placeholder="Email">
+
+                </div>
+
+                <div class="input-box">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" required name="password" placeholder="Password">
+
+                </div> <br>
+
+                <button type="submit" name="submit">Sign Up</button>
+                <br>
+                <br>
+
+                <p>Already have account?
+                    <a href="#" onclick="showLogin(event)" style="color: #eee;">Login</a>
+                </p>
+            </form>
+
+            <!-- LOGIN -->
+            <form class="form login-form" action="backend/login.php" method="post" enctype="multipart/form-data">
+                <h2>Welcome Back</h2>
+
+                <div class="input-box">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" name="emails" placeholder="Email">
+
+                </div>
+
+                <div class="input-box">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" required name="passwords" placeholder="Password">
+
+                </div>
+                <br>
+                <button type="submit" name="submit">Login</button>
+                <br>
+                <br>
+                <p>Don't have account?
+                    <a href="#" onclick="showSignup(event) " style="color: #eee;">Sign Up</a>
+                </p>
+            </form>
+
+        </div>
+    </div>
+
+
+
+    <nav>
+
+        <!-- LEFT -->
+        <div class="nav-left">
+
+            <div class="logo">Vitalness</div>
+
+            <ul class="nav-center">
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="nav/recipes.html">Recipes</a></li>
+
+                <li>
+
+                    <a href="nav/mindfulness.html">
+                        Mindfulness
+                    </a>
+
+
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="javascript:void(0)" class="program-btn">
+                        Program ▾
+                    </a>
+
+                    <ul class="dropdown-menu" id="programMenu">
+
+                        <li>
+                            <a href="nav/weight.html">
+                                Weight Gain or Weight Loss
+                            </a>
+                        </li>
+
+
+
+                        <li>
+                            <a href="muscle-gain.html">
+                                Muscle Gain
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stamina.html">
+                                Stamina or Endurance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stamina.html">
+                                Cardio
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li><a href="nav/blog.php">Blog</a></li>
+                <li class="dropdown">
+
+                    <a href="javascript:void(0)" class="expert-btn">
+                        Experts ▾
+                    </a>
+
+                    <ul class="dropdown-menu" id="expertMenu">
+
+                        <li>
+                            <a href="physiotherapist.html">Physiotherapist</a>
+                        </li>
+
+                        <li>
+                            <a href="rehab-specialist.html">Rehab Specialist</a>
+                        </li>
+
+                        <li>
+                            <a href="mindset-coach.html">Mindset / Wellness Coach</a>
+                        </li>
+
+                        <li>
+                            <a href="yoga-instructor.html">Certified Yoga Instructor</a>
+                        </li>
+
+
+                        <li>
+                            <a href="yoga-instructor.html"> Nutrition Advisor</a>
+                        </li>
+                        <li>
+                            <a href="yoga-instructor.html">Strength And Conditioning Coach</a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+
+            <!-- SEARCH BOX -->
+           <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        class="search-input"
+    >
+
+
+</div>
+
+
+            <!-- LANGUAGE SELECTOR -->
+            <div class="language-box">
+               <select id="languageSelect">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+</select>
+
+<!-- Hidden Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+            </div>
+
+            <!-- LOGIN -->
+<a href="javascript:void(0)" class="btn-signin" onclick="openLogin()">
+    Login
+</a>
+
+<a href="javascript:void(0)" class="btn-signin" onclick="openSignup()">
+    Sign Up
+</a>
+        </div>
+
+    </nav>
+
+    <!-- PREMIUM HERO SECTION -->
+
+    <section class="hero-modern">
+
+        <!-- BACKGROUND IMAGE -->
+        <div class="hero-image-box">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop"
+                alt="Fitness">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="hero-left">
+
+            <span class="hero-tag ">
+                FITNESS • HEALTH • WELLNESS
+            </span>
+            <h1 class="bounce-heading">
+                Transform Your <span>Body</span><br>
+                & Mind
+            </h1>
+
+            <p  >
+                Build strength, improve endurance and stay healthy with
+                smart workout plans, nutrition guidance and daily fitness tracking.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="hero-buttons">
+
+                <a href="#workout" class="hero-btn" >
+
+                    Start Workout
+
+                </a>
+
+
+                <a href="nav/recipes.html" class="hero-btn-outline" >
+                    🥗 Explore Diet
+                </a>
+
+            </div>
+
+            <!-- STATS -->
+            <div class="hero-stats">
+
+                <div class="stat-box">
+                    <h3>12K+</h3>
+                    <span>Active Users</span>
+                </div>
+
+                <div class="stat-box">
+                    <h3>450+</h3>
+                    <span>Workout Plans</span>
+                </div>
+
+                <div class="stat-box">
+                    <h3>98%</h3>
+                    <span>Success Rate</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--TRACKERS SECTION  -->
+    <section class="trackers-section" id="trackers">
+
+        <div class="section-title">
+            <h2>Health Trackers</h2>
+            <p>Monitor your fitness, health, and daily wellness with smart tracking tools.</p>
+        </div>
+
+        <div class="trackers-container">
+
+
+
+            <!-- BMR Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+
+                <h3>BMR Tracker</h3>
+
+                <p>
+                    Calculate your Basal Metabolic Rate and know how many calories
+                    your body burns daily at rest.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+            <!-- BMI Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-weight-scale"></i>
+                </div>
+
+                <h3>BMI Tracker</h3>
+
+                <p>
+                    Track your Body Mass Index to maintain a healthy weight
+                    and improve fitness goals.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+            <!-- Calorie Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <h3>Calorie Tracker</h3>
+
+                <p>
+                    Monitor your daily calorie intake and maintain a balanced
+                    diet for a healthier lifestyle.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+            <!-- Heart Rate Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h3>Heart Rate Tracker</h3>
+
+                <p>
+                    Keep track of your heart health and monitor pulse rate
+                    during workouts and activities.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+            <!-- Water Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-glass-water"></i>
+                </div>
+
+                <h3>Water Tracker</h3>
+
+                <p>
+                    Stay hydrated by tracking your daily water intake
+                    and improving overall wellness.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+            <!-- Sleep Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+
+                <h3>Sleep Tracker</h3>
+
+                <p>
+                    Monitor your sleep duration and quality to improve
+                    energy, recovery, and overall health.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+            <!-- Macro Tracker -->
+            <div class="tracker-card">
+                <div class="tracker-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+
+                <h3>Macro Tracker</h3>
+
+                <p>
+                    Track proteins, carbohydrates, and fats to maintain
+                    balanced nutrition and achieve fitness goals.
+                </p>
+
+                <button>Open Tracker</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!--  HOME WORKOUT SECTION  -->
+    <section class="workout-section" id="workouts">
+
+        <div class="section-title">
+            <h2> Home Workout Programs</h2>
+            <p>
+                Build strength, improve endurance, and stay active with
+                guided fitness routines for every goal.
+            </p>
+        </div>
+
+        <div class="workout-container">
+
+            <!-- Strength Training -->
+            <div class="workout-card">
+                <div class="workout-icon">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+
+                <h3>Strength Training</h3>
+
+                <p>
+                    Improve muscle strength and body power with effective
+                    resistance and weight training exercises.
+                </p>
+
+                <button>Start Workout</button>
+            </div>
+
+            <!-- HIIT -->
+            <div class="workout-card">
+                <div class="workout-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>HIIT Workouts</h3>
+
+                <p>
+                    Burn calories fast with High-Intensity Interval Training
+                    designed to boost stamina and fitness.
+                </p>
+
+                <button>Start Workout</button>
+            </div>
+
+            <!-- Core Workout -->
+            <div class="workout-card">
+                <div class="workout-icon">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+
+                <h3>Core Strength</h3>
+
+                <p>
+                    Strengthen your abs, lower back, and core muscles
+                    for better balance and stability.
+                </p>
+
+                <button>Start Workout</button>
+            </div>
+
+            <!-- Yoga -->
+            <div class="workout-card">
+                <div class="workout-icon">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+
+                <h3>Yoga & Stretching</h3>
+
+                <p>
+                    Relax your body and improve flexibility with calming
+                    yoga poses and stretching routines.
+                </p>
+
+                <button>Start Workout</button>
+            </div>
+
+            <!-- Warmup -->
+            <div class="workout-card">
+                <div class="workout-icon">
+                    <i class="fa-solid fa-person-running"></i>
+                </div>
+
+                <h3>Warmup Routines</h3>
+
+                <p>
+                    Prepare your muscles and body before workouts
+                    with guided warmup exercises.
+                </p>
+
+                <button>Start Workout</button>
+            </div>
+
+            <!-- Cooldown -->
+            <div class="workout-card">
+                <div class="workout-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>Cooldown Routines</h3>
+
+                <p>
+                    Recover safely after exercise with relaxing
+                    cooldown movements and breathing techniques.
+                </p>
+
+                <button>Start Workout</button>
+            </div>
+
+        </div>
+    </section>
+
+    </section> <!-- EXPERTS SECTION -->
+    <div class="section">
+        <h2>🧠 Health & Fitness Experts</h2>
+        <p>Get guidance from certified diet & workout specialists</p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>🥗 Diet Specialist</h3>
+                <p>Helps you create custom meal plans based on your goal (fat loss, muscle gain, healthy living).</p>
+            </div>
+
+            <div class="card">
+                <h3>🏋️ Fitness Trainer</h3>
+                <p>Designs workout routines for beginners to advanced gym training.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Nutrition Advisor</h3>
+                <p>Guides calorie intake, protein balance and daily nutrition needs.</p>
+            </div>
+
+            <div class="card">
+                <h3>💪 Strength Coach</h3>
+                <p>Focuses on muscle building, strength training and body transformation.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="logo">VitalNess</div>
+
+
+
+    <!-- DIET SECTION -->
+    <div class="section">
+        <h2>🥗 Diet Knowledge</h2>
+        <div class="grid">
+
+            <div class="card">
+                <h3>Weight Loss Diet</h3>
+                <p>High protein, low carbs, more water, green vegetables.</p>
+            </div>
+
+            <div class="card">
+                <h3>Muscle Gain Diet</h3>
+                <p>High protein, eggs, chicken, milk, nuts, carbs balance.</p>
+            </div>
+
+            <div class="card">
+                <h3>Healthy Diet</h3>
+                <p>Balanced food: fruits, vegetables, grains, protein.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- WORKOUT SECTION -->
+    <div class="section">
+        <h2>🏋️ Workout Knowledge</h2>
+        <div class="grid">
+
+            <div class="card">
+                <h3>Fat Loss Workout</h3>
+                <p>Running, skipping, HIIT, cycling (30-45 min daily).</p>
+            </div>
+
+            <div class="card">
+                <h3>Muscle Building</h3>
+                <p>Push-ups, pull-ups, weight training, resistance workout.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fitness Routine</h3>
+                <p>Warm-up + cardio + strength + stretching daily.</p>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    <!-- FITNESS DASHBOARD SECTION -->
+    <div class="section dashboard">
+        <h2>🏋️ Fitness Dashboard</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>⚖️ BMI Status</h3>
+                <p id="dash-bmi">No data yet</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Water Tracker</h3>
+                <p id="water">0 Glasses</p>
+                <button onclick="addWater()">+ Add Water</button>
+            </div>
+
+            <div class="card">
+                <h3>🏋️ Daily Workout</h3>
+                <p>Push-ups: 20<br>Squats: 30<br>Running: 10 min</p>
+            </div>
+
+            <div class="card">
+                <h3>🍎 Diet Plan</h3>
+                <p>Breakfast: Eggs<br>Lunch: Rice + Chicken<br>Dinner: Salad</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- HOME WORKOUT SECTION -->
+    <div class="section" id="home-workout">
+        <h2>🏠 Home Workout (No Equipment)</h2>
+        <p>Simple workouts you can do at home without gym equipment</p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>💪 Push-ups</h3>
+                <p>3 sets × 10–15 reps<br>Build chest, shoulders & arms strength.</p>
+            </div>
+
+            <div class="card">
+                <h3>🦵 Squats</h3>
+                <p>3 sets × 15–20 reps<br>Strengthen legs and burn fat.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧘 Plank</h3>
+                <p>3 sets × 30–60 sec<br>Improves core strength and posture.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔥 Jumping Jacks</h3>
+                <p>3 sets × 20 reps<br>Full body warm-up and fat burn.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏃 High Knees</h3>
+                <p>3 sets × 30 sec<br>Cardio exercise for fat loss.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧎 Lunges</h3>
+                <p>3 sets × 10 reps each leg<br>Leg strength and balance improvement.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Injury Care Section -->
+    <section class="injury-section">
+        <h2>Basic Injury Care & Recovery Tips</h2>
+        <p>If you get a minor injury during workout or daily activity, follow these simple steps to recover safely:</p>
+
+        <div class="injury-grid">
+            <div class="injury-card">
+                <h3>🧊 Rest & Ice</h3>
+                <p>Rest the injured area and apply ice for 15–20 minutes to reduce swelling and pain.</p>
+            </div>
+
+            <div class="injury-card">
+                <h3>🩹 Compression</h3>
+                <p>Use a light bandage to support the injured area and avoid extra movement.</p>
+            </div>
+
+            <div class="injury-card">
+                <h3>⬆️ Elevation</h3>
+                <p>Keep the injured part elevated above heart level to reduce swelling.</p>
+            </div>
+
+            <div class="injury-card">
+                <h3>⚠️ When to See Doctor</h3>
+                <p>If pain is severe, swelling increases, or movement becomes difficult, consult a doctor immediately.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--FAQ SECTION -->
+    <section class="faq">
+
+        <div class="faq-header">
+            <span>VITALNESS SUPPORT</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about workouts, diet plans and fitness tracking.</p>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is VitalNess free to use?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, VitalNess provides free workout guidance, diet knowledge and fitness tracking tools.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can beginners follow these workouts?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Our workouts are beginner-friendly and include easy home exercises.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need gym equipment?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No. VitalNess includes many bodyweight and home workouts without equipment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How is BMI calculated?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>BMI is calculated using your height and weight to estimate body fitness level.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I get a personalized diet plan?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, based on your age, weight, height and fitness goal we suggest suitable plans.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- PREMIUM MEMBERSHIP SECTION -->
+    <section class="premium-section">
+
+        <!-- BACKGROUND GLOW -->
+        <div class="premium-glow"></div>
+
+        <div class="premium-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="premium-left">
+
+                <span class="premium-tag">
+                    VITALNESS PREMIUM
+                </span>
+
+                <h2>
+                    Unlock The <span>Premium</span><br>
+                    Fitness Experience
+                </h2>
+
+                <p>
+                    Access advanced workout programs, AI diet plans,
+                    personal coaching, premium trackers and exclusive
+                    transformation tools with VitalNess Pro.
+                </p>
+
+                <!-- FEATURES -->
+                <div class="premium-features">
+
+                    <div class="premium-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Unlimited Workout Programs</span>
+                    </div>
+
+                    <div class="premium-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Personal Diet Plans</span>
+                    </div>
+
+                    <div class="premium-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Advanced BMI & Calorie Tracker</span>
+                    </div>
+
+                    <div class="premium-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Premium Meditation Sessions</span>
+                    </div>
+
+                    <div class="premium-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Expert Live Guidance</span>
+                    </div>
+
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="premium-buttons">
+
+                    <a href="#" class="premium-btn">
+                        🚀 Upgrade Now
+                    </a>
+
+                    <a href="#" class="premium-outline-btn">
+                        View Plans
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CARD -->
+            <div id="premium-right" class="bounce-heading">
+
+                <div class="premium-card">
+
+                    <div class="premium-top">
+                        <span>Most Popular</span>
+                    </div>
+
+                    <h3>VitalNess Pro</h3>
+
+                    <div class="premium-price">
+                        ₹499
+                        <span>/month</span>
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            AI Fitness Dashboard
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Smart Health Reports
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Premium Workout Videos
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Daily Diet Tracking
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            24/7 Expert Support
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="premium-card-btn">
+                        Start Premium
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CLIENT REVIEW -->
+    <section class="reviews">
+
+        <div class="section-header">
+            <span>HAPPY CLIENT</span>
+            <h2>Customer Review</h2>
+            <p>What our users say about VitalNess transformation journey</p>
+        </div>
+
+        <div class="review-container">
+
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" />
+                <h3>Mohit Sharma(Owner of this website)</h3>
+                <span class="role">CLIENT</span>
+                <p>VitalNess completely changed my daily routine. The workout plans are simple and highly effective.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" />
+                <h3>Himanshu Yadav</h3>
+                <span class="role">CLIENT</span>
+                <p>The diet tracker helped me stay consistent. I lost 6kg in just 2 months naturally.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" />
+                <h3>Rohan</h3>
+                <span class="role">CLIENT</span>
+                <p>Very clean interface and beginner-friendly exercises. Perfect for daily home workouts.</p>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" />
+                <h3>Rohit</h3>
+                <span class="role">CLIENT</span>
+                <p>I love the motivational dashboard and calorie guidance. It keeps me disciplined every day.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/men/21.jpg" />
+                <h3>Arjun Mehta</h3>
+                <span class="role">CLIENT</span>
+                <p>Best fitness website for students and beginners. The home workout section is amazing.</p>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/women/29.jpg" />
+                <h3>Rajesh</h3>
+                <span class="role">CLIENT</span>
+                <p>The personalized fitness plans are really helpful. I feel healthier and more active now.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/men/58.jpg" />
+                <h3>Bittu</h3>
+                <span class="role">CLIENT</span>
+                <p>Simple workouts with great explanations. I improved my stamina and body strength quickly.</p>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="review-card">
+                <div class="top-bar"></div>
+                <img src="https://randomuser.me/api/portraits/women/12.jpg" />
+                <h3>Rose</h3>
+                <span class="role">CLIENT</span>
+                <p>Tracking water intake and workouts together made my fitness journey much easier.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+        <!-- Footer -->
+        <div class="footer-content">
+
+            <!-- Brand Section -->
+            <div class="footer-section">
+                <h3>VitalNess</h3>
+                <p>
+                    Empowering healthier lives with smart fitness tracking,
+                    personalized diet plans, workouts, and wellness solutions.
+                </p>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Features -->
+            <div class="footer-section">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">BMI Calculator</a></li>
+                    <li><a href="#">Workout Plans</a></li>
+                    <li><a href="#">Diet Tracking</a></li>
+                    <li><a href="#">Health Tips</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 VitalNess. All rights reserved.</p>
+
+            <div class="social-links">
+                <a href="https://x.com/">Twitter</a>
+                <a href="https://www.youtube.com/">YouTube</a>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- SUCCESS POPUP -->
+
+    <div id="successPopup" class="popup-container">
+
+        <div class="popup-box">
+
+            <div class="check-icon">✓</div>
+
+            <h2>Account Created</h2>
+
+            <p>Signup Successful</p>
+
+        </div>
+
+    </div>
+
+    <style>
+        .popup-container {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100vh;
+
+            background: rgba(0, 0, 0, 0.35);
+
+            backdrop-filter: blur(8px);
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 99999;
+        }
+
+        .popup-box {
+
+            width: 340px;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            backdrop-filter: blur(20px);
+
+            animation: popupShow 0.5s ease;
+
+            color: white;
+        }
+
+        .check-icon {
+
+            width: 90px;
+            height: 90px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: #00c853;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 50px;
+        }
+
+        .popup-box h2 {
+
+            margin-top: 20px;
+            font-size: 28px;
+        }
+
+        .popup-box p {
+
+            margin-top: 10px;
+            color: #eee;
+        }
+
+        @keyframes popupShow {
+
+            from {
+
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.get('signup') === 'success') {
+
+            const popup = document.getElementById('successPopup');
+
+            popup.style.display = 'flex';
+
+            setTimeout(() => {
+
+                popup.style.display = 'none';
+
+                window.history.replaceState({}, document.title, window.location.pathname);
+
+            }, 2500);
+        }
+        
+
+
+    </script>
+    <script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+</script>
+
+<script>
+window.addEventListener("load", function() {
+
+    setTimeout(() => {
+
+        openLogin();
+
+    }, 5000);
+
+});
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>

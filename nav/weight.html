@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitLife - Weight Gain & Loss</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+overflow-x:hidden;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+header h1{
+font-size:4rem;
+animation:slideDown 1s ease;
+}
+
+header p{
+margin-top:15px;
+font-size:1.2rem;
+max-width:700px;
+opacity:.8;
+animation:fadeIn 2s ease;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#22c55e;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(34,197,94,.4);
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:80px 0;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:30px;
+text-align:center;
+transition:.4s;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h2{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.gain{
+border-top:5px solid #22c55e;
+}
+
+.loss{
+border-top:5px solid #ef4444;
+}
+
+.icon{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-top:40px;
+}
+
+.calculator{
+padding:70px 20px;
+text-align:center;
+}
+
+.box{
+max-width:500px;
+margin:auto;
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+}
+
+input{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.calculate{
+width:100%;
+padding:15px;
+background:#3b82f6;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+font-size:22px;
+font-weight:600;
+}
+
+.progress-section{
+padding:80px 0;
+}
+
+.progress-box{
+margin:25px 0;
+}
+
+.progress-title{
+margin-bottom:10px;
+}
+
+.progress{
+height:20px;
+background:#334155;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+width:0;
+border-radius:20px;
+transition:2s;
+}
+
+.green{
+background:#22c55e;
+}
+
+.red{
+background:#ef4444;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#020617;
+margin-top:50px;
+}
+
+@keyframes slideDown{
+from{
+transform:translateY(-80px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>FitLife</h1>
+<p>
+Transform your body with healthy Weight Gain and Weight Loss plans.
+Track BMI, progress and stay motivated.
+</p>
+
+<button class="btn" onclick="scrollToSection()">
+Get Started
+</button>
+</header>
+
+<div class="container">
+
+<h2 class="section-title reveal">Choose Your Goal</h2>
+
+<div class="cards">
+
+<div class="card gain reveal">
+<div class="icon">💪</div>
+<h2>Weight Gain</h2>
+<p>
+Build muscle, increase strength and gain healthy weight with balanced nutrition.
+</p>
+</div>
+
+<div class="card loss reveal">
+<div class="icon">🔥</div>
+<h2>Weight Loss</h2>
+<p>
+Burn fat, stay fit and achieve your dream physique with smart workouts.
+</p>
+</div>
+
+</div>
+
+<section class="calculator reveal">
+
+<h2 class="section-title">BMI Calculator</h2>
+
+<div class="box">
+
+<input type="number" id="height" placeholder="Height (cm)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+
+<button class="calculate" onclick="calculateBMI()">
+Calculate BMI
+</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+</section>
+
+<section class="progress-section reveal">
+
+<h2 class="section-title">Progress Tracker</h2>
+
+<div class="progress-box">
+<div class="progress-title">Weight Gain Progress</div>
+<div class="progress">
+<div class="fill green" id="gainBar"></div>
+</div>
+</div>
+
+<div class="progress-box">
+<div class="progress-title">Weight Loss Progress</div>
+<div class="progress">
+<div class="fill red" id="lossBar"></div>
+</div>
+</div>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 FitLife | Weight Gain & Weight Loss Program
+</footer>
+
+<script>
+
+function calculateBMI(){
+
+let h=document.getElementById("height").value/100;
+let w=document.getElementById("weight").value;
+
+if(!h || !w){
+alert("Enter Height and Weight");
+return;
+}
+
+let bmi=(w/(h*h)).toFixed(1);
+
+let status="";
+
+if(bmi<18.5){
+status="Underweight";
+}
+else if(bmi<25){
+status="Normal";
+}
+else if(bmi<30){
+status="Overweight";
+}
+else{
+status="Obese";
+}
+
+document.getElementById("result").innerHTML=
+"BMI: "+bmi+"<br>"+status;
+
+}
+
+function scrollToSection(){
+window.scrollTo({
+top:700,
+behavior:"smooth"
+});
+}
+
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".reveal").forEach(el=>{
+
+let windowHeight=window.innerHeight;
+let top=el.getBoundingClientRect().top;
+
+if(top<windowHeight-100){
+el.classList.add("active");
+}
+
+});
+
+});
+
+window.onload=()=>{
+
+setTimeout(()=>{
+document.getElementById("gainBar").style.width="80%";
+document.getElementById("lossBar").style.width="65%";
+},1000);
+
+};
+</script>
+
+</body>
+</html>
