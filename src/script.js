@@ -294,3 +294,54 @@ document.getElementById("languageSelect")
 //     signupForm.classList.add("active");
 //     loginForm.classList.remove("active");
 // }
+
+// themeToggle
+const themeBtn = document.getElementById("themeToggle");
+
+// Page load par saved theme check karo
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.textContent = "🌙";
+} else {
+    document.body.classList.remove("dark");
+    themeBtn.textContent = "☀️";
+}
+
+// Button click
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        themeBtn.textContent = "🌙";
+        localStorage.setItem("theme", "dark");
+    } else {
+        themeBtn.textContent = "☀️";
+        localStorage.setItem("theme", "light");
+    }
+
+});
+
+// menu btn
+
+
+const hamburger = document.getElementById("hamburger");
+const navCenter = document.querySelector(".nav-center");
+
+hamburger.addEventListener("click", () => {
+
+    navCenter.classList.toggle("active");
+
+    const icon = hamburger.querySelector("i");
+
+    if(navCenter.classList.contains("active")){
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+    }else{
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+    }
+
+});
