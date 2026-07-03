@@ -25,8 +25,9 @@ if(isset($_POST['submit'])){
 
             if(password_verify($password, $user['user_password'])){
 
-                $_SESSION['kashish'] = $user['user_name'];
-header("Location: dashboard/dashboard.php?login=success");
+                $_SESSION['name'] = $user['user_name'];
+                $_SESSION['email'] = $user['user_email'];
+                header("Location: dashboard/dashboard.php?login=success");
 exit();
 
             } else {

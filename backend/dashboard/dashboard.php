@@ -5,7 +5,7 @@ session_start();
 
 // Agar user login nahi hai
 
-if (!isset($_SESSION['kashish'])) {
+if (!isset($_SESSION['name'])) {
 
     header("Location: ../frontend/index.html");
 
@@ -523,11 +523,11 @@ id="profileSidebar">
         <img src="https://i.pravatar.cc/150?img=12">
 
         <h2>
-            <?php echo $_SESSION['kashish']; ?>
+            <?php echo $_SESSION['name']; ?>
         </h2>
 
         <p>
-            VitalNess Premium User
+        <?php echo $_SESSION['email']; ?>
         </p>
 
     </div>

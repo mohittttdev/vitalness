@@ -55,7 +55,8 @@ if(isset($_POST['submit'])){
 
                 // SESSION
 
-                $_SESSION['kashish'] = $username;
+                $_SESSION['name'] = $username;
+                $_SESSION['email'] = $email;
 
                 // REDIRECT
 
