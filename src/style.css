@@ -1133,6 +1133,7 @@ body.dark .hero-overlay {
             #00ff88,
             #0df34b);
 
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
