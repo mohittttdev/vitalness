@@ -2062,7 +2062,7 @@ body.dark .heart {
 
     min-height:780px;
 
-    background:var(--bg);
+    background:#fff;
 
     overflow:hidden;
 
@@ -2071,31 +2071,24 @@ body.dark .heart {
 /*=================================
         LEFT IMAGE
 =================================*/
-
 .tracking-image{
-
-    position:relative;
-
-    width:100%;
-
-    height:60%;
-
-    overflow:hidden;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
 }
 
 .tracking-image img{
-
     width:100%;
-
-    height:100%;
-
+    max-width:650px;
+    aspect-ratio:1/1;
+    height:auto;
+    border-radius:50%;
     object-fit:cover;
+}
 
-    display:block;
-
-    transition:.8s;
-
+.tracking-info:hover .tracking-image img{
+    transform: scale(1.05);
 }
 
 .tracking-info:hover .tracking-image img{
@@ -2105,24 +2098,19 @@ body.dark .heart {
 }
 
 /* Dark Overlay */
-
 .tracking-image::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
 
     background:linear-gradient(
         90deg,
-        rgba(0,0,0,.20),
-        rgba(0,0,0,.05),
+        rgba(255,255,255,.15),
+        rgba(255,255,255,.05),
         transparent
     );
 
     z-index:1;
-
 }
 
 /* Green Glow */
@@ -2183,11 +2171,90 @@ body.dark .heart {
 
 }
 
-body.dark .floating-card{
+/*=================================
+        DARK MODE
+=================================*/
 
-    background:rgba(20,20,20,.88);
+body.dark{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#ffffff;
+    --text-light:#cbd5e1;
+    --border:#334155;
+    --primary:#22c55e;
+
+    background:#0f172a;
+    color:#ffffff;
 
 }
+
+/* Main Section */
+
+body.dark .tracking-info{
+    background:var(--bg);
+}
+
+/* Right Side Cards */
+
+body.dark .track-item,
+body.dark .stat-box{
+    background:var(--card);
+    border-color:var(--border);
+}
+
+/* Floating Card */
+
+body.dark .floating-card{
+    background:rgba(30,41,59,.95);
+    border-color:var(--border);
+}
+
+/* Text */
+
+body.dark .tracking-content h2,
+body.dark .track-item h4,
+body.dark .floating-card strong{
+    color:var(--text);
+}
+
+body.dark .tracking-content p,
+body.dark .track-item p,
+body.dark .stat-box span,
+body.dark .floating-card span{
+    color:var(--text-light);
+}
+
+/* Buttons */
+
+body.dark .tracking-outline-btn{
+    color:#22c55e;
+    border-color:#22c55e;
+}
+
+body.dark .tracking-outline-btn:hover{
+    background:#22c55e;
+    color:#fff;
+}
+
+/* Tag */
+
+body.dark .tracking-tag{
+    background:rgba(34,197,94,.15);
+    color:#22c55e;
+}
+
+/* Image Overlay */
+
+body.dark .tracking-image::before{
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.08),
+        transparent
+    );
+}
+
 
 /* ICON */
 
@@ -2243,18 +2310,18 @@ body.dark .floating-card{
 
     left:40px;
 
-    top:50px;
+    top:300px;
 
 }
 
 .water{
 
-    right:40px;
+    right:700px;
 
-    bottom:50px;
+    bottom:300px;
 
 }
-
+    
 /*=================================
         IMAGE BADGE
 =================================*/
@@ -2845,35 +2912,35 @@ body.dark .floating-card{
         RESPONSIVE
 =========================================*/
 
-@media(max-width:1100px){
+    @media(max-width:1100px){
 
-    .tracking-info{
+        .tracking-info{
 
-        grid-template-columns:1fr;
+            grid-template-columns:1fr;
 
-        min-height:auto;
+            min-height:auto;
+
+        }
+
+        .tracking-image{
+
+            min-height:500px;
+
+        }
+
+        .tracking-content{
+
+            padding:60px 30px;
+
+        }
+
+        .tracking-content h2{
+
+            font-size:42px;
+
+        }
 
     }
-
-    .tracking-image{
-
-        min-height:500px;
-
-    }
-
-    .tracking-content{
-
-        padding:60px 30px;
-
-    }
-
-    .tracking-content h2{
-
-        font-size:42px;
-
-    }
-
-}
 
 @media(max-width:768px){
 
@@ -3013,8 +3080,9 @@ Grid
     z-index:2;
 
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+       grid-template-columns: repeat(2, 1fr);
+
+    gap:50px;
 }
 
 /*==========================
@@ -3025,7 +3093,7 @@ Card
 
     position:relative;
 
-    background:var(--card);
+    background:#fff;
 
     border:1px solid rgba(34,197,94,.15);
 
@@ -3073,10 +3141,11 @@ Icon
 
 .yoga-icon{
 
-    width:75px;
-    height:75px;
+    width:100%;
+    height:250px;
 
-    border-radius:22px;
+    border-radius:20px 20px 20px 20px;
+    overflow:hidden;
 
     display:flex;
     align-items:center;
@@ -3092,6 +3161,31 @@ Icon
 
     box-shadow:0 15px 35px rgba(34,197,94,.30);
 
+}
+.yoga-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+}
+
+.yoga-card:hover .yoga-icon img{
+    transform: scale(1.08);
+}
+
+.yoga-card h3,
+.yoga-card p,
+.yoga-info,
+.yoga-card a,
+.yoga-level{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.yoga-card a{
+    display: inline-block;
+    margin: 20px;
 }
 
 /*==========================
@@ -3136,27 +3230,22 @@ Level Badge
 
 }
 
-/* Dark Mode Badge */
-
-body.dark .beginner{
-
-    background:#164e2f;
-    color:#86efac;
-
+body.dark .yoga-card{
+    background:#1b2635;
+    border:1px solid #2f3e52;
 }
 
-body.dark .intermediate{
-
-    background:#4d3d11;
-    color:#fde68a;
-
+body.dark .yoga-card h3{
+    color:#fff;
 }
 
-body.dark .advanced{
+body.dark .yoga-card p,
+body.dark .yoga-info span{
+    color:#cfd8dc;
+}
 
-    background:#4b1d1d;
-    color:#fca5a5;
-
+body.dark .yoga-card a{
+    color:#fff;
 }
 
 /*==========================
@@ -3248,61 +3337,119 @@ Button
     box-shadow:0 15px 30px rgba(34,197,94,.30);
 
 }
+/* ===========================
+   YOGA RESPONSIVE
+=========================== */
 
-/*==========================
-Responsive
-==========================*/
-
-@media(max-width:992px){
-
-    .yoga-section{
-
-        padding:90px 5%;
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .yoga-section{
-
-        padding:80px 20px;
-
-    }
+/* Laptop */
+@media (max-width:1200px){
 
     .yoga-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    .yoga-section{
-
-        padding:70px 18px;
-
-    }
-
-    .yoga-card{
-
-        padding:25px;
-
+        grid-template-columns: repeat(2,1fr);
+        gap:25px;
     }
 
     .yoga-icon{
-
-        width:65px;
-        height:65px;
-
-        font-size:28px;
-
+        height:220px;
     }
 
 }
+
+/* Tablet */
+@media (max-width:768px){
+
+    .section-title h2{
+        font-size:36px;
+    }
+
+    .section-title p{
+        font-size:16px;
+    }
+
+    .yoga-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .yoga-card{
+        width:100%;
+    }
+
+    .yoga-icon{
+        height:240px;
+    }
+
+    .yoga-card h3{
+        font-size:24px;
+    }
+
+    .yoga-card p{
+        font-size:15px;
+    }
+
+    .yoga-info{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .yoga-card a{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+    .yoga-section{
+        padding:60px 20px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .section-title p{
+        font-size:14px;
+    }
+
+    .yoga-icon{
+        height:200px;
+    }
+
+    .yoga-card{
+        padding:18px;
+    }
+
+    .yoga-level{
+        font-size:12px;
+        padding:5px 12px;
+    }
+
+    .yoga-card h3{
+        font-size:22px;
+    }
+
+    .yoga-card p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .yoga-info{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .yoga-card a{
+        width:100%;
+        padding:14px;
+    }
+
+}
+
+
+
 
 /*====================================
         HOME WORKOUT SECTION
@@ -3381,9 +3528,9 @@ Grid
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:repeat(2,1fr);
 
-    gap:35px;
+    gap:50px;
 
 }
 
@@ -3443,9 +3590,10 @@ Exercise Icon
 
 .exercise-icon{
 
-    width:70px;
+    width:100%px;
 
-    height:70px;
+    height:240px;
+    overflow:hidden;
 
     border-radius:20px;
 
@@ -3459,12 +3607,22 @@ Exercise Icon
 
     font-size:32px;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
     color:#fff;
 
     box-shadow:0 15px 30px rgba(34,197,94,.3);
 
+}
+.exercise-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+.card:hover .exercise-icon img{
+    transform:scale(1.08);
 }
 
 /*==================
@@ -3568,7 +3726,26 @@ Workout Info
     font-weight:600;
 
 }
+.card{
+    overflow:hidden;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
+.exercise-level,
+.card h3,
+.card p,
+.exercise-info,
+.exercise-btn{
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.exercise-btn{
+    display:inline-block;
+    margin:20px;
+}
 /*==================
 Button
 ==================*/
@@ -3607,7 +3784,7 @@ Button
 
 }
 
-/*==================
+/* ==================
 Dark Mode
 ==================*/
 
@@ -3635,75 +3812,81 @@ body.dark .advanced{
 
 }
 
-/*==================
-Responsive
-==================*/
+/* ==================
+   Responsive
+================== */
 
-@media(max-width:992px){
+/* Laptop */
+@media (max-width:1024px){
 
-    .section-title h2{
-
-        font-size:2.4rem;
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .home-workout{
-
-        padding:80px 20px;
-
-    }
-
-    .home-workout .grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .section-title{
-
-        margin-bottom:50px;
-
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
     }
 
     .section-title h2{
-
-        font-size:2rem;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    .home-workout{
-
-        padding:70px 18px;
-
-    }
-
-    .home-workout .card{
-
-        padding:25px;
-
+        font-size:2.3rem;
     }
 
     .exercise-icon{
+        height:230px;
+    }
 
-        width:60px;
-        height:60px;
+}
 
-        font-size:26px;
+/* ==================
+   Mobile Responsive
+================== */
 
+@media (max-width:480px){
+
+    .home-workout{
+        padding:60px 20px;
     }
 
     .section-title h2{
+        font-size:28px;
+    }
 
-        font-size:1.8rem;
+    .section-title p{
+        font-size:14px;
+    }
 
+    .exercise-icon{
+        height:200px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .exercise-level{
+        font-size:12px;
+        padding:5px 12px;
+    }
+
+    .card h3{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .exercise-info{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .exercise-btn{
+        display:block;
+        width:100%;
+        padding:14px;
+        text-align:center;
+        margin-top:18px;
     }
 
 }
