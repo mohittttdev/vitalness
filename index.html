@@ -2580,6 +2580,422 @@ transform:translateY(-3px);
 
 box-shadow:0 12px 25px rgba(34,197,94,.35);
 
+}/*====================================
+        AI FOOTER
+=====================================*/
+
+.ai-footer{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:18px;
+
+background:var(--card);
+
+border-top:1px solid var(--border);
+
+}
+
+.ai-footer input{
+
+flex:1;
+
+height:55px;
+
+padding:0 20px;
+
+border:1px solid var(--border);
+
+border-radius:50px;
+
+background:var(--bg);
+
+color:var(--text);
+
+font-size:15px;
+
+outline:none;
+
+transition:.35s;
+
+}
+
+.ai-footer input::placeholder{
+
+color:var(--text-light);
+
+}
+
+.ai-footer input:focus{
+
+border-color:#22c55e;
+
+box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+.ai-footer button{
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#22c55e,#16a34a);
+
+color:#fff;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 12px 25px rgba(34,197,94,.35);
+
+}
+
+.ai-footer button:hover{
+
+transform:translateY(-4px) scale(1.08);
+
+box-shadow:0 18px 35px rgba(34,197,94,.45);
+
+}
+
+/*====================================
+      TYPING DOTS
+=====================================*/
+
+.ai-typing{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+padding:16px 20px;
+
+margin-top:18px;
+
+width:80px;
+
+border-radius:18px;
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+}
+
+.ai-typing span{
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#22c55e;
+
+animation:typing .9s infinite;
+
+}
+
+.ai-typing span:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+.ai-typing span:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+@keyframes typing{
+
+0%,100%{
+
+transform:translateY(0);
+
+opacity:.4;
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+opacity:1;
+
+}
+
+}
+
+/*====================================
+      DARK MODE
+=====================================*/
+
+body.dark .ai-chat{
+
+background:#111827;
+
+border-color:#2b3444;
+
+box-shadow:0 25px 70px rgba(0,0,0,.55);
+
+}
+
+body.dark .ai-body{
+
+background:#0f172a;
+
+}
+
+body.dark .ai-message{
+
+background:#1e293b;
+
+border-color:#334155;
+
+color:#f8fafc;
+
+}
+
+body.dark .ai-footer{
+
+background:#111827;
+
+border-color:#334155;
+
+}
+
+body.dark .ai-footer input{
+
+background:#1e293b;
+
+border-color:#334155;
+
+color:#fff;
+
+}
+
+body.dark .quick-buttons button{
+
+background:rgba(34,197,94,.15);
+
+color:#4ade80;
+
+border-color:rgba(34,197,94,.25);
+
+}
+
+/*====================================
+      RESPONSIVE
+=====================================*/
+
+@media(max-width:768px){
+
+.ai-chat{
+
+right:15px;
+
+left:15px;
+
+width:auto;
+
+height:72vh;
+
+bottom:100px;
+
+border-radius:24px;
+
+}
+
+.ai-toggle{
+
+right:20px;
+
+bottom:20px;
+
+width:62px;
+
+height:62px;
+
+font-size:26px;
+
+}
+
+.ai-header{
+
+padding:16px;
+
+}
+
+.ai-avatar{
+
+width:48px;
+
+height:48px;
+
+font-size:22px;
+
+}
+
+.ai-profile h3{
+
+font-size:16px;
+
+}
+
+.ai-footer{
+
+padding:14px;
+
+}
+
+.ai-footer input{
+
+height:50px;
+
+font-size:14px;
+
+}
+
+.ai-footer button{
+
+width:50px;
+
+height:50px;
+
+font-size:18px;
+
+}
+
+.quick-buttons{
+
+gap:8px;
+
+}
+
+.quick-buttons button{
+
+padding:9px 14px;
+
+font-size:13px;
+
+}
+
+}
+
+/*====================================
+      EXTRA PREMIUM EFFECTS
+=====================================*/
+
+.ai-chat::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+
+right:-120px;
+
+width:240px;
+
+height:240px;
+
+background:radial-gradient(circle,
+rgba(34,197,94,.18),
+transparent 70%);
+
+pointer-events:none;
+
+}
+
+.ai-chat::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-120px;
+
+left:-120px;
+
+width:220px;
+
+height:220px;
+
+background:radial-gradient(circle,
+rgba(22,163,74,.15),
+transparent 70%);
+
+pointer-events:none;
+
+}
+
+.ai-toggle i{
+
+animation:robotRotate 6s linear infinite;
+
+}
+
+@keyframes robotRotate{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+10%{
+
+transform:rotate(-10deg);
+
+}
+
+20%{
+
+transform:rotate(10deg);
+
+}
+
+30%{
+
+transform:rotate(-8deg);
+
+}
+
+40%{
+
+transform:rotate(8deg);
+
+}
+
+50%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(0deg);
+
+}
+
 }
 </style>
 <script>
