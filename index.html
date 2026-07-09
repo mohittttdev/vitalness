@@ -2204,7 +2204,103 @@ window.addEventListener("load", function() {
 
 </div>
 <style>
-    
+    /*=========================
+    AI ASSISTANT
+==========================*/
+
+.ai-toggle{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:70px;
+
+height:70px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#22c55e,#16a34a);
+
+color:#fff;
+
+font-size:30px;
+
+cursor:pointer;
+
+z-index:9999;
+
+box-shadow:0 15px 40px rgba(34,197,94,.45);
+
+transition:.4s;
+
+animation:floatAI 3s ease-in-out infinite;
+
+}
+
+.ai-toggle:hover{
+
+transform:scale(1.12);
+
+box-shadow:0 20px 60px rgba(34,197,94,.6);
+
+}
+
+.ai-toggle::before{
+
+content:"";
+
+position:absolute;
+
+inset:-8px;
+
+border-radius:50%;
+
+border:2px solid rgba(34,197,94,.4);
+
+animation:pulseAI 2s infinite;
+
+}
+
+@keyframes pulseAI{
+
+0%{
+
+transform:scale(.8);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(1.6);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes floatAI{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
 </style>
 <script>
     /*=====================================
