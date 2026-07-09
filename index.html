@@ -2206,6 +2206,224 @@ window.addEventListener("load", function() {
 <style>
     
 </style>
+<script>
+    /*=====================================
+      VITALNESS AI ASSISTANT
+======================================*/
+
+const aiToggle = document.querySelector(".ai-toggle");
+const aiChat = document.querySelector(".ai-chat");
+const closeChat = document.querySelector(".close-chat");
+
+const input = document.querySelector(".ai-footer input");
+const sendBtn = document.querySelector(".ai-footer button");
+const body = document.querySelector(".ai-body");
+
+/*=========================
+        OPEN CHAT
+=========================*/
+
+aiToggle.addEventListener("click", () => {
+
+    aiChat.classList.toggle("active");
+
+});
+
+/*=========================
+       CLOSE CHAT
+=========================*/
+
+closeChat.addEventListener("click", () => {
+
+    aiChat.classList.remove("active");
+
+});
+
+/*=========================
+      ADD MESSAGE
+=========================*/
+
+function addMessage(text, sender){
+
+    const message = document.createElement("div");
+
+    message.className = sender;
+
+    message.innerHTML = text;
+
+    message.style.maxWidth="85%";
+    message.style.padding="15px";
+    message.style.margin="12px 0";
+    message.style.borderRadius="18px";
+    message.style.lineHeight="1.7";
+    message.style.animation="messageFade .4s";
+
+    if(sender==="user-message"){
+
+        message.style.marginLeft="auto";
+        message.style.background="#22c55e";
+        message.style.color="#fff";
+
+    }else{
+
+        message.style.background="var(--card)";
+        message.style.color="var(--text)";
+        message.style.border="1px solid var(--border)";
+
+    }
+
+    body.appendChild(message);
+
+    body.scrollTop = body.scrollHeight;
+
+}
+
+/*=========================
+      TYPING EFFECT
+=========================*/
+
+function showTyping(){
+
+    const typing = document.createElement("div");
+
+    typing.className="ai-typing";
+
+    typing.innerHTML=`
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    `;
+
+    body.appendChild(typing);
+
+    body.scrollTop = body.scrollHeight;
+
+    return typing;
+
+}
+
+/*=========================
+      AI REPLY
+=========================*/
+
+function aiReply(question){
+
+    const q = question.toLowerCase();
+
+    let reply="😊 Sorry, I couldn't understand. Please ask about workout, diet, BMI, water, sleep or fitness.";
+
+    if(q.includes("hello") || q.includes("hi")){
+
+        reply="👋 Hello! Welcome to VitalNess AI. How can I help you today?";
+
+    }
+
+    else if(q.includes("workout")){
+
+        reply="🏋 Aim for 30–45 minutes of exercise at least 5 days a week. Mix strength training and cardio for balanced fitness.";
+
+    }
+
+    else if(q.includes("diet")){
+
+        reply="🥗 Focus on vegetables, fruits, whole grains, lean protein, and healthy fats. Try to reduce sugary drinks and processed foods.";
+
+    }
+
+    else if(q.includes("water")){
+
+        reply="💧 Most adults benefit from around 2–3 liters of water per day, though your needs vary with activity level and climate.";
+
+    }
+
+    else if(q.includes("sleep")){
+
+        reply="😴 Adults should generally get 7–9 hours of sleep each night. A consistent bedtime can improve sleep quality.";
+
+    }
+
+    else if(q.includes("bmi")){
+
+        reply="❤️ Enter your height and weight in the BMI Calculator to estimate your BMI and understand your weight category.";
+
+    }
+
+    else if(q.includes("weight loss")){
+
+        reply="🔥 A sustainable approach combines a modest calorie deficit, regular exercise, adequate sleep, and consistency over time.";
+
+    }
+
+    else if(q.includes("muscle")){
+
+        reply="💪 Prioritize strength training, eat enough protein, and allow time for recovery between workouts.";
+
+    }
+
+    const typing = showTyping();
+
+    setTimeout(()=>{
+
+        typing.remove();
+
+        addMessage(reply,"ai-message");
+
+    },1500);
+
+}
+
+/*=========================
+        SEND
+=========================*/
+
+function sendMessage(){
+
+    const text=input.value.trim();
+
+    if(text==="") return;
+
+    addMessage(text,"user-message");
+
+    input.value="";
+
+    aiReply(text);
+
+}
+
+/*=========================
+      EVENTS
+=========================*/
+
+sendBtn.addEventListener("click",sendMessage);
+
+input.addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        sendMessage();
+
+    }
+
+});
+
+/*=========================
+ QUICK BUTTONS
+=========================*/
+
+document.querySelectorAll(".quick-buttons button").forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+        input.value=btn.innerText;
+
+        sendMessage();
+
+    });
+
+});
+</script>
 
 
 <!-- Floating Button -->
