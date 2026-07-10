@@ -1,0 +1,1255 @@
+/*=========================================================
+        VITALNESS AI ASSISTANT
+        PART 1
+=========================================================*/
+
+/*==========================
+        GOOGLE FONT
+==========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==========================
+        ROOT VARIABLES
+==========================*/
+
+:root{
+
+    --primary:#22c55e;
+    --primary-dark:#16a34a;
+    --primary-light:#86efac;
+
+    --secondary:#0f172a;
+
+    --white:#ffffff;
+    --black:#000000;
+
+    --bg:#f5fdf7;
+    --card:#ffffff;
+
+    --text:#1e293b;
+    --text-light:#64748b;
+
+    --border:#dbe7df;
+
+    --shadow:
+    0 10px 40px rgba(0,0,0,.08);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+
+}
+
+
+/*==========================
+        DARK MODE
+==========================*/
+
+body.dark{
+
+    --bg:#08120d;
+
+    --card:#112018;
+
+    --text:#f1f5f9;
+
+    --text-light:#a7b5ae;
+
+    --border:#20352a;
+
+    --shadow:
+    0 12px 45px rgba(0,0,0,.55);
+
+}
+
+
+/*==========================
+        RESET
+==========================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Outfit',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+
+/*==========================
+        FLOATING BUTTON
+==========================*/
+
+.ai-toggle{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:
+    0 15px 35px rgba(34,197,94,.45);
+
+    transition:var(--transition);
+
+    animation:floatAI 3s ease-in-out infinite;
+
+}
+
+.ai-toggle:hover{
+
+    transform:scale(1.08);
+
+}
+
+.ai-toggle:active{
+
+    transform:scale(.95);
+
+}
+
+
+/*==========================
+        FLOATING EFFECT
+==========================*/
+
+@keyframes floatAI{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/*==========================
+        AI CONTAINER
+==========================*/
+
+.ai-container{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:115px;
+
+    width:400px;
+
+    max-width:calc(100% - 30px);
+
+    height:650px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:var(--shadow);
+
+    z-index:9998;
+
+    transform-origin:bottom right;
+
+    animation:popup .35s ease;
+
+}
+
+
+/*==========================
+        DARK CONTAINER
+==========================*/
+
+body.dark .ai-container{
+
+    background:rgba(17,32,24,.88);
+
+    border-color:#20352a;
+
+}
+
+
+/*==========================
+        POPUP
+==========================*/
+
+@keyframes popup{
+
+0%{
+
+opacity:0;
+
+transform:scale(.75);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+/*==========================
+        HEADER
+==========================*/
+
+.ai-header{
+
+    height:80px;
+
+    padding:18px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    color:#fff;
+
+}
+
+
+/*==========================
+        ASSISTANT INFO
+==========================*/
+
+.assistant-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.assistant-avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+.assistant-info h2{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+
+/*==========================
+        STATUS
+==========================*/
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    opacity:.95;
+
+}
+
+.dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00ff66;
+
+    box-shadow:
+    0 0 12px #00ff66;
+
+    animation:onlinePulse 1.4s infinite;
+
+}
+
+@keyframes onlinePulse{
+
+0%{
+
+transform:scale(.8);
+
+opacity:.6;
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(.8);
+
+opacity:.6;
+
+}
+
+}
+
+
+/*==========================
+        HEADER BUTTONS
+==========================*/
+
+.header-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.header-buttons button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.15);
+
+    transition:var(--transition);
+
+    font-size:17px;
+
+}
+
+.header-buttons button:hover{
+
+    background:rgba(255,255,255,.28);
+
+    transform:translateY(-2px);
+
+}
+/*=========================================================
+        VITALNESS AI ASSISTANT
+        PART 2
+=========================================================*/
+
+
+/*==========================
+        CHAT BODY
+==========================*/
+
+.chat-body{
+
+    flex:1;
+
+    padding:22px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    background:transparent;
+
+}
+
+
+/*==========================
+        CUSTOM SCROLLBAR
+==========================*/
+
+.chat-body::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.chat-body::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.chat-body::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+/*==========================
+        MESSAGE
+==========================*/
+
+.message{
+
+    display:flex;
+
+    gap:12px;
+
+    width:100%;
+
+    animation:messageFade .35s ease;
+
+}
+
+@keyframes messageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==========================
+        AVATAR
+==========================*/
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+}
+
+
+/*==========================
+        MESSAGE BUBBLE
+==========================*/
+
+.bubble{
+
+    max-width:78%;
+
+    padding:16px 18px;
+
+    border-radius:18px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    line-height:1.7;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    word-wrap:break-word;
+
+}
+
+
+/*==========================
+        BOT MESSAGE
+==========================*/
+
+.bot{
+
+    justify-content:flex-start;
+
+}
+
+.bot .bubble{
+
+    border-top-left-radius:6px;
+
+}
+
+
+/*==========================
+        USER MESSAGE
+==========================*/
+
+.user{
+
+    justify-content:flex-end;
+
+}
+
+.user .avatar{
+
+    display:none;
+
+}
+
+.user .bubble{
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    color:#fff;
+
+    border:none;
+
+    border-top-right-radius:6px;
+
+}
+
+
+/*==========================
+        BUBBLE CONTENT
+==========================*/
+
+.bubble ul{
+
+    margin-top:12px;
+
+    margin-left:18px;
+
+}
+
+.bubble li{
+
+    margin:8px 0;
+
+}
+
+
+/*==========================
+        SUGGESTIONS
+==========================*/
+
+.suggestions{
+
+    padding:18px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    border-top:1px solid var(--border);
+
+    background:rgba(255,255,255,.45);
+
+}
+
+body.dark .suggestions{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+
+/*==========================
+        SUGGESTION BUTTON
+==========================*/
+
+.suggestion{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:11px 16px;
+
+    border-radius:30px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.suggestion:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-color:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================
+        TYPING AREA
+==========================*/
+
+.typing-area{
+
+    display:none;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:15px 22px;
+
+}
+
+
+/*==========================
+        SHOW TYPING
+==========================*/
+
+.typing-area.active{
+
+    display:flex;
+
+}
+
+
+/*==========================
+        TYPING DOTS
+==========================*/
+
+.typing-area span{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    animation:typing .9s infinite;
+
+}
+
+.typing-area span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.typing-area span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+
+/*==========================
+        TYPING ANIMATION
+==========================*/
+
+@keyframes typing{
+
+0%{
+
+    transform:translateY(0);
+
+    opacity:.4;
+
+}
+
+50%{
+
+    transform:translateY(-8px);
+
+    opacity:1;
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+    opacity:.4;
+
+}
+
+}
+
+
+/*==========================
+        MESSAGE TIME
+==========================*/
+
+.message-time{
+
+    margin-top:8px;
+
+    font-size:11px;
+
+    opacity:.6;
+
+}
+
+
+/*==========================
+        LINK STYLE
+==========================*/
+
+.bubble a{
+
+    color:var(--primary-dark);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.bubble a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/*==========================
+        CODE BLOCK
+==========================*/
+
+.bubble pre{
+
+    background:#111827;
+
+    color:#fff;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    overflow:auto;
+
+    margin-top:10px;
+
+}
+
+.bubble code{
+
+    font-family:Consolas, monospace;
+
+    font-size:14px;
+
+}
+
+/*=========================================================
+        VITALNESS AI ASSISTANT
+        PART 3
+=========================================================*/
+
+
+/*==========================
+        CHAT INPUT
+==========================*/
+
+.chat-input{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px;
+
+    background:var(--card);
+
+    border-top:1px solid var(--border);
+
+}
+
+
+/*==========================
+        INPUT
+==========================*/
+
+.chat-input input{
+
+    flex:1;
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    outline:none;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.chat-input input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+.chat-input input::placeholder{
+
+    color:var(--text-light);
+
+}
+
+
+/*==========================
+        BUTTONS
+==========================*/
+
+#voiceBtn,
+#sendBtn{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:18px;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+#voiceBtn:hover,
+#sendBtn:hover{
+
+    transform:translateY(-3px) scale(1.05);
+
+    box-shadow:0 12px 25px rgba(34,197,94,.35);
+
+}
+
+#voiceBtn:active,
+#sendBtn:active{
+
+    transform:scale(.95);
+
+}
+
+
+/*==========================
+        HIDE CHAT
+==========================*/
+
+.ai-container{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(30px) scale(.9);
+
+    pointer-events:none;
+
+    transition:.35s ease;
+
+}
+
+.ai-container.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0) scale(1);
+
+    pointer-events:auto;
+
+}
+
+
+/*==========================
+        MOBILE
+==========================*/
+
+@media(max-width:768px){
+
+.ai-toggle{
+
+    right:18px;
+
+    bottom:18px;
+
+    width:60px;
+
+    height:60px;
+
+    font-size:24px;
+
+}
+
+.ai-container{
+
+    right:10px;
+
+    left:10px;
+
+    bottom:90px;
+
+    width:auto;
+
+    height:75vh;
+
+    border-radius:22px;
+
+}
+
+.ai-header{
+
+    height:70px;
+
+    padding:15px;
+
+}
+
+.assistant-avatar{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+.assistant-info h2{
+
+    font-size:17px;
+
+}
+
+.chat-body{
+
+    padding:16px;
+
+}
+
+.bubble{
+
+    max-width:90%;
+
+    font-size:14px;
+
+}
+
+.suggestions{
+
+    padding:14px;
+
+}
+
+.suggestion{
+
+    font-size:13px;
+
+}
+
+.chat-input{
+
+    padding:14px;
+
+}
+
+.chat-input input{
+
+    height:48px;
+
+    font-size:14px;
+
+}
+
+#voiceBtn,
+#sendBtn{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+}
+
+
+/*==========================
+        SMALL MOBILE
+==========================*/
+
+@media(max-width:480px){
+
+.ai-container{
+
+    top:10px;
+
+    bottom:10px;
+
+    left:10px;
+
+    right:10px;
+
+    height:auto;
+
+}
+
+.chat-body{
+
+    padding:14px;
+
+}
+
+.bubble{
+
+    max-width:95%;
+
+}
+
+.suggestions{
+
+    gap:8px;
+
+}
+
+.suggestion{
+
+    width:100%;
+
+}
+
+}
+
+
+/*==========================
+        DESKTOP
+==========================*/
+
+@media(min-width:1400px){
+
+.ai-container{
+
+    width:430px;
+
+    height:700px;
+
+}
+
+}
+
+
+/*==========================
+        SELECTION
+==========================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/*==========================
+        FOCUS
+==========================*/
+
+button:focus,
+input:focus{
+
+    outline:none;
+
+}
+
+
+/*==========================
+        SMOOTH TRANSITION
+==========================*/
+
+.ai-container,
+.ai-toggle,
+button,
+input,
+.bubble,
+.suggestion{
+
+    transition:.3s ease;
+
+}
