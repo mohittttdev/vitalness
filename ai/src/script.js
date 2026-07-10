@@ -1,7 +1,11 @@
 /*=========================================
         VITALNESS AI ASSISTANT
-        PART 1
+        PART 1A
 =========================================*/
+
+/*=============
+    ELEMENTS
+==============*/
 
 const aiToggle = document.getElementById("aiToggle");
 const aiContainer = document.getElementById("aiContainer");
@@ -12,48 +16,123 @@ const clearChat = document.getElementById("clearChat");
 const chatBody = document.getElementById("chatBody");
 
 const sendBtn = document.getElementById("sendBtn");
+const voiceBtn = document.getElementById("voiceBtn");
+
 const userInput = document.getElementById("userInput");
 
 const typingArea = document.getElementById("typingArea");
 
-const suggestions = document.querySelectorAll(".suggestion");
+const suggestions = document.querySelector(".suggestions");
+
+const suggestionBtns = document.querySelectorAll(".suggestion");
 
 
-/*=========================================
-        OPEN / CLOSE CHAT
-=========================================*/
+/*==========================
+      DEMO RESPONSES
+==========================*/
 
-aiToggle.addEventListener("click", () => {
+const replies = [
 
-    aiContainer.classList.toggle("hidden");
-    aiContainer.classList.toggle("show");
+"🥗 Eat a balanced diet rich in fruits, vegetables and protein.",
+
+"💧 Drink at least 2–3 litres of water every day.",
+
+"🏃 Exercise for 30 minutes daily to stay fit.",
+
+"😴 Sleep 7–8 hours every night for better recovery.",
+
+"🧘 Yoga and meditation help reduce stress and improve focus.",
+
+"❤️ Small healthy habits every day create long-term results.",
+
+"🍎 Avoid sugary drinks and processed foods whenever possible.",
+
+"🚶 Walk after meals to improve digestion."
+
+];
+
+
+/*==========================
+        ESCAPE HTML
+==========================*/
+
+function escapeHTML(text){
+
+    const div=document.createElement("div");
+
+    div.innerText=text;
+
+    return div.innerHTML;
+
+}
+
+
+/*==========================
+        AUTO SCROLL
+==========================*/
+
+function scrollBottom(){
+
+    chatBody.scrollTo({
+
+        top:chatBody.scrollHeight,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/*==========================
+      OPEN / CLOSE CHAT
+==========================*/
+
+aiToggle.addEventListener("click",()=>{
+
+    aiContainer.classList.toggle("active");
 
     aiToggle.classList.toggle("active");
 
+    if(aiContainer.classList.contains("active")){
+
+        aiToggle.innerHTML='<i class="fa-solid fa-xmark"></i>';
+
+    }
+
+    else{
+
+        aiToggle.innerHTML='<i class="fa-solid fa-robot"></i>';
+
+    }
+
 });
 
 
-/*=========================================
-        MINIMIZE
-=========================================*/
+/*==========================
+      MINIMIZE
+==========================*/
 
-minimizeChat.addEventListener("click", () => {
+minimizeChat.addEventListener("click",()=>{
 
-    aiContainer.classList.remove("show");
-    aiContainer.classList.add("hidden");
+    aiContainer.classList.remove("active");
 
     aiToggle.classList.remove("active");
 
+    aiToggle.innerHTML='<i class="fa-solid fa-robot"></i>';
+
 });
 
 
-/*=========================================
-        ENTER KEY
-=========================================*/
+/*==========================
+      ENTER KEY
+==========================*/
 
-userInput.addEventListener("keypress", function(e){
+userInput.addEventListener("keydown",(e)=>{
 
     if(e.key==="Enter"){
+
+        e.preventDefault();
 
         sendMessage();
 
@@ -62,22 +141,22 @@ userInput.addEventListener("keypress", function(e){
 });
 
 
-/*=========================================
-        SEND BUTTON
-=========================================*/
+/*==========================
+      SEND BUTTON
+==========================*/
 
-sendBtn.addEventListener("click", sendMessage);
+sendBtn.addEventListener("click",sendMessage);
 
 
-/*=========================================
-        SUGGESTIONS
-=========================================*/
+/*==========================
+      SUGGESTIONS
+==========================*/
 
-suggestions.forEach(btn=>{
+suggestionBtns.forEach(btn=>{
 
     btn.addEventListener("click",()=>{
 
-        userInput.value=btn.innerText;
+        userInput.value=btn.textContent.trim();
 
         sendMessage();
 
@@ -86,145 +165,440 @@ suggestions.forEach(btn=>{
 });
 
 
+/*==========================
+      VOICE BUTTON
+==========================*/
+
+voiceBtn.addEventListener("click",()=>{
+
+    alert("🎤 Voice Assistant Coming Soon");
+
+});
 /*=========================================
-        SEND MESSAGE
+        VITALNESS AI ASSISTANT
+        PART 1B
 =========================================*/
 
-function sendMessage(){
 
-    const text=userInput.value.trim();
+/*==========================
+      WELCOME MESSAGE
+==========================*/
 
-    if(text==="") return;
+function loadWelcomeMessage(){
 
+chatBody.innerHTML=`
 
-    addUserMessage(text);
+<div class="message bot">
 
-    userInput.value="";
+<div class="avatar">
 
-    showTyping();
+<i class="fa-solid fa-heart-pulse"></i>
 
+</div>
 
-    setTimeout(()=>{
+<div class="bubble">
 
-        hideTyping();
+<h3>👋 Hello!</h3>
 
-        addBotMessage("AI integration coming in next step... 🤖");
+<p>
+I'm <strong>Vital AI</strong>,
+your personal health assistant.
+</p>
 
-    },1500);
+<p>I can help you with:</p>
+
+<ul>
+
+<li>🥗 Diet Plans</li>
+
+<li>💪 Workout Plans</li>
+
+<li>🧘 Yoga</li>
+
+<li>😴 Sleep Tips</li>
+
+<li>❤️ Healthy Lifestyle</li>
+
+<li>🍎 Nutrition</li>
+
+</ul>
+
+</div>
+
+</div>
+
+`;
+
+scrollBottom();
 
 }
 
 
-/*=========================================
-        USER MESSAGE
-=========================================*/
+/*==========================
+      USER MESSAGE
+==========================*/
 
 function addUserMessage(text){
 
-    chatBody.innerHTML+=`
+chatBody.insertAdjacentHTML("beforeend",`
 
-    <div class="message user">
+<div class="message user">
 
-        <div class="bubble">
+<div class="bubble">
 
-            ${text}
+${escapeHTML(text)}
 
-        </div>
+<div class="message-time">
 
-    </div>
+${new Date().toLocaleTimeString([],{
 
-    `;
+hour:"2-digit",
 
-    scrollBottom();
+minute:"2-digit"
+
+})}
+
+</div>
+
+</div>
+
+</div>
+
+`);
+
+scrollBottom();
 
 }
 
 
-/*=========================================
-        BOT MESSAGE
-=========================================*/
+/*==========================
+      BOT MESSAGE
+==========================*/
 
 function addBotMessage(text){
 
-    chatBody.innerHTML+=`
+chatBody.insertAdjacentHTML("beforeend",`
 
-    <div class="message bot">
+<div class="message bot">
 
-        <div class="avatar">
+<div class="avatar">
 
-            <i class="fa-solid fa-heart-pulse"></i>
+<i class="fa-solid fa-heart-pulse"></i>
 
-        </div>
+</div>
 
-        <div class="bubble">
+<div class="bubble">
 
-            ${text}
+${text}
 
-        </div>
+<div class="message-time">
 
-    </div>
+${new Date().toLocaleTimeString([],{
 
-    `;
+hour:"2-digit",
 
-    scrollBottom();
+minute:"2-digit"
+
+})}
+
+</div>
+
+</div>
+
+</div>
+
+`);
+
+scrollBottom();
 
 }
 
 
-/*=========================================
-        TYPING
-=========================================*/
+/*==========================
+      TYPING
+==========================*/
 
 function showTyping(){
 
-    typingArea.classList.add("active");
+typingArea.classList.add("active");
 
-    scrollBottom();
+scrollBottom();
 
 }
 
 function hideTyping(){
 
-    typingArea.classList.remove("active");
+typingArea.classList.remove("active");
 
 }
 
 
-/*=========================================
-        SCROLL
-=========================================*/
+/*==========================
+      SEND MESSAGE
+==========================*/
 
-function scrollBottom(){
+function sendMessage(){
 
-    chatBody.scrollTop=chatBody.scrollHeight;
+const text=userInput.value.trim();
+
+if(text==="") return;
+
+addUserMessage(text);
+
+userInput.value="";
+
+if(suggestions){
+
+suggestions.style.display="none";
+
+}
+
+showTyping();
+
+setTimeout(()=>{
+
+hideTyping();
+
+const reply=replies[Math.floor(Math.random()*replies.length)];
+
+addBotMessage(reply);
+
+},1200);
 
 }
 
 
-/*=========================================
-        CLEAR CHAT
-=========================================*/
+/*==========================
+      CLEAR CHAT
+==========================*/
 
 clearChat.addEventListener("click",()=>{
 
-    chatBody.innerHTML=`
+const ok=confirm("Do you want to clear all chats?");
 
-    <div class="message bot">
+if(!ok) return;
 
-        <div class="avatar">
+loadWelcomeMessage();
 
-            <i class="fa-solid fa-heart-pulse"></i>
+if(suggestions){
 
-        </div>
+suggestions.style.display="flex";
 
-        <div class="bubble">
+}
 
-            👋 Chat cleared successfully.
+});
 
-        </div>
 
-    </div>
+/*==========================
+      INITIAL LOAD
+==========================*/
 
-    `;
+window.addEventListener("load",()=>{
+
+loadWelcomeMessage();
+
+});
+/*=========================================
+        VITALNESS AI ASSISTANT
+        PART 2A
+=========================================*/
+
+
+/*==========================
+      SAVE CHAT
+==========================*/
+
+function saveChat(){
+
+localStorage.setItem(
+
+"vitalness-chat",
+
+chatBody.innerHTML
+
+);
+
+}
+
+
+/*==========================
+      LOAD CHAT
+==========================*/
+
+function loadChat(){
+
+const history=
+
+localStorage.getItem(
+
+"vitalness-chat"
+
+);
+
+if(history){
+
+chatBody.innerHTML=history;
+
+scrollBottom();
+
+}
+
+else{
+
+loadWelcomeMessage();
+
+}
+
+}
+
+
+/*==========================
+      TYPE EFFECT
+==========================*/
+
+function typeMessage(text){
+
+const wrapper=document.createElement("div");
+
+wrapper.className="message bot";
+
+wrapper.innerHTML=`
+
+<div class="avatar">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+</div>
+
+<div class="bubble">
+
+<span class="typing-text"></span>
+
+<div class="message-time">
+
+${new Date().toLocaleTimeString([],{
+
+hour:"2-digit",
+
+minute:"2-digit"
+
+})}
+
+</div>
+
+<div class="message-actions">
+
+<button class="copy-btn">
+
+<i class="fa-regular fa-copy"></i>
+
+</button>
+
+<button class="like-btn">
+
+👍
+
+</button>
+
+<button class="dislike-btn">
+
+👎
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+chatBody.appendChild(wrapper);
+
+const target=
+
+wrapper.querySelector(".typing-text");
+
+let i=0;
+
+const timer=setInterval(()=>{
+
+target.innerHTML+=text.charAt(i);
+
+scrollBottom();
+
+i++;
+
+if(i>=text.length){
+
+clearInterval(timer);
+
+saveChat();
+
+}
+
+},18);
+
+}
+
+
+/*==========================
+      COPY
+==========================*/
+
+chatBody.addEventListener("click",(e)=>{
+
+const btn=e.target.closest(".copy-btn");
+
+if(!btn) return;
+
+const bubble=
+
+btn.closest(".bubble");
+
+const txt=
+
+bubble.querySelector(".typing-text")?.innerText ||
+
+bubble.innerText;
+
+navigator.clipboard.writeText(txt);
+
+btn.innerHTML="✅";
+
+setTimeout(()=>{
+
+btn.innerHTML='<i class="fa-regular fa-copy"></i>';
+
+},1200);
+
+});
+
+
+/*==========================
+      LIKE
+==========================*/
+
+chatBody.addEventListener("click",(e)=>{
+
+const btn=e.target.closest(".like-btn");
+
+if(!btn) return;
+
+btn.innerHTML="💚";
+
+});
+
+
+/*==========================
+      DISLIKE
+==========================*/
+
+chatBody.addEventListener("click",(e)=>{
+
+const btn=e.target.closest(".dislike-btn");
+
+if(!btn) return;
+
+btn.innerHTML="😔";
 
 });
