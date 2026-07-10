@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalNess AI Assistant</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ======================================
+        FLOATING AI BUTTON
+======================================= -->
+
+<button id="aiToggle" class="ai-toggle">
+    <i class="fa-solid fa-robot"></i>
+</button>
+
+
+<!-- ======================================
+            AI CHAT WINDOW
+======================================= -->
+
+<div class="ai-container" id="aiContainer">
+
+    <!-- HEADER -->
+
+    <div class="ai-header">
+
+        <div class="assistant-info">
+
+            <div class="assistant-avatar">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+
+                <h2>Vital AI</h2>
+
+                <span class="status">
+                    <span class="dot"></span>
+                    Online
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="header-buttons">
+
+            <button id="clearChat">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+
+            <button id="minimizeChat">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHAT BODY -->
+
+    <div class="chat-body" id="chatBody">
+
+        <!-- Welcome Message -->
+
+        <div class="message bot">
+
+            <div class="avatar">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div class="bubble">
+
+                👋 Hello!
+
+                <br><br>
+
+                I'm <strong>Vital AI</strong>, your personal health assistant.
+
+                <br><br>
+
+                I can help you with:
+
+                <ul>
+
+                    <li>🥗 Diet Plans</li>
+
+                    <li>💪 Workout Plans</li>
+
+                    <li>🧘 Yoga</li>
+
+                    <li>😴 Sleep Tips</li>
+
+                    <li>❤️ Healthy Lifestyle</li>
+
+                    <li>🍎 Nutrition</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUGGESTIONS -->
+
+    <div class="suggestions">
+
+        <button class="suggestion">
+            Create a diet plan
+        </button>
+
+        <button class="suggestion">
+            Home workout
+        </button>
+
+        <button class="suggestion">
+            Weight loss tips
+        </button>
+
+        <button class="suggestion">
+            Healthy breakfast
+        </button>
+
+    </div>
+
+
+    <!-- Typing -->
+
+    <div class="typing-area" id="typingArea">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- INPUT -->
+
+    <div class="chat-input">
+
+        <button id="voiceBtn">
+
+            <i class="fa-solid fa-microphone"></i>
+
+        </button>
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Ask anything about health..."
+            autocomplete="off">
+
+        <button id="sendBtn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- JavaScript -->
+
+<script src="src/script.js"></script>
+
+</body>
+</html>
