@@ -602,3 +602,422 @@ if(!btn) return;
 btn.innerHTML="😔";
 
 });
+/*=========================================
+        VITALNESS AI ASSISTANT
+        PART 2B-1
+=========================================*/
+
+
+/*==========================
+      ONLINE STATUS
+==========================*/
+
+const statusDot = document.querySelector(".dot");
+const statusText = document.querySelector(".status");
+
+function updateStatus(){
+
+    if(navigator.onLine){
+
+        statusDot.style.background="#22c55e";
+
+        statusText.lastChild.textContent=" Online";
+
+    }else{
+
+        statusDot.style.background="#ef4444";
+
+        statusText.lastChild.textContent=" Offline";
+
+    }
+
+}
+
+window.addEventListener("online",updateStatus);
+window.addEventListener("offline",updateStatus);
+
+updateStatus();
+
+
+/*==========================
+      SPEECH RECOGNITION
+==========================*/
+
+const SpeechRecognition=
+window.SpeechRecognition||
+window.webkitSpeechRecognition;
+
+if(SpeechRecognition){
+
+    const recognition=new SpeechRecognition();
+
+    recognition.lang="en-US";
+
+    recognition.continuous=false;
+
+    recognition.interimResults=false;
+
+    voiceBtn.addEventListener("click",()=>{
+
+        recognition.start();
+
+        voiceBtn.innerHTML='<i class="fa-solid fa-microphone-lines"></i>';
+
+    });
+
+    recognition.onresult=(e)=>{
+
+        const speech=e.results[0][0].transcript;
+
+        userInput.value=speech;
+
+        sendMessage();
+
+    };
+
+    recognition.onend=()=>{
+
+        voiceBtn.innerHTML='<i class="fa-solid fa-microphone"></i>';
+
+    };
+
+    recognition.onerror=()=>{
+
+        voiceBtn.innerHTML='<i class="fa-solid fa-microphone"></i>';
+
+    };
+
+}else{
+
+    voiceBtn.disabled=true;
+
+    voiceBtn.title="Speech Recognition Not Supported";
+
+}
+
+
+/*==========================
+      AI VOICE
+==========================*/
+
+function speak(text){
+
+    if(!("speechSynthesis" in window)) return;
+
+    window.speechSynthesis.cancel();
+
+    const utterance=new SpeechSynthesisUtterance(text);
+
+    utterance.lang="en-US";
+
+    utterance.rate=1;
+
+    utterance.pitch=1;
+
+    speechSynthesis.speak(utterance);
+
+}
+
+
+/*==========================
+      SMART DEMO REPLY
+==========================*/
+
+function getReply(message){
+
+    message=message.toLowerCase();
+
+    if(message.includes("diet")){
+
+        return "🥗 A healthy diet should include vegetables, fruits, whole grains and lean protein.";
+
+    }
+
+    if(message.includes("workout")){
+
+        return "💪 Start with 20–30 minutes of exercise daily. Combine cardio and strength training.";
+
+    }
+
+    if(message.includes("weight")){
+
+        return "⚖️ Weight loss works best with a calorie deficit, regular exercise and proper sleep.";
+
+    }
+
+    if(message.includes("sleep")){
+
+        return "😴 Aim for 7–8 hours of quality sleep every night.";
+
+    }
+
+    if(message.includes("water")){
+
+        return "💧 Drink around 2–3 litres of water each day depending on your activity level.";
+
+    }
+
+    if(message.includes("protein")){
+
+        return "🥚 Include eggs, milk, paneer, tofu, lentils or chicken for good protein intake.";
+
+    }
+
+    if(message.includes("hello")||
+       message.includes("hi")){
+
+        return "👋 Hello! How can I help you with your health today?";
+
+    }
+
+    return replies[Math.floor(Math.random()*replies.length)];
+
+}
+/*=========================================
+        VITALNESS AI ASSISTANT
+        PART 2B-2
+=========================================*/
+
+
+/*==========================
+      AUTO FOCUS
+==========================*/
+
+aiToggle.addEventListener("click",()=>{
+
+    setTimeout(()=>{
+
+        if(aiContainer.classList.contains("active")){
+
+            userInput.focus();
+
+        }
+
+    },300);
+
+});
+
+
+/*==========================
+      ESC SHORTCUT
+==========================*/
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        aiContainer.classList.remove("active");
+
+        aiToggle.classList.remove("active");
+
+        aiToggle.innerHTML='<i class="fa-solid fa-robot"></i>';
+
+    }
+
+});
+
+
+/*==========================
+      CTRL + /
+==========================*/
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.ctrlKey && e.key==="/"){
+
+        e.preventDefault();
+
+        aiContainer.classList.add("active");
+
+        aiToggle.classList.add("active");
+
+        aiToggle.innerHTML='<i class="fa-solid fa-xmark"></i>';
+
+        userInput.focus();
+
+    }
+
+});
+
+
+/*==========================
+      INPUT ANIMATION
+==========================*/
+
+userInput.addEventListener("input",()=>{
+
+    if(userInput.value.length>0){
+
+        sendBtn.style.transform="scale(1.08)";
+
+        sendBtn.style.opacity="1";
+
+    }
+
+    else{
+
+        sendBtn.style.transform="scale(1)";
+
+        sendBtn.style.opacity=".85";
+
+    }
+
+});
+
+
+/*==========================
+      BUTTON RIPPLE
+==========================*/
+
+document.querySelectorAll("button").forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+const ripple=document.createElement("span");
+
+const rect=this.getBoundingClientRect();
+
+const size=Math.max(rect.width,rect.height);
+
+ripple.style.width=size+"px";
+
+ripple.style.height=size+"px";
+
+ripple.style.left=(e.clientX-rect.left-size/2)+"px";
+
+ripple.style.top=(e.clientY-rect.top-size/2)+"px";
+
+ripple.className="ripple";
+
+this.appendChild(ripple);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+});
+
+
+/*==========================
+      AUTO SAVE
+==========================*/
+
+const observer=new MutationObserver(()=>{
+
+saveChat();
+
+});
+
+observer.observe(chatBody,{
+
+childList:true,
+
+subtree:true
+
+});
+
+
+/*==========================
+      INPUT LIMIT
+==========================*/
+
+const MAX_LENGTH=500;
+
+userInput.addEventListener("input",()=>{
+
+if(userInput.value.length>MAX_LENGTH){
+
+userInput.value=userInput.value.substring(0,MAX_LENGTH);
+
+}
+
+});
+
+
+/*==========================
+      GREETING
+==========================*/
+
+setTimeout(()=>{
+
+if(chatBody.children.length<=1){
+
+typeMessage(
+
+"😊 Welcome to VitalNess AI. Ask me anything about fitness, nutrition, workouts or healthy living."
+
+);
+
+}
+
+},1500);
+
+
+/*==========================
+      RANDOM HEALTH TIP
+==========================*/
+
+const tips=[
+
+"💧 Stay hydrated throughout the day.",
+
+"🥗 Eat colorful vegetables daily.",
+
+"🚶 Walk 8,000–10,000 steps daily.",
+
+"😴 Sleep is as important as exercise.",
+
+"🧘 Take 5 minutes to meditate every day."
+
+];
+
+setInterval(()=>{
+
+if(aiContainer.classList.contains("active")){
+
+console.log(
+
+tips[Math.floor(Math.random()*tips.length)]
+
+);
+
+}
+
+},120000);
+
+
+/*==========================
+      MOBILE FIX
+==========================*/
+
+window.addEventListener("resize",()=>{
+
+scrollBottom();
+
+});
+
+
+/*==========================
+      PAGE VISIBILITY
+==========================*/
+
+document.addEventListener("visibilitychange",()=>{
+
+if(document.hidden){
+
+speechSynthesis.cancel();
+
+}
+
+});
+
+
+/*==========================
+      END
+==========================*/
+
+console.log("✅ VitalNess AI Frontend Loaded Successfully");
