@@ -506,5 +506,497 @@
     PART 1 END
 PART 2 STARTS FROM BMI SECTION
 =========================== -->
+    <!-- =========================================
+                BMI & CALORIE CALCULATOR
+    ========================================= -->
+
+    <section class="bmi-section" id="bmi">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Health Calculator</span>
+
+                <h2>Know Your Body Better</h2>
+
+                <p>
+                    Calculate your BMI and estimate your daily calorie
+                    requirement to achieve your fitness goals.
+                </p>
+
+            </div>
+
+            <div class="calculator-grid">
+
+                <!-- BMI FORM -->
+
+                <div class="calculator-card">
+
+                    <div class="card-heading">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                        <h3>BMI Calculator</h3>
+
+                    </div>
+
+                    <form class="bmi-form">
+
+                        <div class="input-group">
+
+                            <label>Height (cm)</label>
+
+                            <input
+                                type="number"
+                                id="height"
+                                placeholder="Enter Height">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Weight (kg)</label>
+
+                            <input
+                                type="number"
+                                id="weight"
+                                placeholder="Enter Weight">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Age</label>
+
+                            <input
+                                type="number"
+                                id="age"
+                                placeholder="Enter Age">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Gender</label>
+
+                            <select id="gender">
+
+                                <option>Male</option>
+                                <option>Female</option>
+
+                            </select>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="calculateBMI"
+                            class="primary-btn">
+
+                            Calculate BMI
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- RESULT -->
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <h3>Your Result</h3>
+
+                    <h1 id="bmiValue">22.5</h1>
+
+                    <span id="bmiStatus">
+
+                        Healthy Weight
+
+                    </span>
+
+                    <div class="result-progress">
+
+                        <div class="progress-line">
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="bmi-range">
+
+                        <div>
+
+                            <strong>Underweight</strong>
+
+                            <small>&lt;18.5</small>
+
+                        </div>
+
+                        <div>
+
+                            <strong>Healthy</strong>
+
+                            <small>18.5 - 24.9</small>
+
+                        </div>
+
+                        <div>
+
+                            <strong>Overweight</strong>
+
+                            <small>25+</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+                DIET PLANS
+    ========================================= -->
+
+    <section class="diet-section" id="plans">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Nutrition</span>
+
+                <h2>Healthy Meal Plans</h2>
+
+                <p>
+
+                    Choose the right nutrition plan according to your
+                    fitness objective.
+
+                </p>
+
+            </div>
+
+            <div class="diet-grid">
+
+                <!-- WEIGHT LOSS -->
+
+                <div class="diet-card">
+
+                    <div class="diet-header">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                        <h3>Weight Loss Diet</h3>
+
+                    </div>
+
+                    <div class="meal-list">
+
+                        <div class="meal-item">
+
+                            <h4>Breakfast</h4>
+
+                            <p>
+
+                                Oats, Apple, Boiled Eggs,
+                                Green Tea
+
+                            </p>
+
+                        </div>
+
+                        <div class="meal-item">
+
+                            <h4>Lunch</h4>
+
+                            <p>
+
+                                Brown Rice, Grilled Chicken,
+                                Vegetables
+
+                            </p>
+
+                        </div>
+
+                        <div class="meal-item">
+
+                            <h4>Snacks</h4>
+
+                            <p>
+
+                                Fruits, Almonds,
+                                Greek Yogurt
+
+                            </p>
+
+                        </div>
+
+                        <div class="meal-item">
+
+                            <h4>Dinner</h4>
+
+                            <p>
+
+                                Salad, Paneer,
+                                Soup
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- WEIGHT GAIN -->
+
+                <div class="diet-card">
+
+                    <div class="diet-header">
+
+                        <i class="fa-solid fa-drumstick-bite"></i>
+
+                        <h3>Weight Gain Diet</h3>
+
+                    </div>
+
+                    <div class="meal-list">
+
+                        <div class="meal-item">
+
+                            <h4>Breakfast</h4>
+
+                            <p>
+
+                                Peanut Butter Toast,
+                                Milk,
+                                Banana,
+                                Eggs
+
+                            </p>
+
+                        </div>
+
+                        <div class="meal-item">
+
+                            <h4>Lunch</h4>
+
+                            <p>
+
+                                Rice,
+                                Chicken,
+                                Dal,
+                                Vegetables
+
+                            </p>
+
+                        </div>
+
+                        <div class="meal-item">
+
+                            <h4>Snacks</h4>
+
+                            <p>
+
+                                Protein Shake,
+                                Nuts,
+                                Dry Fruits
+
+                            </p>
+
+                        </div>
+
+                        <div class="meal-item">
+
+                            <h4>Dinner</h4>
+
+                            <p>
+
+                                Paneer,
+                                Sweet Potato,
+                                Rice,
+                                Milk
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+                WORKOUT PROGRAMS
+    ========================================= -->
+
+    <section class="workout-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Workout Plans</span>
+
+                <h2>Train Smarter Every Day</h2>
+
+                <p>
+
+                    Professional workout routines designed
+                    for beginners and advanced users.
+
+                </p>
+
+            </div>
+
+            <div class="workout-grid">
+
+                <!-- CARD -->
+
+                <div class="workout-card">
+
+                    <div class="workout-icon">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+                    <h3>Weight Loss</h3>
+
+                    <ul>
+
+                        <li>HIIT Training</li>
+
+                        <li>Running</li>
+
+                        <li>Cycling</li>
+
+                        <li>Jump Rope</li>
+
+                        <li>Core Workout</li>
+
+                        <li>Stretching</li>
+
+                    </ul>
+
+                    <div class="workout-footer">
+
+                        <span>45 Minutes</span>
+
+                        <span>450 kcal</span>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="workout-card">
+
+                    <div class="workout-icon">
+
+                        <i class="fa-solid fa-dumbbell"></i>
+
+                    </div>
+
+                    <h3>Weight Gain</h3>
+
+                    <ul>
+
+                        <li>Bench Press</li>
+
+                        <li>Squats</li>
+
+                        <li>Deadlift</li>
+
+                        <li>Shoulder Press</li>
+
+                        <li>Pull Ups</li>
+
+                        <li>Barbell Rows</li>
+
+                    </ul>
+
+                    <div class="workout-footer">
+
+                        <span>60 Minutes</span>
+
+                        <span>Strength</span>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="workout-card">
+
+                    <div class="workout-icon">
+
+                        <i class="fa-solid fa-person-running"></i>
+
+                    </div>
+
+                    <h3>Full Body Fitness</h3>
+
+                    <ul>
+
+                        <li>Push Ups</li>
+
+                        <li>Mountain Climbers</li>
+
+                        <li>Burpees</li>
+
+                        <li>Plank</li>
+
+                        <li>Lunges</li>
+
+                        <li>Stretching</li>
+
+                    </ul>
+
+                    <div class="workout-footer">
+
+                        <span>30 Minutes</span>
+
+                        <span>Daily</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+                END PART 2
+       PART 3 STARTS FROM
+       PROGRESS TRACKER SECTION
+    ========================================= -->
 </body>
 </html>
