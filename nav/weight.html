@@ -1,377 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FitLife - Weight Gain & Loss</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-overflow-x:hidden;
-}
-
-header{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-padding:20px;
-}
-
-header h1{
-font-size:4rem;
-animation:slideDown 1s ease;
-}
-
-header p{
-margin-top:15px;
-font-size:1.2rem;
-max-width:700px;
-opacity:.8;
-animation:fadeIn 2s ease;
-}
-
-.btn{
-margin-top:30px;
-padding:15px 35px;
-border:none;
-border-radius:40px;
-background:#22c55e;
-color:white;
-font-size:18px;
-cursor:pointer;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(34,197,94,.4);
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-padding:80px 0;
-}
-
-.card{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-border-radius:25px;
-padding:30px;
-text-align:center;
-transition:.4s;
-border:1px solid rgba(255,255,255,.1);
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card h2{
-font-size:2rem;
-margin-bottom:15px;
-}
-
-.gain{
-border-top:5px solid #22c55e;
-}
-
-.loss{
-border-top:5px solid #ef4444;
-}
-
-.icon{
-font-size:70px;
-margin-bottom:20px;
-}
-
-.section-title{
-text-align:center;
-font-size:2.8rem;
-margin-top:40px;
-}
-
-.calculator{
-padding:70px 20px;
-text-align:center;
-}
-
-.box{
-max-width:500px;
-margin:auto;
-background:rgba(255,255,255,.08);
-padding:30px;
-border-radius:20px;
-}
-
-input{
-width:100%;
-padding:15px;
-margin:10px 0;
-border:none;
-border-radius:10px;
-font-size:16px;
-}
-
-.calculate{
-width:100%;
-padding:15px;
-background:#3b82f6;
-color:white;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-}
-
-.result{
-margin-top:20px;
-font-size:22px;
-font-weight:600;
-}
-
-.progress-section{
-padding:80px 0;
-}
-
-.progress-box{
-margin:25px 0;
-}
-
-.progress-title{
-margin-bottom:10px;
-}
-
-.progress{
-height:20px;
-background:#334155;
-border-radius:20px;
-overflow:hidden;
-}
-
-.fill{
-height:100%;
-width:0;
-border-radius:20px;
-transition:2s;
-}
-
-.green{
-background:#22c55e;
-}
-
-.red{
-background:#ef4444;
-}
-
-footer{
-text-align:center;
-padding:40px;
-background:#020617;
-margin-top:50px;
-}
-
-@keyframes slideDown{
-from{
-transform:translateY(-80px);
-opacity:0;
-}
-to{
-transform:translateY(0);
-opacity:1;
-}
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-}
-to{
-opacity:1;
-}
-}
-
-.reveal{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    
+    <!-- =========================================
+        WEIGHT GAIN & WEIGHT LOSS PAGE
+        PART 1
+========================================= -->
 
-<header>
-<h1>FitLife</h1>
-<p>
-Transform your body with healthy Weight Gain and Weight Loss plans.
-Track BMI, progress and stay motivated.
-</p>
+<main class="weight-management-page">
 
-<button class="btn" onclick="scrollToSection()">
-Get Started
-</button>
-</header>
+    <!-- =========================================
+                HERO SECTION
+    ========================================= -->
 
-<div class="container">
+    <section class="weight-hero">
 
-<h2 class="section-title reveal">Choose Your Goal</h2>
+        <div class="hero-bg-circle circle-1"></div>
+        <div class="hero-bg-circle circle-2"></div>
+        <div class="hero-bg-circle circle-3"></div>
 
-<div class="cards">
+        <div class="container">
 
-<div class="card gain reveal">
-<div class="icon">💪</div>
-<h2>Weight Gain</h2>
-<p>
-Build muscle, increase strength and gain healthy weight with balanced nutrition.
-</p>
-</div>
+            <div class="weight-hero-grid">
 
-<div class="card loss reveal">
-<div class="icon">🔥</div>
-<h2>Weight Loss</h2>
-<p>
-Burn fat, stay fit and achieve your dream physique with smart workouts.
-</p>
-</div>
+                <!-- LEFT -->
 
-</div>
+                <div class="weight-hero-content">
 
-<section class="calculator reveal">
+                    <span class="section-tag">
+                        <i class="fa-solid fa-fire"></i>
+                        VitalNess Body Transformation
+                    </span>
 
-<h2 class="section-title">BMI Calculator</h2>
+                    <h1>
+                        Transform Your Body
+                        <span>Weight Gain</span>
+                        &
+                        <span>Weight Loss</span>
+                        Journey Starts Today
+                    </h1>
 
-<div class="box">
+                    <p>
 
-<input type="number" id="height" placeholder="Height (cm)">
-<input type="number" id="weight" placeholder="Weight (kg)">
+                        Whether your goal is burning fat or building muscle,
+                        VitalNess provides expert workout plans, healthy meal
+                        programs, calorie tracking and personalized guidance
+                        for sustainable fitness results.
 
-<button class="calculate" onclick="calculateBMI()">
-Calculate BMI
-</button>
+                    </p>
 
-<div class="result" id="result"></div>
+                    <div class="hero-buttons">
 
-</div>
+                        <a href="#goal" class="primary-btn">
 
-</section>
+                            Start Your Journey
 
-<section class="progress-section reveal">
+                        </a>
 
-<h2 class="section-title">Progress Tracker</h2>
+                        <a href="#plans" class="secondary-btn">
 
-<div class="progress-box">
-<div class="progress-title">Weight Gain Progress</div>
-<div class="progress">
-<div class="fill green" id="gainBar"></div>
-</div>
-</div>
+                            Explore Plans
 
-<div class="progress-box">
-<div class="progress-title">Weight Loss Progress</div>
-<div class="progress">
-<div class="fill red" id="lossBar"></div>
-</div>
-</div>
+                        </a>
 
-</section>
+                    </div>
 
-</div>
+                    <!-- Hero Stats -->
 
-<footer>
-© 2026 FitLife | Weight Gain & Weight Loss Program
-</footer>
+                    <div class="hero-stats">
 
-<script>
+                        <div class="hero-stat">
 
-function calculateBMI(){
+                            <h2>15K+</h2>
+                            <p>Members</p>
 
-let h=document.getElementById("height").value/100;
-let w=document.getElementById("weight").value;
+                        </div>
 
-if(!h || !w){
-alert("Enter Height and Weight");
-return;
-}
+                        <div class="hero-stat">
 
-let bmi=(w/(h*h)).toFixed(1);
+                            <h2>95%</h2>
+                            <p>Success Rate</p>
 
-let status="";
+                        </div>
 
-if(bmi<18.5){
-status="Underweight";
-}
-else if(bmi<25){
-status="Normal";
-}
-else if(bmi<30){
-status="Overweight";
-}
-else{
-status="Obese";
-}
+                        <div class="hero-stat">
 
-document.getElementById("result").innerHTML=
-"BMI: "+bmi+"<br>"+status;
+                            <h2>24/7</h2>
+                            <p>Support</p>
 
-}
+                        </div>
 
-function scrollToSection(){
-window.scrollTo({
-top:700,
-behavior:"smooth"
-});
-}
+                    </div>
 
-window.addEventListener("scroll",()=>{
+                </div>
 
-document.querySelectorAll(".reveal").forEach(el=>{
+                <!-- RIGHT -->
 
-let windowHeight=window.innerHeight;
-let top=el.getBoundingClientRect().top;
+                <div class="weight-hero-image">
 
-if(top<windowHeight-100){
-el.classList.add("active");
-}
+                    <img src="images/weight-hero.png" alt="Fitness">
 
-});
+                    <!-- Floating Card -->
 
-});
+                    <div class="floating-card calories-card">
 
-window.onload=()=>{
+                        <i class="fa-solid fa-fire"></i>
 
-setTimeout(()=>{
-document.getElementById("gainBar").style.width="80%";
-document.getElementById("lossBar").style.width="65%";
-},1000);
+                        <div>
 
-};
-</script>
+                            <h4>Calories Burned</h4>
+                            <span>520 kcal</span>
 
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card bmi-card">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                        <div>
+
+                            <h4>BMI Score</h4>
+                            <span>22.4 Healthy</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card water-card">
+
+                        <i class="fa-solid fa-glass-water"></i>
+
+                        <div>
+
+                            <h4>Water Intake</h4>
+                            <span>2.5 L Today</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+            WHY WEIGHT MANAGEMENT
+    ========================================= -->
+
+    <section class="weight-benefits">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Why It Matters</span>
+
+                <h2>
+
+                    Healthy Weight,
+                    Healthier Life
+
+                </h2>
+
+                <p>
+
+                    Maintaining a healthy weight improves your energy,
+                    confidence, heart health and overall quality of life.
+
+                </p>
+
+            </div>
+
+            <div class="benefits-grid">
+
+                <!-- Card -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Better Heart Health
+
+                    </h3>
+
+                    <p>
+
+                        Reduce the risk of heart disease with
+                        balanced nutrition and regular exercise.
+
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Higher Energy
+
+                    </h3>
+
+                    <p>
+
+                        Feel active throughout the day with
+                        proper diet and workout routines.
+
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Mental Wellness
+
+                    </h3>
+
+                    <p>
+
+                        Exercise boosts mood,
+                        reduces stress and improves focus.
+
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-dumbbell"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Stronger Body
+
+                    </h3>
+
+                    <p>
+
+                        Build strength, improve endurance
+                        and increase muscle mass naturally.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+                CHOOSE YOUR GOAL
+    ========================================= -->
+
+    <section class="goal-section" id="goal">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Your Goal</span>
+
+                <h2>
+
+                    Choose Your Fitness Mission
+
+                </h2>
+
+                <p>
+
+                    Select the path that matches your
+                    body transformation journey.
+
+                </p>
+
+            </div>
+
+            <div class="goal-grid">
+
+                <!-- Weight Loss -->
+
+                <div class="goal-card weight-loss">
+
+                    <div class="goal-top">
+
+                        <div class="goal-icon">
+
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+
+                        </div>
+
+                        <span>
+
+                            Weight Loss
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Burn Fat &
+                        Stay Fit
+
+                    </h3>
+
+                    <p>
+
+                        Lose excess body fat through
+                        calorie deficit, cardio training,
+                        healthy eating and daily activity.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Fat Burning Workouts
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            HIIT Programs
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Cardio Sessions
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Healthy Meal Plans
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Calorie Tracking
+
+                        </li>
+
+                    </ul>
+
+                    <a href="#plans" class="goal-btn">
+
+                        Start Losing Weight
+
+                    </a>
+
+                </div>
+
+                <!-- Weight Gain -->
+
+                <div class="goal-card weight-gain">
+
+                    <div class="goal-top">
+
+                        <div class="goal-icon">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+                        <span>
+
+                            Weight Gain
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Build Muscle &
+                        Gain Strength
+
+                    </h3>
+
+                    <p>
+
+                        Increase lean muscle through
+                        strength training, protein-rich meals,
+                        recovery and progressive overload.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Strength Training
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Muscle Building
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Protein Diet
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Recovery Guide
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Progress Tracking
+
+                        </li>
+
+                    </ul>
+
+                    <a href="#plans" class="goal-btn">
+
+                        Start Gaining Muscle
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ===========================
+    PART 1 END
+PART 2 STARTS FROM BMI SECTION
+=========================== -->
 </body>
 </html>
