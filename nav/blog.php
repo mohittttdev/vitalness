@@ -582,6 +582,529 @@ input{
     color:var(--text);
 
 }
+/*=========================================
+            HERO SECTION
+=========================================*/
+
+.hero{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:140px 7% 90px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+
+    position:relative;
+
+}
+
+.hero-left{
+
+    animation:fadeLeft 1s ease;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+    border:1px solid var(--border);
+
+}
+
+.hero h1{
+
+    font-size:72px;
+    line-height:1.08;
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+    max-width:600px;
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================
+        HERO BUTTONS
+=========================================*/
+
+.hero-buttons{
+
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+
+}
+
+.primary-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:60px;
+
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.secondary-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:16px 34px;
+
+    border-radius:60px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=========================================
+            HERO STATS
+=========================================*/
+
+.hero-stats{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.stat-card{
+
+    min-width:150px;
+
+    padding:25px;
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h2{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+}
+
+.stat-card span{
+
+    color:var(--text-light);
+
+}
+
+/*=========================================
+        HERO IMAGE
+=========================================*/
+
+.hero-right{
+
+    display:flex;
+    justify-content:center;
+
+    animation:fadeRight 1s ease;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    width:100%;
+    max-width:620px;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    height:700px;
+
+    object-fit:cover;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+/*=========================================
+        FLOATING CARDS
+=========================================*/
+
+.floating-card{
+
+    position:absolute;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:var(--shadow);
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+body.dark .floating-card{
+
+    background:rgba(20,20,20,.75);
+
+}
+
+.floating-card i{
+
+    width:50px;
+    height:50px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:20px;
+
+}
+
+.floating-card h4{
+
+    font-size:16px;
+
+}
+
+.floating-card p{
+
+    margin-top:4px;
+
+    font-size:14px;
+
+    color:var(--text-light);
+
+}
+
+.card1{
+
+    top:50px;
+
+    left:-60px;
+
+}
+
+.card2{
+
+    right:-40px;
+
+    top:250px;
+
+}
+
+.card3{
+
+    bottom:40px;
+
+    left:-50px;
+
+}
+
+/*=========================================
+        SEARCH SECTION
+=========================================*/
+
+.search-section{
+
+    padding:90px 7%;
+
+}
+
+.search-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 22px;
+
+    border-radius:70px;
+
+    background:var(--card);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+.search-box i{
+
+    font-size:22px;
+
+    color:var(--primary);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:17px;
+
+}
+
+.search-box button{
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.search-box button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*=========================================
+        POPULAR TAGS
+=========================================*/
+
+.popular-tags{
+
+    margin-top:35px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.popular-tags span{
+
+    font-weight:700;
+
+}
+
+.popular-tags a{
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    color:var(--text-light);
+
+    transition:.35s;
+
+}
+
+.popular-tags a:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=========================================
+            ANIMATIONS
+=========================================*/
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
  </style>
 
 </head>
