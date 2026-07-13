@@ -1105,6 +1105,459 @@ body.dark .floating-card{
     }
 
 }
+/*=========================================
+            VIDEOS SECTION
+=========================================*/
+
+.videos-section{
+
+    padding:100px 7%;
+
+}
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:35px;
+
+}
+
+.video-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.video-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.video-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.video-image img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.video-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.play-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.9);
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.video-card:hover .play-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translate(-50%,-50%) scale(1.1);
+
+}
+
+.video-content{
+
+    padding:30px;
+
+}
+
+.video-content span{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.video-content h3{
+
+    margin:15px 0;
+
+    font-size:24px;
+
+}
+
+.video-content p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+            EXPERT SECTION
+=========================================*/
+
+.experts{
+
+    padding:100px 7%;
+
+    background:var(--bg2);
+
+}
+
+.expert-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.expert-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.expert-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.expert-card img{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    border:5px solid var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.expert-card h3{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+.expert-card span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.expert-card p{
+
+    margin-top:18px;
+
+    line-height:1.8;
+
+    color:var(--text-light);
+
+}
+
+/*=========================================
+            BMI SECTION
+=========================================*/
+
+.bmi-section{
+
+    padding:100px 7%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.bmi-content span{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.bmi-content h2{
+
+    font-size:52px;
+
+    margin:20px 0;
+
+}
+
+.bmi-content p{
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.bmi-image img{
+
+    width:100%;
+
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+/*=========================================
+            AI ASSISTANT
+=========================================*/
+
+.ai-section{
+
+    padding:100px 7%;
+
+}
+
+.ai-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    border-radius:35px;
+
+    padding:70px;
+
+    overflow:hidden;
+
+    color:#fff;
+
+}
+
+.ai-badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:rgba(255,255,255,.2);
+
+    border-radius:40px;
+
+    margin-bottom:20px;
+
+}
+
+.ai-left h2{
+
+    font-size:54px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.ai-left p{
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+    opacity:.95;
+
+}
+
+.ai-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.ai-buttons .primary-btn{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+.ai-buttons .secondary-btn{
+
+    border:2px solid #fff;
+
+    color:#fff;
+
+}
+
+.ai-buttons .secondary-btn:hover{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+.ai-right img{
+
+    width:100%;
+
+    border-radius:30px;
+
+    object-fit:cover;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+/*=========================================
+            GALLERY
+=========================================*/
+
+.gallery{
+
+    padding:100px 7%;
+
+    background:var(--bg2);
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:var(--shadow-hover);
+
+}
  </style>
 
 </head>
