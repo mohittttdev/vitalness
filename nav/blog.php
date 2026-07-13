@@ -1,878 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VitalNess Blog</title>
-<style> 
-    /*=========================================
-        GOOGLE FONT
-=========================================*/
+<title>VitalNess | Premium Blog</title>
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-/*=========================================
-        ROOT VARIABLES
-=========================================*/
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
-:root{
-
-    --primary:#22c55e;
-    --primary-dark:#16a34a;
-
-    --bg:#f7fff9;
-    --bg2:#ecfdf3;
-
-    --text:#0f172a;
-    --muted:#64748b;
-
-    --card:rgba(255,255,255,.75);
-    --border:rgba(34,197,94,.15);
-
-    --shadow:0 20px 60px rgba(0,0,0,.08);
-
-    --radius:22px;
-
-}
-
-
-/*=========================================
-        DARK MODE
-=========================================*/
-
-body.dark{
-
-    --bg:#06140d;
-    --bg2:#0b1f14;
-
-    --text:#ffffff;
-    --muted:#cbd5e1;
-
-    --card:rgba(255,255,255,.06);
-
-    --border:rgba(255,255,255,.08);
-
-}
-
-
-/*=========================================
-        GLOBAL RESET
-=========================================*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Outfit',sans-serif;
-}
-
-body{
-    background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
-    transition:.4s;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-
-/*=========================================
-        NAVBAR
-=========================================*/
-
-.navbar{
-
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:18px 7%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid var(--border);
-
-    z-index:999;
-
-}
-
-.logo{
-
-    font-size:24px;
-    font-weight:800;
-}
-
-.logo span{
-    color:var(--primary);
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
-.nav-links a{
-    font-weight:500;
-    color:var(--muted);
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:var(--primary);
-}
-
-.nav-btn{
-
-    padding:10px 22px;
-    border-radius:50px;
-    border:none;
-
-    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-    color:white;
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.nav-btn:hover{
-    transform:translateY(-3px);
-}
-
-
-/*=========================================
-        HERO SECTION
-=========================================*/
-
-.hero{
-
-    min-height:100vh;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    padding:120px 7% 80px;
-
-    position:relative;
-    gap:50px;
-
-}
-
-.hero h1{
-
-    font-size:64px;
-    line-height:1.1;
-}
-
-.hero h1 span{
-    color:var(--primary);
-}
-
-.hero p{
-
-    margin:20px 0;
-    color:var(--muted);
-    max-width:500px;
-    line-height:1.8;
-}
-
-.btn{
-
-    padding:14px 28px;
-    border-radius:50px;
-    border:none;
-
-    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-    color:white;
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-5px);
-}
-
-
-/*=========================================
-        HERO VIDEO
-=========================================*/
-
-.hero-video{
-
-    width:100%;
-    height:500px;
-    object-fit:cover;
-
-    border-radius:30px;
-    box-shadow:var(--shadow);
-}
-
-
-/*=========================================
-        BLOG SECTION
-=========================================*/
-
-.blog-section{
-
-    padding:100px 7%;
-    background:var(--bg2);
-}
-
-.section-title{
-
-    text-align:center;
-    font-size:42px;
-    margin-bottom:60px;
-}
-
-.blog-grid{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-
-/*=========================================
-        BLOG CARD
-=========================================*/
-
-.blog-card{
-
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    overflow:hidden;
-
-    transition:.4s;
-    backdrop-filter:blur(15px);
-
-    box-shadow:var(--shadow);
-}
-
-.blog-card:hover{
-    transform:translateY(-10px);
-}
-
-.blog-card img{
-
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.blog-content{
-    padding:20px;
-}
-
-.blog-category{
-
-    display:inline-block;
-    padding:5px 12px;
-    background:rgba(34,197,94,.15);
-    color:var(--primary);
-    border-radius:50px;
-    font-size:12px;
-    margin-bottom:10px;
-}
-
-.blog-title{
-    font-size:20px;
-    margin-bottom:10px;
-}
-
-.blog-text{
-    color:var(--muted);
-    font-size:14px;
-    line-height:1.7;
-}
-
-
-/*=========================================
-        NEWSLETTER
-=========================================*/
-
-.newsletter{
-
-    padding:100px 7%;
-    text-align:center;
-}
-
-.newsletter input{
-
-    padding:14px 20px;
-    width:300px;
-    border-radius:50px;
-    border:1px solid var(--border);
-    outline:none;
-
-    margin-top:20px;
-}
-
-.newsletter button{
-
-    padding:14px 24px;
-    border:none;
-
-    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-    color:white;
-
-    border-radius:50px;
-    margin-left:10px;
-
-    cursor:pointer;
-}
-
-
-/*=========================================
-        FOOTER
-=========================================*/
-
-footer{
-
-    background:#0b1f14;
-    color:white;
-
-    padding:80px 7% 30px;
-}
-
-.footer-content{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:40px;
-    margin-bottom:40px;
-}
-
-.footer-section h3,
-.footer-section h4{
-    margin-bottom:15px;
-}
-
-.footer-section ul{
-    list-style:none;
-}
-
-.footer-section ul li{
-    margin-bottom:10px;
-}
-
-.footer-section ul li a{
-    color:#cbd5e1;
-    transition:.3s;
-}
-
-.footer-section ul li a:hover{
-    color:var(--primary);
-}
-
-.footer-bottom{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    border-top:1px solid rgba(255,255,255,.1);
-    padding-top:20px;
-}
-
-.social-links a{
-    margin-left:15px;
-    color:#cbd5e1;
-}
-
-.social-links a:hover{
-    color:var(--primary);
-}
-
-
-/*=========================================
-        RESPONSIVE
-=========================================*/
-
-@media(max-width:992px){
-
-.hero{
-    grid-template-columns:1fr;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero p{
-    margin:auto;
-}
-
-.hero-video{
-    height:350px;
-}
-
-.nav-links{
-    display:none;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero h1{
-    font-size:34px;
-}
-
-.newsletter input{
-    width:100%;
-    margin-bottom:10px;
-}
-
-.newsletter button{
-    width:100%;
-    margin-left:0;
-}
-
-.footer-bottom{
-    flex-direction:column;
-    gap:15px;
-}
-}
-</style>
+<link rel="stylesheet" href="blog.css">
 
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!--=========================================
+                LOADER
+==========================================-->
+
+<div class="loader">
+
+    <div class="loader-circle"></div>
+
+    <h2>Vital<span>Ness</span></h2>
+
+</div>
+
+<!--=========================================
+                BACKGROUND
+==========================================-->
+
+<div class="bg-gradient bg1"></div>
+<div class="bg-gradient bg2"></div>
+<div class="bg-gradient bg3"></div>
+
+<!--=========================================
+                NAVBAR
+==========================================-->
 
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="#" class="logo">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
         <span>Vital</span>Ness
-    </div>
+
+    </a>
 
     <ul class="nav-links">
+
         <li><a href="#">Home</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">Workouts</a></li>
-        <li><a href="#">Nutrition</a></li>
+
+        <li><a href="#" class="active">Blog</a></li>
+
+        <li><a href="#">Recipes</a></li>
+
+        <li><a href="#">Workout</a></li>
+
+        <li><a href="#">Weight Loss</a></li>
+
         <li><a href="#">Contact</a></li>
+
     </ul>
 
-    <button class="nav-btn">Join Now</button>
+    <div class="nav-right">
+
+        <button class="search-btn">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+        <button id="themeToggle" class="theme-btn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <a href="#" class="join-btn">
+
+            Join Free
+
+        </a>
+
+        <button class="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
 
 </nav>
 
-
-<!-- ================= HERO ================= -->
+<!--=========================================
+            HERO SECTION
+==========================================-->
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-left">
 
-        <span class="badge">🔥 Health • Fitness • Wellness</span>
+<div class="hero-badge">
 
-        <h1>
-            Build A <span>Healthy</span><br>
-            Lifestyle
-        </h1>
+<i class="fa-solid fa-fire"></i>
 
-        <p>
-            Discover fitness routines, nutrition guides,
-            and wellness tips that help you stay stronger,
-            healthier, and more energetic every day.
-        </p>
+Trending Health Blog
 
-        <div class="hero-actions">
-            <button class="btn primary">Explore Blogs</button>
-            <button class="btn secondary">Watch Demo</button>
-        </div>
+</div>
 
-    </div>
+<h1>
 
-    <div class="hero-media">
+Transform Your
 
-        <div class="video-wrapper">
+<span>Health</span>
 
-            <video autoplay muted loop playsinline>
-                <source src="istockphoto-538828082-640_adpp_is.mp4">
-            </video>
+With Expert
 
-        </div>
+Advice
 
-    </div>
+</h1>
 
-</section>
+<p>
 
+Explore evidence-based fitness tips, healthy recipes,
+weight loss guides, workout plans, nutrition advice,
+and wellness articles written to help you become the
+best version of yourself.
 
-<!-- ================= BLOGS ================= -->
+</p>
 
-<section class="blog-section">
+<div class="hero-buttons">
 
-    <div class="section-header">
+<a href="#blogs" class="primary-btn">
 
-        <h2>Latest Articles</h2>
-        <p>Fresh health & fitness insights to upgrade your lifestyle</p>
+Explore Blogs
 
-    </div>
+<i class="fa-solid fa-arrow-right"></i>
 
-    <div class="blog-grid">
+</a>
 
-        <!-- CARD 1 -->
-        <div class="blog-card">
+<a href="#featured" class="secondary-btn">
 
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop">
-                <span class="tag">Nutrition</span>
-            </div>
+Watch Stories
 
-            <div class="blog-content">
+</a>
 
-                <h3>Best Foods For Muscle Recovery</h3>
+</div>
 
-                <p>
-                    Learn how protein, hydration, and balanced meals
-                    improve recovery and boost muscle growth.
-                </p>
+<div class="hero-stats">
 
-                <a href="#">Read More →</a>
+<div class="stat-card">
 
-            </div>
+<h2>120+</h2>
 
-        </div>
+<span>Expert Articles</span>
 
+</div>
 
-        <!-- CARD 2 -->
-        <div class="blog-card">
+<div class="stat-card">
 
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop">
-                <span class="tag">Fitness</span>
-            </div>
+<h2>50K+</h2>
 
-            <div class="blog-content">
+<span>Monthly Readers</span>
 
-                <h3>Morning Workout Benefits</h3>
+</div>
 
-                <p>
-                    Starting your day with exercise improves energy,
-                    focus, metabolism, and overall health.
-                </p>
+<div class="stat-card">
 
-                <a href="#">Read More →</a>
+<h2>98%</h2>
 
-            </div>
+<span>Positive Reviews</span>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- CARD 3 -->
-        <div class="blog-card">
+</div>
 
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop">
-                <span class="tag">Wellness</span>
-            </div>
+<!--=========================-->
 
-            <div class="blog-content">
+<div class="hero-right">
 
-                <h3>Healthy Eating Made Simple</h3>
+<div class="hero-image">
 
-                <p>
-                    Simple habits and meal planning strategies
-                    for maintaining a healthy lifestyle.
-                </p>
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80&auto=format&fit=crop"
+alt="Fitness">
 
-                <a href="#">Read More →</a>
+<!-- Floating Cards -->
 
-            </div>
+<div class="floating-card card1">
 
-        </div>
+<i class="fa-solid fa-heart-pulse"></i>
 
-    </div>
+<div>
 
-</section>
+<h4>Heart Rate</h4>
 
+<p>78 BPM</p>
 
-<!-- ================= NEWSLETTER ================= -->
+</div>
 
-<section class="newsletter">
+</div>
 
-    <div class="newsletter-box">
+<div class="floating-card card2">
 
-        <h2>Stay Updated</h2>
+<i class="fa-solid fa-fire"></i>
 
-        <p>Get weekly fitness & nutrition tips directly in your inbox</p>
+<div>
 
-        <div class="input-box">
+<h4>Calories</h4>
 
-            <input type="email" placeholder="Enter your email">
+<p>528 kcal</p>
 
-            <button>Subscribe</button>
+</div>
 
-        </div>
+</div>
 
-    </div>
+<div class="floating-card card3">
+
+<i class="fa-solid fa-dumbbell"></i>
+
+<div>
+
+<h4>Workout</h4>
+
+<p>45 Minutes</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+<!--=========================================
+            SEARCH SECTION
+==========================================-->
 
-<!-- ================= FOOTER ================= -->
+<section class="search-section">
 
-<footer class="footer">
+<div class="search-box">
 
-    <div class="footer-grid">
+<i class="fa-solid fa-magnifying-glass"></i>
 
-        <div class="footer-col">
+<input
+type="text"
+placeholder="Search articles, nutrition, recipes, workouts...">
 
-            <h3>VitalNess</h3>
+<button>
 
-            <p>
-                Empowering healthier lives with smart fitness tracking,
-                workouts, and wellness solutions.
-            </p>
+Search
 
-        </div>
+</button>
 
-        <div class="footer-col">
-            <h4>Company</h4>
-            <a href="#">About Us</a>
-            <a href="#">Team</a>
-            <a href="#">Contact</a>
-        </div>
+</div>
 
-        <div class="footer-col">
-            <h4>Features</h4>
-            <a href="#">BMI Calculator</a>
-            <a href="#">Workout Plans</a>
-            <a href="#">Diet Tracking</a>
-        </div>
+<div class="popular-tags">
 
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
-            <a href="#">Cookies</a>
-        </div>
+<span>Popular :</span>
 
-    </div>
+<a href="#">Weight Loss</a>
 
-    <div class="footer-bottom">
+<a href="#">Protein</a>
 
-        <p>© 2026 VitalNess. All rights reserved.</p>
+<a href="#">Muscle Gain</a>
 
-        <div class="socials">
-            <a href="#">Twitter</a>
-            <a href="#">YouTube</a>
-            <a href="#">LinkedIn</a>
-        </div>
+<a href="#">Yoga</a>
 
-    </div>
+<a href="#">Healthy Diet</a>
 
-</footer>
-<script>
+<a href="#">Cardio</a>
 
+</div>
 
-    /*=========================================
-        VITALNESS BLOG JS
-=========================================*/
+</section>
 
+<!--=========================================
+        FEATURED ARTICLE
+==========================================-->
 
-/*=========================================
-        DARK MODE TOGGLE (AUTO BUTTON)
-=========================================*/
+<section class="featured" id="featured">
 
-const themeBtn = document.createElement("button");
+<div class="featured-image">
 
-themeBtn.innerText = "🌙";
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80&auto=format&fit=crop"
+alt="Featured">
 
-themeBtn.style.position = "fixed";
-themeBtn.style.bottom = "20px";
-themeBtn.style.right = "20px";
-themeBtn.style.zIndex = "9999";
-themeBtn.style.padding = "12px 16px";
-themeBtn.style.borderRadius = "50px";
-themeBtn.style.border = "none";
-themeBtn.style.cursor = "pointer";
-themeBtn.style.background = "#22c55e";
-themeBtn.style.color = "#fff";
+<div class="featured-badge">
 
-document.body.appendChild(themeBtn);
+Editor's Choice
 
-themeBtn.addEventListener("click", () => {
+</div>
 
-    document.body.classList.toggle("dark");
+</div>
 
-    themeBtn.innerText = document.body.classList.contains("dark") ? "☀️" : "🌙";
+<div class="featured-content">
 
-});
+<span class="category">
 
+Nutrition
 
-/*=========================================
-        SMOOTH SCROLL
-=========================================*/
+</span>
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+<h2>
 
-    anchor.addEventListener("click", function(e){
+The Ultimate Healthy Eating Guide
+For Better Energy & Long-Term Fitness
 
-        e.preventDefault();
+</h2>
 
-        const target = document.querySelector(this.getAttribute("href"));
+<p>
 
-        if(target){
+Discover science-backed nutrition strategies that help
+boost metabolism, improve recovery, support weight loss,
+and maintain overall wellness.
 
-            target.scrollIntoView({
-                behavior:"smooth"
-            });
+</p>
 
-        }
+<div class="article-meta">
 
-    });
+<div>
 
-});
+<i class="fa-solid fa-user"></i>
 
+Admin
 
-/*=========================================
-        NAVBAR SCROLL EFFECT
-=========================================*/
+</div>
 
-const navbar = document.querySelector(".navbar");
+<div>
 
-window.addEventListener("scroll", () => {
+<i class="fa-solid fa-calendar"></i>
 
-    if(window.scrollY > 50){
+June 2026
 
-        navbar.style.background = "rgba(0,0,0,.4)";
-        navbar.style.backdropFilter = "blur(20px)";
+</div>
 
-    } else {
+<div>
 
-        navbar.style.background = "rgba(255,255,255,.08)";
-    }
+<i class="fa-solid fa-clock"></i>
 
-});
+8 Min Read
 
+</div>
 
-/*=========================================
-        BLOG CARD ANIMATION (SCROLL REVEAL)
-=========================================*/
+</div>
 
-const cards = document.querySelectorAll(".blog-card");
+<a href="#" class="read-btn">
 
-const observer = new IntersectionObserver((entries) => {
+Read Full Article
 
-    entries.forEach(entry => {
+<i class="fa-solid fa-arrow-right"></i>
 
-        if(entry.isIntersecting){
+</a>
 
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
+</div>
 
-        }
+</section>
 
-    });
+<!--=========================================
+        PART 1 END
+==========================================-->
 
-}, { threshold: 0.2 });
+<script src="blog.js"></script>
 
-
-cards.forEach(card => {
-
-    card.style.opacity = 0;
-    card.style.transform = "translateY(50px)";
-    card.style.transition = "0.6s ease";
-
-    observer.observe(card);
-
-});
-
-
-/*=========================================
-        NEWSLETTER VALIDATION
-=========================================*/
-
-const input = document.querySelector(".newsletter input");
-const btn = document.querySelector(".newsletter button");
-
-btn.addEventListener("click", () => {
-
-    const email = input.value;
-
-    if(!email.includes("@") || email.length < 5){
-
-        alert("Please enter a valid email!");
-
-        return;
-
-    }
-
-    btn.innerText = "Subscribed ✔";
-
-    btn.style.background = "#16a34a";
-
-    input.value = "";
-
-});
-
-
-/*=========================================
-        HERO BUTTON EFFECT
-=========================================*/
-
-const heroBtn = document.querySelector(".btn");
-
-heroBtn.addEventListener("click", () => {
-
-    alert("Redirecting to blog section 🚀");
-
-    document.querySelector(".blog-section")
-    .scrollIntoView({ behavior: "smooth" });
-
-});
-
-
-/*=========================================
-        PARALLAX HERO (OPTIONAL FEEL)
-=========================================*/
-
-window.addEventListener("scroll", () => {
-
-    const heroVideo = document.querySelector(".hero-video");
-
-    if(heroVideo){
-
-        heroVideo.style.transform = `translateY(${window.scrollY * 0.2}px)`;
-
-    }
-
-});
-
-
-/*=========================================
-        AUTO ACTIVE ANIMATIONS
-=========================================*/
-
-window.addEventListener("load", () => {
-
-    document.body.style.opacity = "0";
-
-    setTimeout(() => {
-
-        document.body.style.transition = "1s";
-        document.body.style.opacity = "1";
-
-    }, 100);
-
-});
-</script>
 </body>
 </html>
