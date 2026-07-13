@@ -714,6 +714,331 @@ Read Full Article
     </div>
 
 </section>
+<!--=========================================
+        FEATURED VIDEOS
+==========================================-->
+
+<section class="videos-section">
+
+    <div class="section-heading">
+
+        <span>Watch & Learn</span>
+
+        <h2>Latest Health Videos</h2>
+
+        <p>
+            Learn fitness, nutrition and healthy lifestyle through
+            expert video guides.
+        </p>
+
+    </div>
+
+    <div class="video-grid">
+
+        <!-- Video 1 -->
+
+        <div class="video-card">
+
+            <div class="video-image">
+
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=80&auto=format&fit=crop">
+
+                <div class="play-btn">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </div>
+
+            </div>
+
+            <div class="video-content">
+
+                <span>Workout</span>
+
+                <h3>20 Minute Fat Burning Home Workout</h3>
+
+                <p>
+
+                    Burn calories without gym equipment.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Video 2 -->
+
+        <div class="video-card">
+
+            <div class="video-image">
+
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80&auto=format&fit=crop">
+
+                <div class="play-btn">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </div>
+
+            </div>
+
+            <div class="video-content">
+
+                <span>Nutrition</span>
+
+                <h3>Healthy Eating For Everyday Life</h3>
+
+                <p>
+
+                    Build healthy eating habits easily.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Video 3 -->
+
+        <div class="video-card">
+
+            <div class="video-image">
+
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80&auto=format&fit=crop">
+
+                <div class="play-btn">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </div>
+
+            </div>
+
+            <div class="video-content">
+
+                <span>Yoga</span>
+
+                <h3>Morning Yoga For Beginners</h3>
+
+                <p>
+
+                    Increase flexibility and reduce stress.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+            EXPERT TIPS
+==========================================-->
+
+<section class="experts">
+
+    <div class="section-heading">
+
+        <span>Meet Experts</span>
+
+        <h2>Health Professionals</h2>
+
+    </div>
+
+    <div class="expert-grid">
+
+        <div class="expert-card">
+
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+            <h3>Dr. Sarah Johnson</h3>
+
+            <span>Nutrition Expert</span>
+
+            <p>
+
+                Specialized in sports nutrition and healthy eating.
+
+            </p>
+
+        </div>
+
+        <div class="expert-card">
+
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+            <h3>Michael Lee</h3>
+
+            <span>Fitness Coach</span>
+
+            <p>
+
+                Certified personal trainer with 10+ years experience.
+
+            </p>
+
+        </div>
+
+        <div class="expert-card">
+
+            <img src="https://randomuser.me/api/portraits/women/65.jpg">
+
+            <h3>Emma Wilson</h3>
+
+            <span>Yoga Instructor</span>
+
+            <p>
+
+                Helping thousands improve flexibility & mindfulness.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+            BMI CTA
+==========================================-->
+
+<section class="bmi-section">
+
+    <div class="bmi-content">
+
+        <span>Free Tool</span>
+
+        <h2>
+
+            Check Your BMI
+            In Seconds
+
+        </h2>
+
+        <p>
+
+            Know whether your weight is healthy and receive
+            personalized recommendations.
+
+        </p>
+
+        <a href="#" class="primary-btn">
+
+            Calculate BMI
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+    <div class="bmi-image">
+
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1200&q=80&auto=format&fit=crop">
+
+    </div>
+
+</section>
+
+<!--=========================================
+        AI HEALTH ASSISTANT
+==========================================-->
+
+<section class="ai-section">
+
+    <div class="ai-card">
+
+        <div class="ai-left">
+
+            <span class="ai-badge">
+
+                🤖 AI Powered
+
+            </span>
+
+            <h2>
+
+                Meet Your
+                AI Health Assistant
+
+            </h2>
+
+            <p>
+
+                Ask anything about nutrition, workouts,
+                weight loss, weight gain, calories,
+                BMI, healthy recipes and wellness.
+
+            </p>
+
+            <div class="ai-buttons">
+
+                <a href="#" class="primary-btn">
+
+                    Start Chat
+
+                </a>
+
+                <a href="#" class="secondary-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="ai-right">
+
+            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900&q=80&auto=format&fit=crop">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        INSTAGRAM GALLERY
+==========================================-->
+
+<section class="gallery">
+
+    <div class="section-heading">
+
+        <span>Community</span>
+
+        <h2>Healthy Lifestyle Gallery</h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=700&q=80&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700&q=80&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700&q=80&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=80&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=700&q=80&auto=format&fit=crop">
+
+    </div>
+
+</section>
+
+<!--=========================================
+            END PART 3
+==========================================-->
 
 <!--=========================================
         END OF PART 2
