@@ -369,6 +369,355 @@ Read Full Article
 </div>
 
 </section>
+<!--=========================================
+        TRENDING ARTICLES
+==========================================-->
+
+<section class="trending-section" id="blogs">
+
+    <div class="section-heading">
+
+        <span>Latest Articles</span>
+
+        <h2>Trending Health Blogs</h2>
+
+        <p>
+            Discover premium articles curated by fitness experts,
+            nutritionists and wellness coaches.
+        </p>
+
+    </div>
+
+    <div class="trending-grid">
+
+        <!-- Card 1 -->
+
+        <article class="blog-card">
+
+            <div class="blog-image">
+
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80&auto=format&fit=crop">
+
+                <span class="blog-tag">
+                    Fitness
+                </span>
+
+            </div>
+
+            <div class="blog-body">
+
+                <div class="blog-meta">
+
+                    <span>
+                        <i class="fa-solid fa-calendar"></i>
+                        Jul 2026
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        5 min
+                    </span>
+
+                </div>
+
+                <h3>
+
+                    7 Morning Habits That Instantly Boost Your Energy
+
+                </h3>
+
+                <p>
+
+                    Learn simple daily routines that improve focus,
+                    metabolism and overall productivity.
+
+                </p>
+
+                <a href="#" class="read-link">
+
+                    Read More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Card 2 -->
+
+        <article class="blog-card">
+
+            <div class="blog-image">
+
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop">
+
+                <span class="blog-tag">
+                    Nutrition
+                </span>
+
+            </div>
+
+            <div class="blog-body">
+
+                <div class="blog-meta">
+
+                    <span>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Admin
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        8 min
+
+                    </span>
+
+                </div>
+
+                <h3>
+
+                    Best High Protein Foods For Muscle Recovery
+
+                </h3>
+
+                <p>
+
+                    Improve muscle repair using healthy protein-rich
+                    meals and recovery strategies.
+
+                </p>
+
+                <a href="#" class="read-link">
+
+                    Read More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Card 3 -->
+
+        <article class="blog-card">
+
+            <div class="blog-image">
+
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&q=80&auto=format&fit=crop">
+
+                <span class="blog-tag">
+                    Healthy Diet
+                </span>
+
+            </div>
+
+            <div class="blog-body">
+
+                <div class="blog-meta">
+
+                    <span>
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        15K Views
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        7 min
+
+                    </span>
+
+                </div>
+
+                <h3>
+
+                    Healthy Meal Planning Made Easy
+
+                </h3>
+
+                <p>
+
+                    Weekly meal planning tips for busy professionals
+                    and students.
+
+                </p>
+
+                <a href="#" class="read-link">
+
+                    Read More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        HEALTH CATEGORIES
+==========================================-->
+
+<section class="categories">
+
+    <div class="section-heading">
+
+        <span>Explore</span>
+
+        <h2>Browse By Category</h2>
+
+    </div>
+
+    <div class="category-grid">
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-dumbbell"></i>
+
+            <h4>Workout</h4>
+
+            <p>58 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-apple-whole"></i>
+
+            <h4>Nutrition</h4>
+
+            <p>74 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-weight-scale"></i>
+
+            <h4>Weight Loss</h4>
+
+            <p>42 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-bowl-food"></i>
+
+            <h4>Weight Gain</h4>
+
+            <p>31 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-person-running"></i>
+
+            <h4>Cardio</h4>
+
+            <p>26 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-spa"></i>
+
+            <h4>Yoga</h4>
+
+            <p>33 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h4>Mental Health</h4>
+
+            <p>18 Articles</p>
+
+        </a>
+
+        <a href="#" class="category-card">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <h4>Wellness</h4>
+
+            <p>45 Articles</p>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        POPULAR TAGS
+==========================================-->
+
+<section class="popular-section">
+
+    <div class="section-heading">
+
+        <span>Popular Searches</span>
+
+        <h2>Trending Topics</h2>
+
+    </div>
+
+    <div class="tag-cloud">
+
+        <a href="#">#Protein</a>
+
+        <a href="#">#HealthyDiet</a>
+
+        <a href="#">#WeightLoss</a>
+
+        <a href="#">#Gym</a>
+
+        <a href="#">#Yoga</a>
+
+        <a href="#">#Workout</a>
+
+        <a href="#">#BMI</a>
+
+        <a href="#">#Fitness</a>
+
+        <a href="#">#MuscleGain</a>
+
+        <a href="#">#Recipes</a>
+
+        <a href="#">#Cardio</a>
+
+        <a href="#">#Meditation</a>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        END OF PART 2
+==========================================-->
 
 <!--=========================================
         PART 1 END
