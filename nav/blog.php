@@ -18,6 +18,571 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 <link rel="stylesheet" href="blog.css">
+<style>
+/*=========================================
+        GOOGLE FONT
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/*=========================================
+        ROOT VARIABLES
+=========================================*/
+
+:root{
+
+    --primary:#22c55e;
+    --primary-dark:#16a34a;
+    --secondary:#06b6d4;
+
+    --bg:#f8fffb;
+    --bg2:#eefcf4;
+
+    --white:#ffffff;
+    --text:#111827;
+    --text-light:#64748b;
+
+    --card:rgba(255,255,255,.72);
+
+    --border:rgba(34,197,94,.15);
+
+    --shadow:0 15px 50px rgba(0,0,0,.08);
+    --shadow-hover:0 25px 70px rgba(0,0,0,.15);
+
+    --radius:22px;
+
+    --transition:.4s ease;
+
+}
+
+/*=========================================
+        DARK MODE
+=========================================*/
+
+body.dark{
+
+    --bg:#08140f;
+
+    --bg2:#102018;
+
+    --card:rgba(255,255,255,.05);
+
+    --text:#ffffff;
+
+    --text-light:#cbd5e1;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/*=========================================
+        RESET
+=========================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Outfit',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    transition:.4s;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    border:none;
+
+}
+
+input{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+/*=========================================
+        CUSTOM SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--bg2);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(var(--primary),var(--secondary));
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/*=========================================
+        SELECTION
+=========================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=========================================
+        LOADER
+=========================================*/
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--bg);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    z-index:99999;
+
+}
+
+.loader-circle{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    border:8px solid rgba(34,197,94,.15);
+
+    border-top:8px solid var(--primary);
+
+    animation:spin 1s linear infinite;
+
+}
+
+.loader h2{
+
+    font-size:40px;
+
+    font-weight:800;
+
+}
+
+.loader span{
+
+    color:var(--primary);
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*=========================================
+        ANIMATED BACKGROUND
+=========================================*/
+
+.bg-gradient{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+.bg1{
+
+    width:420px;
+
+    height:420px;
+
+    background:#22c55e;
+
+    top:-120px;
+
+    left:-120px;
+
+    animation:float1 12s linear infinite alternate;
+
+}
+
+.bg2{
+
+    width:350px;
+
+    height:350px;
+
+    background:#06b6d4;
+
+    right:-80px;
+
+    top:25%;
+
+    animation:float2 15s linear infinite alternate;
+
+}
+
+.bg3{
+
+    width:380px;
+
+    height:380px;
+
+    background:#4ade80;
+
+    bottom:-100px;
+
+    left:45%;
+
+    animation:float3 18s linear infinite alternate;
+
+}
+
+@keyframes float1{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(120px);
+
+    }
+
+}
+
+@keyframes float2{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-140px);
+
+    }
+
+}
+
+@keyframes float3{
+
+    from{
+
+        transform:translate(0);
+
+    }
+
+    to{
+
+        transform:translate(80px,-100px);
+
+    }
+
+}
+
+/*=========================================
+        NAVBAR
+=========================================*/
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    padding:0 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:999;
+
+    transition:var(--transition);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:30px;
+
+    font-weight:800;
+
+}
+
+.logo i{
+
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:34px;
+
+}
+
+.nav-links a{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text-light);
+
+    position:relative;
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover,
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.search-btn,
+
+.theme-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    color:var(--text);
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+.search-btn:hover,
+
+.theme-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+.join-btn{
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.join-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    font-size:20px;
+
+    color:var(--text);
+
+}
+ </style>
 
 </head>
 <body>
