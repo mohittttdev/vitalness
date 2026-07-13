@@ -1035,6 +1035,343 @@ Read Full Article
     </div>
 
 </section>
+<!--=========================================
+            NEWSLETTER
+==========================================-->
+
+<section class="newsletter">
+
+    <div class="newsletter-container">
+
+        <span class="section-badge">
+            Weekly Wellness
+        </span>
+
+        <h2>
+
+            Subscribe To Our
+            Premium Newsletter
+
+        </h2>
+
+        <p>
+
+            Get the latest fitness tips, healthy recipes,
+            workout plans, AI health updates and wellness
+            guides delivered directly to your inbox.
+
+        </p>
+
+        <form class="newsletter-form">
+
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required>
+
+            <button type="submit">
+
+                Subscribe Now
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </form>
+
+        <div class="newsletter-features">
+
+            <div>
+
+                <i class="fa-solid fa-check"></i>
+
+                Weekly Articles
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-check"></i>
+
+                Healthy Recipes
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-check"></i>
+
+                Fitness Tips
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-check"></i>
+
+                No Spam
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+            FOLLOW US
+==========================================-->
+
+<section class="follow-us">
+
+    <h2>
+
+        Join 50,000+ Healthy People
+
+    </h2>
+
+    <p>
+
+        Follow VitalNess for daily health inspiration.
+
+    </p>
+
+    <div class="social-grid">
+
+        <a href="#">
+
+            <i class="fab fa-instagram"></i>
+
+            Instagram
+
+        </a>
+
+        <a href="#">
+
+            <i class="fab fa-youtube"></i>
+
+            YouTube
+
+        </a>
+
+        <a href="#">
+
+            <i class="fab fa-facebook-f"></i>
+
+            Facebook
+
+        </a>
+
+        <a href="#">
+
+            <i class="fab fa-linkedin-in"></i>
+
+            LinkedIn
+
+        </a>
+
+        <a href="#">
+
+            <i class="fab fa-x-twitter"></i>
+
+            Twitter
+
+        </a>
+
+    </div>
+
+</section>
+
+<!--=========================================
+                FOOTER
+==========================================-->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-about">
+
+<div class="footer-logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<span>Vital</span>Ness
+
+</div>
+
+<p>
+
+VitalNess helps people build healthier lifestyles
+through fitness, nutrition, AI health guidance,
+healthy recipes and wellness education.
+
+</p>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+</div>
+
+</div>
+
+<!--========================-->
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<a href="#">Home</a>
+
+<a href="#">Blog</a>
+
+<a href="#">Recipes</a>
+
+<a href="#">Workout</a>
+
+<a href="#">Weight Loss</a>
+
+<a href="#">Weight Gain</a>
+
+<a href="#">AI Assistant</a>
+
+</div>
+
+<!--========================-->
+
+<div class="footer-links">
+
+<h3>Health Topics</h3>
+
+<a href="#">Nutrition</a>
+
+<a href="#">BMI Calculator</a>
+
+<a href="#">Calories</a>
+
+<a href="#">Yoga</a>
+
+<a href="#">Meditation</a>
+
+<a href="#">Diet Plans</a>
+
+<a href="#">Fitness Tips</a>
+
+</div>
+
+<!--========================-->
+
+<div class="footer-links">
+
+<h3>Resources</h3>
+
+<a href="#">Help Center</a>
+
+<a href="#">FAQs</a>
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms & Conditions</a>
+
+<a href="#">Cookie Policy</a>
+
+<a href="#">Support</a>
+
+</div>
+
+<!--========================-->
+
+<div class="footer-links">
+
+<h3>Contact</h3>
+
+<p>
+
+<i class="fa-solid fa-location-dot"></i>
+
+India
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+support@vitalness.com
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
++91 98765 43210
+
+</p>
+
+<a href="#" class="footer-btn">
+
+Contact Us
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 <strong>VitalNess</strong>.
+All Rights Reserved.
+
+</p>
+
+<div class="bottom-links">
+
+<a href="#">Privacy</a>
+
+<a href="#">Terms</a>
+
+<a href="#">Cookies</a>
+
+<a href="#">Sitemap</a>
+
+</div>
+
+</div>
+
+</footer>
+
+<!--=========================================
+            BACK TO TOP
+==========================================-->
+
+<button id="backToTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!--=========================================
+                BLOG JS
+==========================================-->
+
+<script src="blog.js"></script>
+
+</body>
+</html>
 
 <!--=========================================
             END PART 3
