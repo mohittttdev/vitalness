@@ -2977,6 +2977,498 @@ body.dark .footer-newsletter input{
     background:rgba(255,255,255,.05);
 
 }
+/*=========================================
+        PART 6
+RESPONSIVE + UTILITIES + ANIMATIONS
+=========================================*/
+
+/*==============================
+        LARGE LAPTOP
+==============================*/
+
+@media (max-width:1400px){
+
+.container{
+    max-width:1200px;
+}
+
+.hero-content h1{
+    font-size:58px;
+}
+
+.section-title h2{
+    font-size:42px;
+}
+
+}
+
+/*==============================
+        LAPTOP
+==============================*/
+
+@media (max-width:1200px){
+
+section{
+    padding:90px 6%;
+}
+
+.navbar{
+    padding:0 25px;
+}
+
+.hero-content h1{
+    font-size:52px;
+}
+
+.hero-stats{
+    gap:25px;
+}
+
+.why-grid,
+.services-grid,
+.team-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.condition-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.contact-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.footer-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/*==============================
+        TABLET
+==============================*/
+
+@media (max-width:992px){
+
+section{
+    padding:80px 5%;
+}
+
+.navbar ul{
+    display:none;
+}
+
+.nav-buttons .primary-btn{
+    display:none;
+}
+
+.physio-hero .container,
+.recovery-progress .container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-image{
+
+    order:-1;
+
+    max-width:550px;
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-stats{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-content p{
+
+    margin:auto;
+
+}
+
+.why-grid,
+.condition-grid,
+.services-grid,
+.team-grid,
+.testimonial-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.timeline{
+
+    flex-direction:column;
+
+}
+
+.contact-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.progress-left{
+
+    text-align:center;
+
+}
+
+.progress-left p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+}
+
+/*==============================
+        MOBILE
+==============================*/
+
+@media(max-width:768px){
+
+section{
+
+    padding:70px 20px;
+
+}
+
+.section-title{
+
+    margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+.hero-content h1{
+
+    font-size:42px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+}
+
+.hero-stats{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.hero-image img{
+
+    border-radius:25px;
+
+}
+
+.floating-card{
+
+    display:none;
+
+}
+
+.why-grid,
+.condition-grid,
+.services-grid,
+.team-grid,
+.testimonial-grid,
+.exercise-grid,
+.contact-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.footer-about p{
+
+    margin:auto;
+
+}
+
+.social-links{
+
+    justify-content:center;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.footer-bottom-links{
+
+    justify-content:center;
+
+}
+
+.emergency-content{
+
+    padding:45px 25px;
+
+}
+
+.emergency-content h2{
+
+    font-size:34px;
+
+}
+
+.cta-buttons{
+
+    flex-direction:column;
+
+}
+
+.doctor-card img{
+
+    height:280px;
+
+}
+
+}
+
+/*==============================
+        SMALL MOBILE
+==============================*/
+
+@media(max-width:480px){
+
+.hero-content h1{
+
+    font-size:34px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+.section-title p{
+
+    font-size:15px;
+
+}
+
+.condition-card,
+.service-card,
+.doctor-card,
+.contact-card,
+.testimonial-card{
+
+    padding:25px;
+
+}
+
+.hero-stats h2{
+
+    font-size:30px;
+
+}
+
+.hero-stats p{
+
+    font-size:14px;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
+.logo i{
+
+    font-size:28px;
+
+}
+
+.theme-btn{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+}
+
+/*==============================
+        UTILITIES
+==============================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{margin-top:10px;}
+.mt-2{margin-top:20px;}
+.mt-3{margin-top:30px;}
+.mt-4{margin-top:40px;}
+.mt-5{margin-top:50px;}
+
+.mb-1{margin-bottom:10px;}
+.mb-2{margin-bottom:20px;}
+.mb-3{margin-bottom:30px;}
+.mb-4{margin-bottom:40px;}
+.mb-5{margin-bottom:50px;}
+
+.hidden{
+
+    display:none;
+
+}
+
+/*==============================
+        SCROLL ANIMATION
+==============================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==============================
+        HOVER EFFECTS
+==============================*/
+
+img{
+
+    transition:.4s;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.primary-btn,
+.secondary-btn,
+.card-btn{
+
+    transition:.35s;
+
+}
+
+/*==============================
+        SELECTION
+==============================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*==============================
+        FOCUS
+==============================*/
+
+button:focus,
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.2);
+
+}
+
+/*==============================
+        SMOOTH TRANSITIONS
+==============================*/
+
+*{
+
+    transition: background .3s,
+    color .3s,
+    border-color .3s;
+
+}
+
+/*==============================
+        END
+==============================*/
 </style>
 <link rel="stylesheet" href="physiotherapist.css">
 
