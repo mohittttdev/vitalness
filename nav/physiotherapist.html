@@ -1762,6 +1762,277 @@ body.dark .exercise-category{
         font-size:16px;
     }
 }
+/*=========================================
+        PHYSIOTHERAPISTS TEAM
+=========================================*/
+
+.physio-team{
+    padding:100px 8%;
+    background:linear-gradient(180deg,#f8fff9 0%,#ffffff 100%);
+    position:relative;
+    overflow:hidden;
+}
+
+body.dark .physio-team{
+    background:#08130c;
+}
+
+/* Decorative Background */
+
+.physio-team::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(34,197,94,.08);
+    top:-180px;
+    left:-150px;
+    filter:blur(30px);
+}
+
+.team-grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/*=========================================
+        DOCTOR CARD
+=========================================*/
+
+.doctor-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.4s ease;
+    position:relative;
+}
+
+.doctor-card:hover{
+    transform:translateY(-12px);
+    box-shadow:var(--shadow-hover);
+}
+
+.doctor-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        180deg,
+        transparent,
+        rgba(34,197,94,.06)
+    );
+    opacity:0;
+    transition:.35s;
+    pointer-events:none;
+}
+
+.doctor-card:hover::before{
+    opacity:1;
+}
+
+/*=========================================
+        IMAGE
+=========================================*/
+
+.doctor-card img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.doctor-card:hover img{
+    transform:scale(1.06);
+}
+
+/*=========================================
+        CONTENT
+=========================================*/
+
+.doctor-content{
+    padding:30px;
+}
+
+.doctor-content h3{
+    font-size:26px;
+    margin-bottom:8px;
+    color:var(--black);
+}
+
+.doctor-content span{
+    display:inline-block;
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+/*=========================================
+        RATING
+=========================================*/
+
+.rating{
+    display:flex;
+    gap:6px;
+    margin-bottom:20px;
+}
+
+.rating i{
+    color:#ffc107;
+    font-size:16px;
+}
+
+/*=========================================
+        FEATURES
+=========================================*/
+
+.doctor-content ul{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:28px;
+}
+
+.doctor-content ul li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--text);
+}
+
+.doctor-content ul li i{
+    color:var(--primary);
+}
+
+/*=========================================
+        BUTTON
+=========================================*/
+
+.doctor-content .primary-btn{
+    width:100%;
+    justify-content:center;
+}
+
+/*=========================================
+        EXPERIENCE BADGE
+=========================================*/
+
+.doctor-card .experience{
+    position:absolute;
+    top:18px;
+    left:18px;
+    padding:8px 16px;
+    border-radius:50px;
+    background:rgba(255,255,255,.92);
+    color:var(--primary);
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+body.dark .doctor-card .experience{
+    background:#13251a;
+}
+
+/*=========================================
+        VERIFIED BADGE
+=========================================*/
+
+.doctor-card .verified{
+    position:absolute;
+    top:18px;
+    right:18px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--gradient);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 20px rgba(34,197,94,.25);
+}
+
+/*=========================================
+        SOCIAL LINKS
+=========================================*/
+
+.doctor-social{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.doctor-social a{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(34,197,94,.08);
+    color:var(--primary);
+    transition:.3s;
+}
+
+.doctor-social a:hover{
+    background:var(--gradient);
+    color:#fff;
+    transform:translateY(-4px);
+}
+
+/*=========================================
+        FLOAT EFFECT
+=========================================*/
+
+@keyframes doctorFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.doctor-card:nth-child(2){
+    animation:doctorFloat 6s ease-in-out infinite;
+}
+
+.doctor-card:nth-child(3){
+    animation:doctorFloat 7s ease-in-out infinite;
+}
+
+/*=========================================
+        HOVER BORDER
+=========================================*/
+
+.doctor-card::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:4px;
+    background:var(--gradient);
+    transition:.4s;
+}
+
+.doctor-card:hover::after{
+    width:100%;
+}
 </style>
 <link rel="stylesheet" href="physiotherapist.css">
 
