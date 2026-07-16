@@ -599,6 +599,505 @@ section{
     }
 
 }
+/*=========================================
+      VITALNESS MINDSET COACH
+            CSS PART 2
+ Statistics + Benefits + Programs
+=========================================*/
+
+/*==========================
+      MINDSET STATS
+==========================*/
+
+.mindset-stats{
+
+    background:#ffffff;
+
+    padding:90px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(34,197,94,.10);
+
+    border-radius:25px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(34,197,94,.10),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.stat-card:hover::before{
+
+    opacity:1;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 50px rgba(34,197,94,.18);
+
+}
+
+.stat-card i{
+
+    width:80px;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    font-size:2rem;
+
+    margin-bottom:22px;
+
+}
+
+.stat-card h2{
+
+    font-size:2.8rem;
+
+    color:var(--dark);
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#666;
+
+    font-weight:600;
+
+}
+
+/*==========================
+      BENEFITS
+==========================*/
+
+.mindset-benefits{
+
+    background:#f8fcf9;
+
+}
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.benefit-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    border:1px solid rgba(34,197,94,.10);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.benefit-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:0;
+
+    background:linear-gradient(
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    transition:.4s;
+
+}
+
+.benefit-card:hover::after{
+
+    height:100%;
+
+}
+
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 22px 45px rgba(34,197,94,.15);
+
+}
+
+.benefit-card i{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+.benefit-card h3{
+
+    font-size:1.4rem;
+
+    color:var(--dark);
+
+    margin-bottom:15px;
+
+}
+
+.benefit-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+      PROGRAMS
+==========================*/
+
+.coaching-programs{
+
+    background:#ffffff;
+
+}
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.program-card{
+
+    background:linear-gradient(
+        145deg,
+        #ffffff,
+        #f8fff9
+    );
+
+    border-radius:28px;
+
+    padding:40px;
+
+    transition:.45s;
+
+    border:1px solid rgba(34,197,94,.10);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.05);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.program-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(34,197,94,.08),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.program-card:hover::before{
+
+    opacity:1;
+
+}
+
+.program-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 60px rgba(34,197,94,.16);
+
+}
+
+.program-icon{
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.program-icon i{
+
+    color:#fff;
+
+    font-size:2.2rem;
+
+}
+
+.program-card h3{
+
+    font-size:1.7rem;
+
+    color:var(--dark);
+
+    margin-bottom:16px;
+
+}
+
+.program-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.program-card ul{
+
+    list-style:none;
+
+    margin-bottom:28px;
+
+}
+
+.program-card ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:15px 0;
+
+    color:#555;
+
+}
+
+.program-card ul li i{
+
+    color:var(--primary);
+
+}
+
+.program-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.program-btn:hover{
+
+    gap:18px;
+
+}
+
+/*==========================
+     RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .benefits-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .program-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-grid,
+    .benefits-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stat-card,
+    .benefit-card,
+    .program-card{
+
+        padding:28px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .program-icon{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .program-icon i{
+
+        font-size:1.8rem;
+
+    }
+
+}
         </style>
 
 </head>
