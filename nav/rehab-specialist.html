@@ -563,7 +563,353 @@ section{
     }
 
 }
-    </style>
+
+/*=========================================
+        VITALNESS REHABILITATION
+            CSS PART 2
+   Statistics + Conditions + Programs
+=========================================*/
+
+/*==========================
+        STATISTICS
+==========================*/
+
+.rehab-stats{
+    background:#fff;
+    padding:80px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(34,197,94,.15);
+    border-radius:25px;
+    padding:45px 25px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+    position:relative;
+    overflow:hidden;
+}
+
+.stat-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+    transition:.7s;
+}
+
+.stat-card:hover::before{
+    left:100%;
+}
+
+.stat-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(34,197,94,.18);
+}
+
+.stat-card i{
+    font-size:3rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.stat-card h2{
+    font-size:2.8rem;
+    color:var(--dark);
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#666;
+    font-weight:600;
+}
+
+/*==========================
+    CONDITIONS SECTION
+==========================*/
+
+.conditions{
+    background:#f8fcf9;
+}
+
+.conditions-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.condition-card{
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    transition:.4s;
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+    border:1px solid rgba(34,197,94,.10);
+    position:relative;
+    overflow:hidden;
+}
+
+.condition-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:5px;
+    height:0;
+    background:linear-gradient(
+        var(--primary),
+        var(--primary-dark)
+    );
+    transition:.4s;
+}
+
+.condition-card:hover::after{
+    height:100%;
+}
+
+.condition-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 45px rgba(34,197,94,.15);
+}
+
+.condition-card i{
+    width:70px;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(34,197,94,.12);
+    color:var(--primary);
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.condition-card h3{
+    font-size:1.5rem;
+    color:var(--dark);
+    margin-bottom:15px;
+}
+
+.condition-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/*==========================
+    PROGRAMS SECTION
+==========================*/
+
+.recovery-programs{
+    background:#fff;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.program-card{
+    background:linear-gradient(
+        145deg,
+        #ffffff,
+        #f7fff8
+    );
+    border-radius:30px;
+    padding:40px;
+    transition:.45s;
+    border:1px solid rgba(34,197,94,.10);
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.05);
+}
+
+.program-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(34,197,94,.08),
+        transparent
+    );
+    opacity:0;
+    transition:.4s;
+}
+
+.program-card:hover::before{
+    opacity:1;
+}
+
+.program-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(34,197,94,.15);
+}
+
+.program-icon{
+    width:85px;
+    height:85px;
+    border-radius:22px;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.program-icon i{
+    color:#fff;
+    font-size:2.2rem;
+}
+
+.program-card h3{
+    font-size:1.7rem;
+    color:var(--dark);
+    margin-bottom:18px;
+}
+
+.program-card p{
+    color:#666;
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+.program-card ul{
+    list-style:none;
+    margin-bottom:30px;
+}
+
+.program-card ul li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:15px 0;
+    color:#555;
+    font-weight:500;
+}
+
+.program-card ul li i{
+    color:var(--primary);
+}
+
+.program-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--primary-dark);
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.program-btn:hover{
+    gap:18px;
+}
+
+.program-btn i{
+    transition:.3s;
+}
+
+/*==========================
+    SECTION DECORATION
+==========================*/
+
+.conditions::before,
+.recovery-programs::before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(34,197,94,.05);
+    filter:blur(80px);
+    top:-100px;
+    right:-120px;
+}
+
+.conditions::after,
+.recovery-programs::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(16,185,129,.06);
+    filter:blur(70px);
+    bottom:-80px;
+    left:-80px;
+}
+
+/*==========================
+        RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .conditions-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-grid,
+    .conditions-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stat-card,
+    .condition-card,
+    .program-card{
+        padding:30px;
+    }
+
+    .program-icon{
+        width:70px;
+        height:70px;
+    }
+
+    .program-icon i{
+        font-size:2rem;
+    }
+
+    .stat-card h2{
+        font-size:2.2rem;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
