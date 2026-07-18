@@ -4254,6 +4254,433 @@ body.dark .advanced{
 }
 
 
+/*==================================================
+        INJURY CARE
+        PART 1A-2 (Emergency Banner)
+==================================================*/
+
+.injury-alert{
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    width:100%;
+
+    margin:70px auto 0;
+
+    padding:28px 32px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#dc2626 0%,#ef4444 55%,#f87171 100%);
+
+    color:#fff;
+
+    box-shadow:
+        0 20px 45px rgba(220,38,38,.28),
+        inset 0 1px 0 rgba(255,255,255,.15);
+
+    transition:.4s ease;
+
+    z-index:2;
+
+}
+
+/* Glow */
+
+.injury-alert::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    top:-120px;
+    right:-80px;
+
+    filter:blur(10px);
+
+}
+
+/* Shine */
+
+.injury-alert::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-130%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+}
+
+.injury-alert:hover::after{
+
+    left:140%;
+
+}
+
+.injury-alert:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 30px 60px rgba(220,38,38,.35),
+        inset 0 1px 0 rgba(255,255,255,.2);
+
+}
+
+/*==================================
+            Icon
+==================================*/
+
+.injury-alert i{
+
+    flex-shrink:0;
+
+    width:72px;
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    font-size:2rem;
+
+    color:#fff;
+
+    backdrop-filter:blur(8px);
+
+    animation:warningPulse 2.5s infinite;
+
+}
+
+/*==================================
+            Text
+==================================*/
+
+.injury-alert h3{
+
+    margin:0 0 10px;
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    color:#fff;
+
+}
+
+.injury-alert p{
+
+    margin:0;
+
+    line-height:1.8;
+
+    font-size:.98rem;
+
+    color:rgba(255,255,255,.95);
+
+}
+
+/*==================================
+        Pulse Animation
+==================================*/
+
+@keyframes warningPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 0 rgba(255,255,255,.35);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+        box-shadow:0 0 0 18px rgba(255,255,255,0);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 0 rgba(255,255,255,0);
+
+    }
+
+}
+
+/*==================================
+        Tablet
+==================================*/
+
+@media (max-width:991px){
+
+    .injury-alert{
+
+        padding:25px;
+
+        gap:20px;
+
+    }
+
+    .injury-alert i{
+
+        width:65px;
+        height:65px;
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+/*==================================
+        Mobile
+==================================*/
+
+@media (max-width:768px){
+
+    .injury-alert{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:24px 20px;
+
+    }
+
+    .injury-alert i{
+
+        margin-bottom:5px;
+
+    }
+
+}
+
+/*==================================
+        Small Mobile
+==================================*/
+
+@media (max-width:480px){
+
+    .injury-alert{
+
+        border-radius:18px;
+
+        padding:20px 18px;
+
+    }
+
+    .injury-alert h3{
+
+        font-size:1.3rem;
+
+    }
+
+    .injury-alert p{
+
+        font-size:.92rem;
+
+    }
+
+    .injury-alert i{
+
+        width:58px;
+        height:58px;
+
+        font-size:1.5rem;
+
+    }
+
+}
+/*==================================================
+        INJURY CARE
+        PART 1A-3 (Premium Grid Layout)
+==================================================*/
+
+/*==============================
+        Cards Container
+==============================*/
+
+.injury-grid{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    gap:30px;
+
+    margin-top:65px;
+
+    align-items:stretch;
+
+    z-index:2;
+
+}
+
+/* Equal Height */
+
+.injury-grid>.injury-card{
+
+    height:100%;
+
+}
+
+/*==============================
+        Large Desktop
+==============================*/
+
+@media (max-width:1400px){
+
+    .injury-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+        gap:26px;
+
+    }
+
+}
+
+/*==============================
+        Laptop
+==============================*/
+
+@media (max-width:1200px){
+
+    .injury-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:28px;
+
+    }
+
+}
+
+/*==============================
+        Tablet
+==============================*/
+
+@media (max-width:992px){
+
+    .injury-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:24px;
+
+        margin-top:55px;
+
+    }
+
+}
+
+/*==============================
+        Mobile
+==============================*/
+
+@media (max-width:768px){
+
+    .injury-grid{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+        margin-top:45px;
+
+    }
+
+}
+
+/*==============================
+        Small Mobile
+==============================*/
+
+@media (max-width:480px){
+
+    .injury-grid{
+
+        gap:18px;
+
+        margin-top:35px;
+
+    }
+
+}
+
+/*==============================
+        Animation
+==============================*/
+
+.injury-grid .injury-card{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+}
+
+/*==============================
+        Future Ready
+==============================*/
+
+.injury-grid>*{
+
+    min-width:0;
+
+}
+
+
 
 
 /*=========================================
