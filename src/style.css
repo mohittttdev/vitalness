@@ -3136,43 +3136,87 @@ Card
 
 }
 
+
 /*==========================
-Icon
+        Yoga Image
 ==========================*/
 
 .yoga-icon{
 
     width:100%;
-    height:250px;
+    height:320px;
 
-    border-radius:20px 20px 20px 20px;
     overflow:hidden;
+    border-radius:20px;
+
+    position:relative;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
-    background:linear-gradient(135deg,#22c55e,#16a34a);
-
-    color:#fff;
-
-    font-size:34px;
+    background:#f5f5f5;
 
     margin-bottom:25px;
 
-    box-shadow:0 15px 35px rgba(34,197,94,.30);
+    box-shadow:0 15px 35px rgba(34,197,94,.18);
 
 }
+
 .yoga-icon img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: .5s;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
+
+    display:block;
+
+    transition:transform .6s ease;
+
 }
 
 .yoga-card:hover .yoga-icon img{
-    transform: scale(1.08);
+
+    transform:scale(1.08);
+
+}
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .yoga-icon{
+
+        height:280px;
+
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    .yoga-icon{
+
+        height:240px;
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    .yoga-icon{
+
+        height:200px;
+
+    }
+
 }
 
 .yoga-card h3,
@@ -3588,40 +3632,30 @@ Card
 /*==================
 Exercise Icon
 ==================*/
-
 .exercise-icon{
-
-    width:100%px;
-
-    height:240px;
+    width:100%;
+    height:300px;
     overflow:hidden;
-
     border-radius:20px;
 
-    background:linear-gradient(135deg,#22c55e,#16a34a);
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    font-size:32px;
 
     margin-bottom:20px;
 
-    color:#fff;
-
     box-shadow:0 15px 30px rgba(34,197,94,.3);
-
 }
+
 .exercise-icon img{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:center;
     display:block;
     transition:.5s;
 }
+
 .card:hover .exercise-icon img{
     transform:scale(1.08);
 }
@@ -3813,84 +3847,173 @@ body.dark .advanced{
 
 }
 
-/* ==================
-   Responsive
-================== */
+/* ======================================
+        RESPONSIVE
+====================================== */
 
-/* Laptop */
+/* Large Tablet */
 @media (max-width:1024px){
 
-    .grid{
+    .home-workout{
+        padding:80px 5%;
+    }
+
+    .home-workout .grid{
         grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
+
+    .section-title h2{
+        font-size:2.4rem;
+    }
+
+    .exercise-icon{
+        height:220px;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:768px){
+
+    .home-workout .grid{
+        grid-template-columns:1fr;
         gap:25px;
     }
 
-    .section-title h2{
-        font-size:2.3rem;
+    .home-workout .card{
+        padding:22px;
     }
 
     .exercise-icon{
-        height:230px;
+        height:240px;
+    }
+
+    .section-title h2{
+        font-size:2rem;
     }
 
 }
 
-/* ==================
-   Mobile Responsive
-================== */
 
-@media (max-width:480px){
+/* Mobile */
+@media (max-width:576px){
 
     .home-workout{
-        padding:60px 20px;
+        padding:60px 18px;
+    }
+
+    .section-title{
+        margin-bottom:40px;
     }
 
     .section-title h2{
-        font-size:28px;
+        font-size:30px;
     }
 
     .section-title p{
-        font-size:14px;
+        font-size:15px;
+    }
+
+    .home-workout .grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .home-workout .card{
+
+        padding:18px;
+
+        border-radius:20px;
+
     }
 
     .exercise-icon{
-        height:200px;
-    }
 
-    .card{
-        padding:18px;
+        height:190px;
+
+        border-radius:16px;
+
     }
 
     .exercise-level{
-        font-size:12px;
-        padding:5px 12px;
+
+        position:static;
+
+        display:inline-block;
+
+        margin-bottom:15px;
+
     }
 
-    .card h3{
+    .home-workout .card h3{
+
         font-size:22px;
+
+        margin-bottom:12px;
+
     }
 
-    .card p{
+    .home-workout .card p{
+
         font-size:14px;
+
         line-height:1.7;
+
+        margin-bottom:20px;
+
     }
 
     .exercise-info{
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+
+    }
+
+    .exercise-info span{
+
+        width:100%;
+
+        text-align:center;
+
     }
 
     .exercise-btn{
-        display:block;
+
         width:100%;
-        padding:14px;
-        text-align:center;
-        margin-top:18px;
+
+        margin:20px 0 0;
+
+        padding:15px;
+
     }
 
 }
+
+
+/* Small Mobile */
+@media (max-width:360px){
+
+    .section-title h2{
+        font-size:26px;
+    }
+
+    .exercise-icon{
+        height:170px;
+    }
+
+    .home-workout .card h3{
+        font-size:20px;
+    }
+
+}
+
+
 
 /*=====================================
         INJURY CARE SECTION
