@@ -4015,540 +4015,241 @@ body.dark .advanced{
 
 
 
-/*=====================================
-        INJURY CARE SECTION
-=====================================*/
+/*==================================================
+            INJURY CARE SECTION
+        PART 1A-1 (Section + Title)
+==================================================*/
 
 .injury-section{
-    padding:100px 7%;
-    background:var(--bg);
-    position:relative;
-    overflow:hidden;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 110px 7%;
+
+    background: var(--bg);
+
+    isolation: isolate;
+
 }
 
-/* Background Glow */
+/*==============================
+        Background Glow
+==============================*/
 
 .injury-section::before{
+
     content:"";
+
     position:absolute;
-    width:350px;
-    height:350px;
-    background:rgba(34,197,94,.08);
+
+    top:-180px;
+    left:-180px;
+
+    width:420px;
+    height:420px;
+
     border-radius:50%;
-    filter:blur(90px);
-    top:-120px;
-    left:-120px;
-}
-
-.injury-section::after{
-    content:"";
-    position:absolute;
-    width:320px;
-    height:320px;
-    background:rgba(74,222,128,.08);
-    border-radius:50%;
-    filter:blur(90px);
-    right:-120px;
-    bottom:-120px;
-}
-
-/*=====================================
-        Emergency Banner
-=====================================*/
-
-.injury-alert{
-
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    align-items:center;
-    gap:20px;
-
-    background:linear-gradient(135deg,#dc2626,#ef4444);
-
-    color:#fff;
-
-    padding:25px 30px;
-
-    border-radius:20px;
-
-    margin:60px auto;
-
-    box-shadow:0 20px 40px rgba(220,38,38,.25);
-
-}
-
-.injury-alert i{
-
-    font-size:45px;
-
-}
-
-.injury-alert h3{
-
-    margin-bottom:8px;
-
-    font-size:1.4rem;
-
-}
-
-/*=====================================
-            Grid
-=====================================*/
-
-.injury-grid{
-
-   
-    display:grid;
-    grid-template-columns:1.5fr 1fr;
-    gap:50px;
-    align-items:center;
-
-    margin-top:60px;
-
-}
-
-/*=====================================
-            Card
-=====================================*/
-
-.injury-card{
-
-    background:var(--card);
-
-    border:1px solid rgba(34,197,94,.15);
-
-    border-radius:24px;
-
-    padding:35px;
-
-    transition:.4s;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    position:relative;
-
-    overflow:hidden;
-    
-   
-    }
-
-.injury-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:5px;
-
-    background:linear-gradient(90deg,#22c55e,#4ade80);
-
-}
-
-.injury-card:hover{
-
-    transform:translateY(-12px);
-
-    border-color:#22c55e;
-
-    box-shadow:0 20px 45px rgba(34,197,94,.18);
-
-}
-
-/*=====================================
-            Icon
-=====================================*/
-
-.injury-icon{
-
-    width:100%;
-    height:250px;
-
-    border-radius:18px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:linear-gradient(135deg,#22c55e,#16a34a);
-
-    color:#fff;
-
-    font-size:34px;
-
-    margin-bottom:25px;
-
-    box-shadow:0 15px 35px rgba(34,197,94,.30);
-        overflow:hidden;
-
-}
-
-.injury-icon img{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center;
-    transition:transform .5s ease;
-}
-
-.injury-card:hover .injury-icon img{
-    transform:scale(1.08);
-}
-
-.injury-card h3,
-.injury-card p,
-.injury-info{
-    padding:0 25px;
-}
-
-.injury-card h3{
-    margin-top:20px;
-}
-
-.injury-info{
-    padding-bottom:25px;
-}
-/*=====================================
-        Text
-=====================================*/
-
-.injury-card h3{
-
-    color:var(--text);
-
-    font-size:1.5rem;
-
-    margin-bottom:15px;
-
-}
-
-.injury-card p{
-
-    color:var(--text-light);
-
-    line-height:1.8;
-
-    margin-bottom:25px;
-
-}
-
-/*=====================================
-        Info Tags
-=====================================*/
-
-.injury-info{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-}
-
-.injury-info span{
-
-    padding:8px 15px;
-
-    border-radius:30px;
 
     background:rgba(34,197,94,.10);
 
-    color:#16a34a;
+    filter:blur(120px);
 
-    font-size:13px;
-
-    font-weight:600;
+    z-index:-2;
 
 }
 
-/*=====================================
-        Recovery Tips
-=====================================*/
+.injury-section::after{
 
-.injury-tips{
+    content:"";
 
-    margin-top:70px;
+    position:absolute;
 
-    background:var(--card);
+    right:-180px;
+    bottom:-180px;
 
-    padding:35px;
+    width:420px;
+    height:420px;
 
-    border-radius:22px;
+    border-radius:50%;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    background:rgba(74,222,128,.10);
 
-}
+    filter:blur(120px);
 
-.injury-tips h3{
-
-    color:var(--text);
-
-    margin-bottom:25px;
+    z-index:-2;
 
 }
 
-.injury-tips ul{
+/* Decorative Circle */
 
-    list-style:none;
+.injury-section .bg-circle{
 
-}
+    position:absolute;
 
-.injury-tips li{
+    width:280px;
+    height:280px;
 
-    display:flex;
+    border-radius:50%;
 
-    align-items:center;
+    border:1px solid rgba(34,197,94,.08);
 
-    gap:12px;
+    top:35%;
 
-    margin:18px 0;
+    left:-120px;
 
-    color:var(--text);
-
-}
-
-.injury-tips i{
-
-    color:#22c55e;
+    z-index:-1;
 
 }
 
-/*=====================================
-            Footer
-=====================================*/
+/* Decorative Lines */
 
-.injury-footer{
+.injury-section .bg-line{
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    border:2px dashed rgba(34,197,94,.08);
+
+    right:-80px;
+
+    top:12%;
+
+    animation:rotateLine 25s linear infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes rotateLine{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==================================================
+                Section Title
+==================================================*/
+
+.section-title{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
 
     text-align:center;
 
-    margin-top:70px;
-
 }
 
-.injury-footer h3{
+.section-tag{
 
-    color:var(--text);
+    display:inline-flex;
 
-    font-size:2rem;
+    align-items:center;
 
-    margin-bottom:15px;
+    justify-content:center;
 
-}
+    gap:8px;
 
-.injury-footer p{
+    padding:10px 22px;
 
-    color:var(--text-light);
-
-    max-width:650px;
-
-    margin:auto auto 30px;
-
-    line-height:1.8;
-
-}
-
-.injury-btn{
-
-    display:inline-block;
-
-    padding:16px 40px;
-
-    background:linear-gradient(135deg,#22c55e,#16a34a);
-
-    color:#fff;
-
-    text-decoration:none;
+    margin-bottom:22px;
 
     border-radius:50px;
 
-    font-weight:600;
+    background:rgba(34,197,94,.12);
 
-    transition:.35s;
+    border:1px solid rgba(34,197,94,.18);
 
-    box-shadow:0 15px 30px rgba(34,197,94,.25);
+    color:#22c55e;
 
-}
+    font-size:.92rem;
 
-.injury-btn:hover{
+    font-weight:700;
 
-    transform:translateY(-4px);
+    letter-spacing:.8px;
 
-    box-shadow:0 20px 40px rgba(34,197,94,.35);
+    text-transform:uppercase;
 
-}
-
-/*=====================================
-        Recovery Tips Layout
-=====================================*/
-
-.injury-tips-wrapper{
-
-    display:grid;
-    grid-template-columns:1.4fr .8fr;
-    gap:50px;
-    align-items:center;
-
-    margin-top:70px;
+    backdrop-filter:blur(12px);
 
 }
 
-.injury-illustration{
+.section-title h2{
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    color:var(--text);
+
+    font-size:clamp(2.4rem,5vw,3.7rem);
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    margin-bottom:22px;
 
 }
 
-.injury-illustration img{
+.section-title h2 span{
 
-    width:100%;
-    max-width:380px;
-    height:auto;
+    color:#22c55e;
+
+    background:linear-gradient(90deg,#22c55e,#4ade80);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.section-title p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+}
+
+/* Small Decoration */
+
+.section-title::after{
+
+    content:"";
+
     display:block;
 
-    filter:drop-shadow(0 20px 40px rgba(34,197,94,.18));
+    width:90px;
 
-    animation:float 4s ease-in-out infinite;
+    height:4px;
 
-}
+    margin:28px auto 0;
 
-@keyframes float{
+    border-radius:30px;
 
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-15px);
-    }
-
-}
-
-/*=====================================
-        Responsive
-=====================================*/
-
-@media(max-width:992px){
-
-    .injury-tips-wrapper{
-
-        grid-template-columns:1fr;
-        gap:35px;
-
-    }
-
-    .injury-illustration{
-
-        order:-1;
-
-    }
-
-    .injury-illustration img{
-
-        max-width:300px;
-
-    }
-
-}
-
-@media(max-width:576px){
-
-    .injury-tips-wrapper{
-
-        grid-template-columns:1fr;
-        gap:25px;
-
-    }
-
-    .injury-illustration img{
-
-        max-width:220px;
-
-    }
-
-}
-/*=====================================
-        Dark Mode
-=====================================*/
-
-body.dark .injury-alert{
-
-    background:linear-gradient(135deg,#991b1b,#dc2626);
-
-}
-
-/*=====================================
-        Responsive
-=====================================*/
-
-@media(max-width:768px){
-
-    .injury-section{
-
-        padding:80px 20px;
-
-    }
-
-    .injury-alert{
-
-        flex-direction:column;
-
-        text-align:center;
-
-        padding:25px;
-
-    }
-
-    .injury-alert i{
-
-        font-size:38px;
-
-    }
-
-    .injury-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .injury-footer h3{
-
-        font-size:1.7rem;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    .injury-section{
-
-        padding:70px 18px;
-
-    }
-
-    .injury-card{
-
-        padding:25px;
-
-    }
-
-    .injury-icon{
-
-        width:60px;
-        height:60px;
-
-        font-size:28px;
-
-    }
+    background:linear-gradient(90deg,#22c55e,#4ade80);
 
 }
 
