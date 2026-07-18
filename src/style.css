@@ -4679,8 +4679,984 @@ body.dark .advanced{
     min-width:0;
 
 }
+/*==================================================
+        INJURY CARE
+        PART 1B-1 (Premium Cards)
+==================================================*/
 
+.injury-card{
 
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    background:var(--card);
+
+    border:1px solid rgba(34,197,94,.12);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+    isolation:isolate;
+
+}
+
+/*==============================
+        Top Gradient Line
+==============================*/
+
+.injury-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #4ade80,
+        #16a34a
+    );
+
+}
+
+/*==============================
+        Green Glow
+==============================*/
+
+.injury-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.10);
+
+    top:-120px;
+    right:-120px;
+
+    filter:blur(70px);
+
+    opacity:0;
+
+    transition:.45s;
+
+    z-index:-1;
+
+}
+
+/*==============================
+        Hover
+==============================*/
+
+.injury-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+        0 25px 55px rgba(34,197,94,.18);
+
+}
+
+.injury-card:hover::after{
+
+    opacity:1;
+
+}
+
+/*==============================
+        Active
+==============================*/
+
+.injury-card:active{
+
+    transform:scale(.98);
+
+}
+
+/*==============================
+        Card Body
+==============================*/
+
+.injury-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==============================
+        Better Spacing
+==============================*/
+
+.injury-card h3,
+.injury-card p,
+.injury-info{
+
+    padding-left:26px;
+    padding-right:26px;
+
+}
+
+/*==============================
+        Last Element
+==============================*/
+
+.injury-info{
+
+    margin-top:auto;
+
+    padding-bottom:28px;
+
+}
+
+/*==============================
+        Tablet
+==============================*/
+
+@media(max-width:992px){
+
+    .injury-card{
+
+        border-radius:22px;
+
+    }
+
+}
+
+/*==============================
+        Mobile
+==============================*/
+
+@media(max-width:576px){
+
+    .injury-card{
+
+        border-radius:20px;
+
+    }
+
+    .injury-card h3,
+    .injury-card p,
+    .injury-info{
+
+        padding-left:20px;
+        padding-right:20px;
+
+    }
+
+}
+/*==================================================
+        INJURY CARE
+        PART 1B-2 (Image Section)
+==================================================*/
+
+/*==============================
+        Image Container
+==============================*/
+
+.injury-icon{
+
+    position:relative;
+
+    width:100%;
+    height:240px;
+
+    overflow:hidden;
+
+    border-radius:26px 26px 0 0;
+
+    background:#f5f5f5;
+
+    isolation:isolate;
+
+}
+
+/*==============================
+        Image
+==============================*/
+
+.injury-icon img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+
+    transition:
+        transform .7s ease,
+        filter .7s ease;
+
+}
+
+/*==============================
+        Gradient Overlay
+==============================*/
+
+.injury-icon::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.28),
+        transparent 45%
+    );
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+/*==============================
+        Green Overlay
+==============================*/
+
+.injury-icon::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(34,197,94,.18),
+        transparent 60%
+    );
+
+    opacity:0;
+
+    transition:.5s;
+
+    z-index:2;
+
+}
+
+/*==============================
+        Hover
+==============================*/
+
+.injury-card:hover .injury-icon img{
+
+    transform:scale(1.08);
+
+    filter:saturate(1.08);
+
+}
+
+.injury-card:hover .injury-icon::after{
+
+    opacity:1;
+
+}
+
+/*==============================
+        Desktop
+==============================*/
+
+@media (min-width:1400px){
+
+    .injury-icon{
+
+        height:260px;
+
+    }
+
+}
+
+/*==============================
+        Laptop
+==============================*/
+
+@media (max-width:1200px){
+
+    .injury-icon{
+
+        height:230px;
+
+    }
+
+}
+
+/*==============================
+        Tablet
+==============================*/
+
+@media (max-width:992px){
+
+    .injury-icon{
+
+        height:220px;
+
+    }
+
+}
+
+/*==============================
+        Mobile
+==============================*/
+
+@media (max-width:768px){
+
+    .injury-icon{
+
+        height:210px;
+
+        border-radius:22px 22px 0 0;
+
+    }
+
+}
+
+/*==============================
+        Small Mobile
+==============================*/
+
+@media (max-width:480px){
+
+    .injury-icon{
+
+        height:190px;
+
+        border-radius:20px 20px 0 0;
+
+    }
+
+    /*==================================================
+        INJURY CARE
+        PART 1B-3 (Typography & Tags)
+==================================================*/
+
+/*==============================
+        Card Heading
+==============================*/
+
+.injury-card h3{
+
+    margin:24px 26px 14px;
+
+    color:var(--text);
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    letter-spacing:.2px;
+
+    transition:.35s;
+
+}
+
+.injury-card:hover h3{
+
+    color:#22c55e;
+
+}
+
+/*==============================
+        Description
+==============================*/
+
+.injury-card p{
+
+    margin:0 26px 26px;
+
+    color:var(--text-light);
+
+    font-size:.98rem;
+
+    line-height:1.9;
+
+    flex:1;
+
+}
+
+.injury-card strong{
+
+    color:#22c55e;
+
+    font-weight:700;
+
+}
+
+/*==============================
+        Bottom Info
+==============================*/
+
+.injury-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin:0 26px 28px;
+
+}
+
+/*==============================
+        Tags
+==============================*/
+
+.injury-info span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:rgba(34,197,94,.10);
+
+    border:1px solid rgba(34,197,94,.18);
+
+    color:#16a34a;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.injury-card:hover .injury-info span{
+
+    background:#22c55e;
+
+    color:#fff;
+
+    border-color:#22c55e;
+
+    transform:translateY(-2px);
+
+}
+
+/*==============================
+        Focus
+==============================*/
+
+.injury-card:focus-within{
+
+    outline:2px solid rgba(34,197,94,.35);
+
+    outline-offset:4px;
+
+}
+
+/*==============================
+        Dark Mode
+==============================*/
+
+body.dark .injury-card{
+
+    background:var(--card);
+
+    border-color:rgba(74,222,128,.15);
+
+}
+
+body.dark .injury-info span{
+
+    background:rgba(74,222,128,.10);
+
+    color:#4ade80;
+
+    border-color:rgba(74,222,128,.18);
+
+}
+
+body.dark .injury-card:hover .injury-info span{
+
+    background:#22c55e;
+
+    color:#fff;
+
+}
+
+/*==============================
+        Tablet
+==============================*/
+
+@media (max-width:992px){
+
+    .injury-card h3{
+
+        font-size:1.3rem;
+
+    }
+
+}
+
+/*==============================
+        Mobile
+==============================*/
+
+@media (max-width:768px){
+
+    .injury-card h3{
+
+        margin:20px 20px 12px;
+
+    }
+
+    .injury-card p{
+
+        margin:0 20px 22px;
+
+        font-size:.95rem;
+
+    }
+
+    .injury-info{
+
+        margin:0 20px 22px;
+
+        gap:10px;
+
+    }
+
+    .injury-info span{
+
+        font-size:.78rem;
+
+        padding:8px 14px;
+
+    }
+
+}
+
+/*==============================
+        Small Mobile
+==============================*/
+
+@media (max-width:480px){
+
+    .injury-card h3{
+
+        font-size:1.15rem;
+
+    }
+
+    .injury-card p{
+
+        font-size:.9rem;
+
+        line-height:1.75;
+
+    }
+
+}
+}
+/*==================================================
+        INJURY CARE
+        PART 2A (Recovery Tips Section)
+==================================================*/
+
+/*====================================
+        Tips Wrapper
+====================================*/
+
+.injury-tips-wrapper{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1.25fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    margin-top:90px;
+
+}
+
+/*====================================
+        Tips Card
+====================================*/
+
+.injury-tips{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--card);
+
+    border:1px solid rgba(34,197,94,.12);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.injury-tips::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #4ade80
+    );
+
+}
+
+.injury-tips::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.08);
+
+    top:-120px;
+    right:-120px;
+
+    filter:blur(70px);
+
+}
+
+.injury-tips:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+        0 25px 55px rgba(34,197,94,.18);
+
+}
+
+/*====================================
+            Heading
+====================================*/
+
+.injury-tips h3{
+
+    color:var(--text);
+
+    font-size:1.7rem;
+
+    margin-bottom:30px;
+
+    font-weight:700;
+
+}
+
+/*====================================
+            List
+====================================*/
+
+.injury-tips ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.injury-tips li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+.injury-tips li:last-child{
+
+    margin-bottom:0;
+
+}
+
+.injury-tips li i{
+
+    flex-shrink:0;
+
+    width:34px;
+    height:34px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+    color:#22c55e;
+
+    font-size:.9rem;
+
+}
+
+/*====================================
+        Illustration
+====================================*/
+
+.injury-illustration{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* Glow */
+
+.injury-illustration::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+    filter:blur(90px);
+
+    z-index:-1;
+
+}
+
+/*====================================
+        Lottie
+====================================*/
+
+.doctor-lottie,
+.injury-illustration dotlottie-wc{
+
+    width:100%;
+
+    max-width:430px;
+
+    height:430px;
+
+    display:block;
+
+    animation:doctorFloat 4s ease-in-out infinite;
+
+}
+
+/* Floating */
+
+@keyframes doctorFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*====================================
+        Tablet
+====================================*/
+
+@media(max-width:992px){
+
+    .injury-tips-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+    .injury-illustration{
+
+        order:-1;
+
+    }
+
+    .doctor-lottie,
+    .injury-illustration dotlottie-wc{
+
+        max-width:340px;
+
+        height:340px;
+
+    }
+
+}
+
+/*====================================
+        Mobile
+====================================*/
+
+@media(max-width:768px){
+
+    .injury-tips{
+
+        padding:30px;
+
+        border-radius:22px;
+
+    }
+
+    .injury-tips h3{
+
+        font-size:1.45rem;
+
+    }
+
+    .injury-tips li{
+
+        font-size:.95rem;
+
+    }
+
+    .doctor-lottie,
+    .injury-illustration dotlottie-wc{
+
+        max-width:280px;
+
+        height:280px;
+
+    }
+
+}
+
+/*====================================
+        Small Mobile
+====================================*/
+
+@media(max-width:480px){
+
+    .injury-tips{
+
+        padding:24px;
+
+    }
+
+    .doctor-lottie,
+    .injury-illustration dotlottie-wc{
+
+        max-width:230px;
+
+        height:230px;
+
+    }
+
+}
+
+/*====================================
+        Dark Mode
+====================================*/
+
+body.dark .injury-tips{
+
+    background:var(--card);
+
+    border-color:rgba(74,222,128,.18);
+
+}
+
+body.dark .injury-tips li i{
+
+    background:rgba(74,222,128,.12);
+
+    color:#4ade80;
+
+}
 
 
 /*=========================================
