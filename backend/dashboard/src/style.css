@@ -1,4 +1,29 @@
-    *{
+   :root{
+
+    --bg:#ffffff;
+
+    --text:#111827;
+
+    --text-light:#64748b;
+
+    --primary:#22c55e;
+
+    --primary-dark:#16a34a;
+
+}
+
+
+body.dark{
+
+    --bg:#111111;
+
+    --text:#ffffff;
+
+    --text-light:#cccccc;
+
+}
+   
+   *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -10,9 +35,40 @@ html{
 }
 
 body{
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
-    color:white;
+
+    background:var(--bg);
+
+    color:var(--text);
     overflow-x:hidden;
+
+}
+/* DAY MODE FIX */
+
+body:not(.dark) .premium-left h1,
+body:not(.dark) .section-title h2,
+body:not(.dark) .benefit-card h3,
+body:not(.dark) .plan-header h3,
+body:not(.dark) .timeline-item h3,
+body:not(.dark) .testimonial-card h4,
+body:not(.dark) .faq-item h3,
+body:not(.dark) .cta-box h2{
+
+    color:#111827 !important;
+
+}
+
+
+
+body:not(.dark) .premium-left p,
+body:not(.dark) .section-title p,
+body:not(.dark) .benefit-card p,
+body:not(.dark) .timeline-item p,
+body:not(.dark) .testimonial-card p,
+body:not(.dark) .faq-item p,
+body:not(.dark) .cta-box p{
+
+    color:#64748b !important;
+
 }
 
 
@@ -233,597 +289,2452 @@ nav{
 
 
 
-
-
-
-
-
-
-.premium-section{
-
-    position: relative;
-
-    width: 100%;
-
-    padding: 120px 8%;
-
-    background:
-    linear-gradient(135deg,#081120,#0d1d36,#12284d);
-
-    overflow: hidden;
-}
-
-/* GLOW EFFECT */
-
-.premium-glow{
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    background: rgba(0,255,200,0.15);
-
-    border-radius: 50%;
-
-    filter: blur(120px);
-
-    top: -120px;
-    right: -120px;
-}
-
-/* CONTAINER */
-
-.premium-container{
-
-    position: relative;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 60px;
-
-    flex-wrap: wrap;
-
-    z-index: 2;
-}
-
-/* LEFT */
-
-.premium-left{
-
-    flex: 1;
-
-    min-width: 320px;
-}
-
-.premium-tag{
-
-    display: inline-block;
-
-    padding: 10px 20px;
-
-    border-radius: 50px;
-
-    background: rgba(255,255,255,0.08);
-
-    border: 1px solid rgba(255,255,255,0.12);
-
-    color: #00e5ff;
-
-    font-size: 14px;
-
-    margin-bottom: 25px;
-
-    letter-spacing: 1px;
-}
-
-.premium-left h2{
-
-    font-size: 58px;
-
-    line-height: 1.1;
-
-    margin-bottom: 25px;
-
-    color: white;
-}
-
-.premium-left h2 span{
-
-    color: #00e5ff;
-}
-
-.premium-left p{
-
-    color: #cfd8dc;
-
-    line-height: 1.8;
-
-    max-width: 600px;
-
-    font-size: 18px;
-
-    margin-bottom: 35px;
-}
-
-/* FEATURES */
-
-.premium-features{
-
-    display: grid;
-
-    grid-template-columns: repeat(2,1fr);
-
-    gap: 18px;
-
-    margin-bottom: 40px;
-}
-
-.premium-feature{
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    color: white;
-
-    font-size: 16px;
-}
-
-.premium-feature i{
-
-    color: #00ffb3;
-}
-
-/* BUTTONS */
-
-.premium-buttons{
-
-    display: flex;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-}
-
-.premium-btn{
-
-    padding: 16px 32px;
-
-    border-radius: 14px;
-
-    background: linear-gradient(135deg,#00e5ff,#00b0ff);
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition: 0.4s;
-}
-
-.premium-btn:hover{
-
-    transform: translateY(-5px);
-}
-
-.premium-outline-btn{
-
-    padding: 16px 32px;
-
-    border-radius: 14px;
-
-    border: 1px solid rgba(255,255,255,0.2);
-
-    text-decoration: none;
-
-    color: white;
-
-    transition: 0.4s;
-}
-
-.premium-outline-btn:hover{
-
-    background: rgba(255,255,255,0.08);
-}
-
-/* RIGHT */
-
-.premium-right{
-
-    flex: 1;
-
-    display: flex;
-
-    justify-content: center;
-
-    min-width: 320px;
-}
- #bounce-heading{
-    animation: floating 3s ease-in-out infinite;
-}
-
-/* ANIMATION */
-
-@keyframes floating{
-
-    0%{
-        transform: translateY(0px);
-    }
-
-    50%{
-        transform: translateY(-18px);
-    }
-
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-/* CARD */
-
-.premium-card{
-
-    width: 360px;
-
-    padding: 40px;
-
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.08);
-
-    border: 1px solid rgba(255,255,255,0.12);
-
-    backdrop-filter: blur(18px);
-
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-
-    color: white;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.premium-top{
-
-    position: absolute;
-
-    top: 20px;
-    right: -40px;
-
-    background: #00e5ff;
-
-    color: #081120;
-
-    padding: 8px 50px;
-
-    transform: rotate(45deg);
-
-    font-size: 13px;
-
-    font-weight: bold;
-}
-
-.premium-card h3{
-
-    font-size: 34px;
-
-    margin-bottom: 20px;
-}
-
-.premium-price{
-
-    font-size: 52px;
-
-    font-weight: bold;
-
-    margin-bottom: 30px;
-}
-
-.premium-price span{
-
-    font-size: 18px;
-
-    color: #ccc;
-}
-
-.premium-card ul{
-
-    list-style: none;
-
-    padding: 0;
-
-    margin-bottom: 35px;
-}
-
-.premium-card ul li{
-
-    margin-bottom: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    color: #e0e0e0;
-}
-
-.premium-card ul li i{
-
-    color: #00ffb3;
-}
-
-.premium-card-btn{
-
-    display: block;
-
-    text-align: center;
-
-    padding: 16px;
-
-    border-radius: 14px;
-
-    background: linear-gradient(135deg,#00e5ff,#00b0ff);
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.4s;
-}
-
-.premium-card-btn:hover{
-
-    transform: scale(1.04);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:950px){
-
-    .premium-left h2{
-
-        font-size: 42px;
-    }
-
-    .premium-features{
-
-        grid-template-columns: 1fr;
-    }
-}
-
-@media(max-width:650px){
-
-    .premium-section{
-
-        padding: 80px 6%;
-    }
-
-    .premium-left h2{
-
-        font-size: 34px;
-    }
-
-    .premium-card{
-
-        width: 100%;
-    }
-}
-
-/* FEATURES */
-
-.features{
-
-    padding:120px 50px;
-}
-
-.title{
-
-    text-align:center;
-
-    font-size:55px;
-
-    margin-bottom:70px;
-}
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:35px;
-}
-
-.card{
-
-    background:rgba(255,255,255,0.06);
-
-    border:1px solid rgba(255,255,255,0.1);
-
-    border-radius:30px;
-
-    padding:40px;
-
-    transition:0.5s;
+/*==================================================
+        VITALNESS PREMIUM
+        PART 5A1 - HERO SECTION
+==================================================*/
+
+/*=====================================
+        Hero Section
+=====================================*/
+
+.premium-hero{
 
     position:relative;
 
     overflow:hidden;
+
+    padding:120px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8fffb 0%,
+        #ffffff 35%,
+        #f3fff7 100%
+    );
+
 }
 
-.card::before{
+/*=====================================
+        Background Glow
+=====================================*/
+
+.premium-bg-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    z-index:0;
+
+}
+
+.premium-bg-circle.one{
+
+    width:420px;
+
+    height:420px;
+
+    background:rgba(34,197,94,.14);
+
+    left:-150px;
+
+    top:-140px;
+
+}
+
+.premium-bg-circle.two{
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(74,222,128,.12);
+
+    right:-120px;
+
+    bottom:-120px;
+
+}
+
+/*=====================================
+        Container
+=====================================*/
+
+.premium-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+/*=====================================
+        Left
+=====================================*/
+
+.premium-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/*=====================================
+        Badge
+=====================================*/
+
+.premium-badge{
+
+    width:max-content;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:rgba(34,197,94,.10);
+
+    border:1px solid rgba(34,197,94,.20);
+
+    color:#16a34a;
+
+    font-size:.92rem;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.premium-badge i{
+
+    color:#22c55e;
+
+    font-size:1rem;
+
+}
+
+/*=====================================
+        Heading
+=====================================*/
+
+.premium-left h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:var(--text);
+
+    margin-bottom:28px;
+
+}
+
+.premium-left h1 span{
+
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #16a34a
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/*=====================================
+        Paragraph
+=====================================*/
+
+.premium-left p{
+
+    max-width:640px;
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    color:var(--text-light);
+
+    margin-bottom:45px;
+
+}
+
+/*=====================================
+        Responsive
+=====================================*/
+
+@media(max-width:1200px){
+
+    .premium-left h1{
+
+        font-size:3.5rem;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .premium-container{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .premium-left{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .premium-left p{
+
+        max-width:100%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .premium-hero{
+
+        padding:90px 20px;
+
+    }
+
+    .premium-left h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .premium-left p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .premium-left h1{
+
+        font-size:2.1rem;
+
+    }
+
+    .premium-badge{
+
+        font-size:.82rem;
+
+        padding:10px 18px;
+
+    }
+
+}
+
+/*=====================================
+        Dark Mode
+=====================================*/
+
+body.dark .premium-hero{
+
+    background:
+    linear-gradient(
+        135deg,
+        #111,
+        #171717,
+        #1d1d1d
+    );
+
+}
+
+body.dark .premium-left h1{
+
+    color:#fff;
+
+}
+
+body.dark .premium-left p{
+
+    color:#cfcfcf;
+
+}
+
+body.dark .premium-badge{
+
+    background:rgba(34,197,94,.12);
+
+    border-color:rgba(74,222,128,.25);
+
+    color:#4ade80;
+
+}
+/*==================================================
+        VITALNESS PREMIUM
+        PART 5A2
+        Highlights • Buttons • Stats
+==================================================*/
+
+/*=====================================
+        HIGHLIGHTS
+=====================================*/
+
+.premium-highlights{
+
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+
+    margin-bottom:45px;
+
+}
+
+.highlight{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    padding:20px 24px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.72);
+
+    border:1px solid rgba(34,197,94,.12);
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.05);
+
+}
+
+.highlight:hover{
+
+    transform:translateX(8px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+    0 20px 40px rgba(34,197,94,.15);
+
+}
+
+.highlight i{
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    color:#fff;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+    box-shadow:
+    0 15px 30px rgba(34,197,94,.28);
+
+}
+
+.highlight h4{
+
+    color:var(--text);
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.highlight span{
+
+    color:var(--text-light);
+
+    font-size:.94rem;
+
+    line-height:1.7;
+
+}
+
+/*=====================================
+        BUTTON GROUP
+=====================================*/
+
+.premium-buttons{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin-top:15px;
+    margin-bottom:55px;
+
+}
+
+/* Main Button */
+
+.premium-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    color:#fff;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 35px rgba(34,197,94,.30);
+
+}
+
+.premium-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 28px 45px rgba(34,197,94,.35);
+
+}
+
+/* Outline Button */
+
+.premium-outline-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    border:2px solid #22c55e;
+
+    color:#22c55e;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    background:transparent;
+
+}
+
+.premium-outline-btn:hover{
+
+    background:#22c55e;
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+/*=====================================
+        STATS
+=====================================*/
+
+.premium-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.premium-stats div{
+
+    text-align:center;
+
+    padding:28px 18px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.75);
+
+    border:1px solid rgba(34,197,94,.12);
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+
+}
+
+.premium-stats div:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+    0 20px 40px rgba(34,197,94,.16);
+
+}
+
+.premium-stats h2{
+
+    font-size:2.2rem;
+
+    color:#22c55e;
+
+    margin-bottom:8px;
+
+    font-weight:800;
+
+}
+
+.premium-stats p{
+
+    margin:0;
+
+    color:var(--text-light);
+
+    font-size:.95rem;
+
+}
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+body.dark .highlight{
+
+    background:rgba(255,255,255,.03);
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+body.dark .highlight h4{
+
+    color:#fff;
+
+}
+
+body.dark .highlight span{
+
+    color:#cfcfcf;
+
+}
+
+body.dark .premium-stats div{
+
+    background:rgba(255,255,255,.03);
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+body.dark .premium-stats p{
+
+    color:#d7d7d7;
+
+}
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+@media(max-width:992px){
+
+    .premium-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .premium-stats{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .premium-highlights{
+
+        gap:16px;
+
+    }
+
+    .highlight{
+
+        padding:18px;
+
+    }
+
+    .highlight i{
+
+        width:54px;
+        height:54px;
+
+        font-size:20px;
+
+    }
+
+    .premium-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .premium-btn,
+    .premium-outline-btn{
+
+        width:100%;
+
+    }
+
+    .premium-stats{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .highlight{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .highlight i{
+
+        margin-bottom:10px;
+
+    }
+
+}
+/*==================================================
+        VITALNESS PREMIUM
+        PART 5A3-1
+        Membership Card Base
+==================================================*/
+
+/*=====================================
+        RIGHT SIDE
+=====================================*/
+
+.premium-right{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+}
+
+/*=====================================
+        CARD
+=====================================*/
+
+.membership-card{
+
+    position:relative;
+
+    width:100%;
+    max-width:430px;
+
+    padding:45px 35px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.95),
+        rgba(245,255,248,.92)
+    );
+
+    border:1px solid rgba(34,197,94,.15);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,.08);
+
+    transition:.45s;
+
+}
+
+/*=====================================
+        TOP GLOW
+=====================================*/
+
+.membership-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+    right:-120px;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+    filter:blur(80px);
+
+}
+
+.membership-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:30px;
+
+    padding:1px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(34,197,94,.35),
+        transparent,
+        rgba(34,197,94,.12)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/*=====================================
+        HOVER
+=====================================*/
+
+.membership-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+        0 35px 70px rgba(34,197,94,.18);
+
+}
+
+/*=====================================
+        POPULAR BADGE
+=====================================*/
+
+.popular{
+
+    position:absolute;
+
+    top:22px;
+    right:-42px;
+
+    width:180px;
+
+    text-align:center;
+
+    padding:10px;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    transform:rotate(40deg);
+
+    box-shadow:
+        0 10px 25px rgba(34,197,94,.35);
+
+}
+
+/*=====================================
+        TITLE
+=====================================*/
+
+.membership-card h3{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:var(--text);
+
+}
+
+/*=====================================
+        PRICE
+=====================================*/
+
+.price{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+    margin-bottom:35px;
+
+    color:#22c55e;
+
+    font-size:3.3rem;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.price span{
+
+    font-size:1rem;
+
+    color:var(--text-light);
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+body.dark .membership-card{
+
+    background:linear-gradient(
+        145deg,
+        #1d1d1d,
+        #252525
+    );
+
+    border-color:rgba(74,222,128,.18);
+
+}
+
+body.dark .membership-card h3{
+
+    color:#fff;
+
+}
+
+body.dark .price span{
+
+    color:#d5d5d5;
+
+}
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+@media(max-width:992px){
+
+    .membership-card{
+
+        max-width:520px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .membership-card{
+
+        padding:35px 25px;
+
+    }
+
+    .membership-card h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .price{
+
+        font-size:2.8rem;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .membership-card{
+
+        border-radius:24px;
+
+        padding:30px 20px;
+
+    }
+
+    .popular{
+
+        width:150px;
+
+        right:-40px;
+
+        font-size:.68rem;
+
+    }
+
+    .membership-card h3{
+
+        font-size:1.5rem;
+
+    }
+
+    .price{
+
+        font-size:2.4rem;
+
+    }
+
+}/*==================================================
+        VITALNESS PREMIUM
+        PART 5A3-2
+        Feature List + Upgrade Button
+==================================================*/
+
+/*=====================================
+        FEATURE LIST
+=====================================*/
+
+.membership-card ul{
+
+    position:relative;
+
+    z-index:2;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-bottom:35px;
+
+}
+
+/*=====================================
+        FEATURE ITEM
+=====================================*/
+
+.membership-card ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px 18px;
+
+    border-radius:18px;
+
+    background:rgba(34,197,94,.06);
+
+    border:1px solid rgba(34,197,94,.08);
+
+    color:var(--text);
+
+    font-size:.98rem;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+/* Hover */
+
+.membership-card ul li:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(34,197,94,.10);
+
+    border-color:#22c55e;
+
+    box-shadow:
+    0 12px 28px rgba(34,197,94,.12);
+
+}
+
+/*=====================================
+        CHECK ICON
+=====================================*/
+
+.membership-card ul li i{
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    color:#fff;
+
+    font-size:14px;
+
+    box-shadow:
+    0 8px 20px rgba(34,197,94,.25);
+
+}
+
+/*=====================================
+        UPGRADE BUTTON
+=====================================*/
+
+.premium-card-btn{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    padding:18px 20px;
+
+    border-radius:60px;
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 35px rgba(34,197,94,.25);
+
+}
+
+/* Shine */
+
+.premium-card-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:1s;
+
+}
+
+.premium-card-btn:hover::before{
+
+    left:150%;
+
+}
+
+/* Hover */
+
+.premium-card-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 25px 45px rgba(34,197,94,.35);
+
+}
+
+/* Active */
+
+.premium-card-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+body.dark .membership-card ul li{
+
+    background:rgba(255,255,255,.04);
+
+    border-color:rgba(255,255,255,.06);
+
+    color:#f2f2f2;
+
+}
+
+body.dark .membership-card ul li:hover{
+
+    background:rgba(34,197,94,.12);
+
+    border-color:#22c55e;
+
+}
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+@media(max-width:768px){
+
+    .membership-card ul{
+
+        gap:14px;
+
+    }
+
+    .membership-card ul li{
+
+        padding:14px 16px;
+
+        font-size:.92rem;
+
+    }
+
+    .membership-card ul li i{
+
+        width:32px;
+
+        height:32px;
+
+        font-size:13px;
+
+    }
+
+    .premium-card-btn{
+
+        padding:16px;
+
+        font-size:.95rem;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .membership-card ul li{
+
+        gap:12px;
+
+        padding:12px 14px;
+
+        font-size:.88rem;
+
+    }
+
+    .membership-card ul li i{
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+}
+
+/*==================================================
+        VITALNESS PREMIUM
+        PART 5B1
+        PREMIUM BENEFITS SECTION
+==================================================*/
+
+
+/*=====================================
+        SECTION BASE
+=====================================*/
+
+.premium-benefits{
+
+    position:relative;
+
+    padding:100px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f3fff7
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+/* Background Glow */
+
+.premium-benefits::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+    filter:blur(100px);
+
+    top:-150px;
+
+    left:-150px;
+
+}
+
+
+
+/*=====================================
+        SECTION TITLE
+=====================================*/
+
+
+.section-title{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:rgba(34,197,94,.10);
+
+    border:1px solid rgba(34,197,94,.20);
+
+    color:#16a34a;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.section-title h2{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
+}
+
+
+.section-title h2 span{
+
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #16a34a
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+
+.section-title p{
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+
+
+/*=====================================
+        BENEFITS GRID
+=====================================*/
+
+
+.benefits-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=====================================
+        BENEFIT CARD
+=====================================*/
+
+
+.benefit-card{
+
+
+    position:relative;
+
+    padding:35px 30px;
+
+    border-radius:28px;
+
+
+    background:
+    rgba(255,255,255,.75);
+
+
+    border:1px solid
+    rgba(34,197,94,.12);
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.4s;
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+    0 15px 40px
+    rgba(0,0,0,.06);
+
+}
+
+
+
+.benefit-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:120px;
+
+
+    height:120px;
+
+
+    border-radius:50%;
+
+
+    background:
+    rgba(34,197,94,.12);
+
+
+    top:-50px;
+
+
+    right:-50px;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.benefit-card:hover::before{
+
+
+    transform:scale(2);
+
+
+}
+
+
+
+
+.benefit-card:hover{
+
+
+    transform:
+    translateY(-12px);
+
+
+    border-color:#22c55e;
+
+
+    box-shadow:
+
+    0 25px 55px
+    rgba(34,197,94,.18);
+
+
+}
+
+
+
+/*=====================================
+        ICON
+=====================================*/
+
+
+.benefit-icon{
+
+
+    width:75px;
+
+    height:75px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    border-radius:22px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+
+    color:white;
+
+
+    font-size:30px;
+
+
+    margin-bottom:25px;
+
+
+    box-shadow:
+
+    0 15px 35px
+    rgba(34,197,94,.30);
+
+
+}
+
+
+
+/*=====================================
+        TEXT
+=====================================*/
+
+
+.benefit-card h3{
+
+
+    font-size:1.35rem;
+
+
+    font-weight:800;
+
+
+    color:var(--text);
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.benefit-card p{
+
+
+    color:var(--text-light);
+
+
+    font-size:.95rem;
+
+
+    line-height:1.8;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.benefit-card span{
+
+
+    display:inline-flex;
+
+
+    padding:8px 18px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    rgba(34,197,94,.10);
+
+
+    color:#16a34a;
+
+
+    font-size:.82rem;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+
+body.dark .premium-benefits{
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #111,
+        #181818
+    );
+
+
+}
+
+
+
+body.dark .section-title h2{
+
+
+    color:#fff;
+
+
+}
+
+
+
+body.dark .section-title p{
+
+
+    color:#ccc;
+
+
+}
+
+
+
+body.dark .benefit-card{
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+body.dark .benefit-card h3{
+
+
+    color:white;
+
+
+}
+
+
+
+body.dark .benefit-card p{
+
+
+    color:#d1d1d1;
+
+
+}
+
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+
+@media(max-width:1100px){
+
+
+    .benefits-grid{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .premium-benefits{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+    .section-title h2{
+
+
+        font-size:2.2rem;
+
+
+    }
+
+
+
+    .benefits-grid{
+
+
+        grid-template-columns:1fr;
+
+
+        gap:22px;
+
+
+    }
+
+
+
+    .benefit-card{
+
+
+        padding:30px 25px;
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .section-title h2{
+
+
+        font-size:1.8rem;
+
+
+    }
+
+
+
+    .benefit-icon{
+
+
+        width:65px;
+
+
+        height:65px;
+
+
+        font-size:25px;
+
+
+    }
+
+
+}==================================================
+        VITALNESS PREMIUM
+        PART 5B2
+        RECOVERY TIMELINE SECTION
+==================================================*/
+
+
+/*=====================================
+        RECOVERY SECTION
+=====================================*/
+
+
+.recovery-process{
+
+    position:relative;
+
+    padding:100px 7%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #f8fffb,
+        #ffffff
+    );
+
+    overflow:hidden;
+
+}
+
+
+/* Background Glow */
+
+.recovery-process::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    filter:blur(100px);
+
+
+    right:-150px;
+
+
+    top:100px;
+
+}
+
+
+
+/*=====================================
+        TIMELINE
+=====================================*/
+
+
+.timeline{
+
+    position:relative;
+
+    max-width:950px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+
+}
+
+
+/* Center Line */
+
+
+.timeline::before{
 
     content:"";
 
     position:absolute;
 
 
-    background:linear-gradient(180deg, #007bff 0%,#011bff 100%);
+    left:50%;
 
 
-    top:-40px;
-    right:-40px;
+    top:0;
+
+
+    width:3px;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        to bottom,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    transform:translateX(-50%);
+
+
+    opacity:.35;
+
+
 }
 
-.card:hover{
 
-    transform:translateY(-15px) scale(1.03);
-    background:#007bff;
+
+
+/*=====================================
+        ITEM
+=====================================*/
+
+
+.timeline-item{
+
+    position:relative;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
 }
 
-.card i{
 
-    font-size:50px;
 
-    color:white;
 
-    margin-bottom:25px;
+/* Alternate Layout */
+
+
+.timeline-item:nth-child(odd){
+
+    justify-content:flex-start;
+
 }
 
-.card h3{
 
-    font-size:30px;
+.timeline-item:nth-child(even){
 
-    margin-bottom:18px;
+    justify-content:flex-end;
+
 }
 
-.card p{
 
-    color:#cbd5e1;
+
+
+/*=====================================
+        NUMBER
+=====================================*/
+
+
+.timeline-item .number{
+
+
+    position:absolute;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    width:70px;
+
+
+    height:70px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    color:#fff;
+
+
+    font-size:1.2rem;
+
+
+    font-weight:800;
+
+
+    z-index:3;
+
+
+    box-shadow:
+
+
+    0 15px 35px
+
+    rgba(34,197,94,.35);
+
+
+    border:5px solid #fff;
+
+
+}
+
+
+
+
+/*=====================================
+        CONTENT CARD
+=====================================*/
+
+
+.timeline-item .content{
+
+
+    width:42%;
+
+
+    padding:30px;
+
+
+    border-radius:28px;
+
+
+    background:
+
+    rgba(255,255,255,.80);
+
+
+    border:
+
+    1px solid
+
+    rgba(34,197,94,.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.4s;
+
+
+    box-shadow:
+
+
+    0 15px 40px
+
+    rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+.timeline-item .content:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    border-color:#22c55e;
+
+
+    box-shadow:
+
+
+    0 25px 55px
+
+    rgba(34,197,94,.18);
+
+
+}
+
+
+
+
+
+.timeline-item h3{
+
+
+    font-size:1.35rem;
+
+
+    font-weight:800;
+
+
+    color:var(--text);
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.timeline-item p{
+
+
+    color:var(--text-light);
+
 
     line-height:1.8;
-}      
 
 
+    font-size:.95rem;
 
-/* ===== CONTACT FITNESS FORM ===== */
 
-#contact-form{
-    padding: 100px 20px;
-    background: linear-gradient(135deg,#0b1220,#13264a);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* HEADING */
 
-#contact-form h2{
-    font-size: 45px;
-    color: #4da3ff;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 0 0 20px rgba(77,163,255,0.35);
-}
 
-#contact-form p{
-    color: #cbd5e1;
-    font-size: 18px;
-    margin-bottom: 45px;
-    text-align: center;
-}
 
-/* FORM CARD */
 
-#contact-form .card{
-    width: 100%;
-    max-width: 950px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(77,163,255,0.25);
-    backdrop-filter: blur(14px);
-    border-radius: 28px;
-    padding: 55px;
+/*=====================================
+        ICON DOT EFFECT
+=====================================*/
+
+
+.timeline-item::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    width:18px;
+
+
+    height:18px;
+
+
+    background:#22c55e;
+
+
+    border-radius:50%;
+
+
+    z-index:2;
+
+
     box-shadow:
-    0 0 30px rgba(77,163,255,0.12),
-    0 0 60px rgba(77,163,255,0.08);
+
+
+    0 0 0 8px
+
+    rgba(34,197,94,.15);
+
+
 }
 
-/* INPUTS */
 
-#contact-form input,
-#contact-form select{
-    width: 100%;
-    padding: 18px 22px;
-    margin-bottom: 22px;
-    border-radius: 14px;
-    border: 1px solid rgba(77,163,255,0.15);
-    background: rgba(255,255,255,0.07);
-    color: white;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
+
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+
+body.dark .recovery-process{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #111,
+
+        #181818
+
+    );
+
+
 }
 
-/* PLACEHOLDER */
 
-#contact-form input::placeholder{
-    color: #b8c5d6;
+
+body.dark .timeline-item .number{
+
+
+    border-color:#111;
+
 }
 
-/* FOCUS */
 
-#contact-form input:focus,
-#contact-form select:focus{
-    border-color: #4da3ff;
-    box-shadow: 0 0 15px rgba(77,163,255,0.35);
-    transform: scale(1.01);
+
+
+body.dark .timeline-item .content{
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
 }
 
-/* SELECT */
 
-#contact-form select{
-    background: rgba(15,20,35,0.95);
+
+body.dark .timeline-item h3{
+
+
+    color:#fff;
+
+
 }
 
-/* BUTTON */
 
-#contact-form button{
-    width: 100%;
-    padding: 18px;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(135deg,#4da3ff,#2563eb);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 20px rgba(77,163,255,0.25);
+
+body.dark .timeline-item p{
+
+
+    color:#ccc;
+
+
 }
 
-/* BUTTON HOVER */
 
-#contact-form button:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(77,163,255,0.45);
+
+
+/*=====================================
+        ANIMATION
+=====================================*/
+
+
+.timeline-item{
+
+
+    opacity:0;
+
+
+    animation:
+
+    timelineShow .8s ease forwards;
+
+
 }
 
-/* MOBILE */
 
-@media(max-width:768px){
 
-    #contact-form{
-        padding: 70px 15px;
+.timeline-item:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+
+.timeline-item:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+
+.timeline-item:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+
+.timeline-item:nth-child(4){
+
+    animation-delay:.8s;
+
+}
+
+
+
+@keyframes timelineShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(40px);
+
     }
 
-    #contact-form h2{
-        font-size: 32px;
-    }
 
-    #contact-form .card{
-        padding: 28px;
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
     }
 
 }
@@ -831,183 +2742,3382 @@ nav{
 
 
 
-/* PREMIUM */
+/*=====================================
+        RESPONSIVE TABLET
+=====================================*/
 
-.premium{
 
-    width:90%;
+@media(max-width:900px){
 
-    margin:100px auto;
 
-    padding:80px;
+    .timeline::before{
 
-    border-radius:35px;
+
+        left:35px;
+
+
+    }
+
+
+
+    .timeline-item{
+
+
+        justify-content:flex-start!important;
+
+
+        padding-left:90px;
+
+
+    }
+
+
+
+    .timeline-item .number{
+
+
+        left:35px;
+
+
+    }
+
+
+
+    .timeline-item::after{
+
+
+        left:35px;
+
+
+    }
+
+
+
+    .timeline-item .content{
+
+
+        width:100%;
+
+
+    }
+
+
+}
+
+
+
+
+
+/*=====================================
+        MOBILE
+=====================================*/
+
+
+@media(max-width:600px){
+
+
+    .recovery-process{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+    .timeline{
+
+
+        gap:35px;
+
+
+    }
+
+
+
+    .timeline-item{
+
+
+        padding-left:75px;
+
+
+    }
+
+
+
+    .timeline-item .number{
+
+
+        width:55px;
+
+
+        height:55px;
+
+
+        font-size:.95rem;
+
+
+    }
+
+
+
+    .timeline-item::after{
+
+
+        width:14px;
+
+
+        height:14px;
+
+
+    }
+
+
+
+    .timeline-item .content{
+
+
+        padding:22px;
+
+
+        border-radius:22px;
+
+
+    }
+
+
+
+    .timeline-item h3{
+
+
+        font-size:1.1rem;
+
+
+    }
+
+
+}
+/*==================================================
+        VITALNESS PREMIUM
+        PART 5B3
+        PREMIUM PLANS SECTION
+==================================================*/
+
+
+/*=====================================
+        PLANS SECTION
+=====================================*/
+
+
+.premium-plans{
+
+    position:relative;
+
+    padding:110px 7%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f3fff7
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+.premium-plans::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    filter:blur(120px);
+
+
+    left:-180px;
+
+    bottom:-100px;
+
+}
+
+
+
+/*=====================================
+        PLANS GRID
+=====================================*/
+
+
+.plans-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+
+}
+
+
+
+/*=====================================
+        PLAN CARD
+=====================================*/
+
+
+.plan-card{
+
+    position:relative;
+
+
+    padding:40px 30px;
+
+
+    border-radius:32px;
+
+
+    background:
+
+    rgba(255,255,255,.85);
+
+
+
+    border:
+
+    1px solid
+
+    rgba(34,197,94,.15);
+
+
+    backdrop-filter:blur(18px);
+
+
+    box-shadow:
+
+
+    0 18px 45px
+
+    rgba(0,0,0,.06);
+
+
+    transition:.45s;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.plan-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:150px;
+
+
+    height:150px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    top:-70px;
+
+
+    right:-70px;
+
+
+}
+
+
+
+
+.plan-card:hover{
+
+
+    transform:
+
+    translateY(-15px);
+
+
+    border-color:#22c55e;
+
+
+    box-shadow:
+
+
+    0 35px 70px
+
+    rgba(34,197,94,.18);
+
+
+}
+
+
+
+
+/*=====================================
+        POPULAR CARD
+=====================================*/
+
+
+.plan-card.popular{
+
+
+    transform:
+
+    translateY(-20px);
+
+
+    border:
+
+    2px solid #22c55e;
+
+
+    box-shadow:
+
+
+    0 30px 70px
+
+    rgba(34,197,94,.22);
+
+
+}
+
+
+
+.plan-card.popular:hover{
+
+
+    transform:
+
+    translateY(-30px);
+
+
+}
+
+
+
+
+
+/*=====================================
+        POPULAR BADGE
+=====================================*/
+
+
+.popular-badge{
+
+
+    position:absolute;
+
+
+    top:25px;
+
+
+    right:-45px;
+
+
+    width:180px;
+
+
+    padding:10px;
+
 
     text-align:center;
 
-    background:linear-gradient(180deg, #009bff 0%,#001bff 100%);
 
-    animation:glow 3s infinite alternate;
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    color:#fff;
+
+
+    font-size:.75rem;
+
+
+    font-weight:800;
+
+
+    letter-spacing:1px;
+
+
+    transform:
+
+    rotate(40deg);
+
+
+    box-shadow:
+
+
+    0 12px 25px
+
+    rgba(34,197,94,.35);
+
+
 }
 
-@keyframes glow{
 
-    from{
-        box-shadow:0 0 20px rgba(0,145,234,0.4);
-    }
 
-    to{
-        box-shadow:0 0 50px rgba(0,145,234,0.7);
-    }
-}
 
-.premium h2{
 
-    font-size:65px;
+/*=====================================
+        PLAN HEADER
+=====================================*/
+
+
+.plan-header{
+
 
     margin-bottom:25px;
+
+
 }
 
-.premium p{
 
-    font-size:24px;
+
+.plan-header h3{
+
+
+    font-size:1.8rem;
+
+
+    font-weight:800;
+
+
+    color:var(--text);
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.plan-header p{
+
+
+    color:var(--text-light);
+
+
+    font-size:.95rem;
+
+
+}
+
+
+
+
+
+/*=====================================
+        PRICE
+=====================================*/
+
+
+.plan-price{
+
+
+    font-size:3rem;
+
+
+    font-weight:900;
+
+
+    color:#22c55e;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.plan-price span{
+
+
+    font-size:1rem;
+
+
+    font-weight:600;
+
+
+    color:var(--text-light);
+
+
+}
+
+
+
+
+
+/*=====================================
+        FEATURES
+=====================================*/
+
+
+.plan-card ul{
+
+
+    list-style:none;
+
+
+    padding:0;
+
+
+    margin:0 0 35px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+.plan-card ul li{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    color:var(--text);
+
+
+    font-size:.95rem;
+
+
+}
+
+
+
+.plan-card ul li i{
+
+
+    width:25px;
+
+
+    height:25px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    color:#fff;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+/*=====================================
+        BUTTON
+=====================================*/
+
+
+.plan-btn{
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:16px;
+
+
+    border-radius:60px;
+
+
+    text-decoration:none;
+
+
+    border:
+
+    2px solid #22c55e;
+
+
+    color:#22c55e;
+
+
+    font-weight:700;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+.plan-btn:hover,
+
+
+.plan-btn.active{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    color:#fff;
+
+
+    transform:
+
+    translateY(-5px);
+
+
+}
+
+
+
+
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+
+body.dark .premium-plans{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #111,
+
+        #181818
+
+    );
+
+
+}
+
+
+
+body.dark .plan-card{
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+body.dark .plan-header h3{
+
+
+    color:#fff;
+
+
+}
+
+
+
+body.dark .plan-header p,
+
+
+body.dark .plan-price span{
+
+
+    color:#ccc;
+
+
+}
+
+
+
+body.dark .plan-card ul li{
+
+
+    color:#eee;
+
+
+}
+
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+
+@media(max-width:1100px){
+
+
+    .plans-grid{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+    .plan-card.popular{
+
+
+        transform:none;
+
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+    .premium-plans{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+    .plans-grid{
+
+
+        grid-template-columns:1fr;
+
+
+        gap:25px;
+
+
+    }
+
+
+
+    .plan-card,
+
+
+    .plan-card.popular{
+
+
+        transform:none;
+
+
+    }
+
+
+
+    .plan-card:hover{
+
+
+        transform:
+
+        translateY(-8px);
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .plan-card{
+
+
+        padding:30px 22px;
+
+
+        border-radius:25px;
+
+
+    }
+
+
+
+    .plan-header h3{
+
+
+        font-size:1.5rem;
+
+
+    }
+
+
+
+    .plan-price{
+
+
+        font-size:2.4rem;
+
+
+    }
+
+
+
+}/*==================================================
+        VITALNESS PREMIUM
+        PART 5B4
+        PLAN COMPARISON TABLE
+==================================================*/
+
+
+/*=====================================
+        COMPARISON SECTION
+=====================================*/
+
+
+.plan-comparison{
+
+    position:relative;
+
+    padding:100px 7%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #f8fffb,
+        #ffffff
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+.plan-comparison::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    filter:blur(100px);
+
+
+    right:-150px;
+
+    top:50px;
+
+}
+
+
+
+/*=====================================
+        TABLE WRAPPER
+=====================================*/
+
+
+.comparison-table{
+
+    position:relative;
+
+    z-index:2;
+
+
+    max-width:1100px;
+
+
+    margin:auto;
+
+
+    overflow-x:auto;
+
+
+    border-radius:28px;
+
+
+    padding:5px;
+
+
+    background:
+
+    rgba(255,255,255,.65);
+
+
+    backdrop-filter:blur(18px);
+
+
+    border:
+
+    1px solid
+
+    rgba(34,197,94,.15);
+
+
+    box-shadow:
+
+
+    0 25px 60px
+
+    rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+/* Scrollbar */
+
+
+.comparison-table::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+
+.comparison-table::-webkit-scrollbar-thumb{
+
+    background:#22c55e;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/*=====================================
+        TABLE
+=====================================*/
+
+
+.comparison-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:750px;
+
+}
+
+
+
+
+
+/*=====================================
+        HEADER
+=====================================*/
+
+
+.comparison-table thead{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+}
+
+
+
+.comparison-table th{
+
+
+    padding:22px 20px;
+
+
+    color:#fff;
+
+
+    font-size:1rem;
+
+
+    font-weight:800;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.comparison-table th:first-child{
+
+
+    text-align:left;
+
+
+}
+
+
+
+
+
+/*=====================================
+        BODY
+=====================================*/
+
+
+.comparison-table td{
+
+
+    padding:20px;
+
+
+    text-align:center;
+
+
+    color:var(--text);
+
+
+    font-size:.95rem;
+
+
+    font-weight:600;
+
+
+    border-bottom:
+
+    1px solid
+
+    rgba(34,197,94,.10);
+
+
+}
+
+
+
+
+.comparison-table td:first-child{
+
+
+    text-align:left;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+
+.comparison-table tbody tr{
+
+
+    transition:.35s;
+
+
+}
+
+
+
+.comparison-table tbody tr:hover{
+
+
+    background:
+
+    rgba(34,197,94,.08);
+
+
+    transform:
+
+    scale(1.01);
+
+
+}
+
+
+
+
+
+/*=====================================
+        CHECK / DASH STYLE
+=====================================*/
+
+
+.comparison-table td:nth-child(n+2){
+
+
+    color:#16a34a;
+
+
+}
+
+
+
+.comparison-table td:first-child{
+
+
+    color:var(--text);
+
+
+}
+
+
+
+
+
+/*=====================================
+        HIGHLIGHT PRO COLUMN
+=====================================*/
+
+
+.comparison-table th:nth-child(3),
+
+
+.comparison-table td:nth-child(3){
+
+
+    background:
+
+    rgba(34,197,94,.08);
+
+
+}
+
+
+
+.comparison-table th:nth-child(3){
+
+
+    position:relative;
+
+
+}
+
+
+
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+
+body.dark .plan-comparison{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #111,
+
+        #181818
+
+    );
+
+
+}
+
+
+
+body.dark .comparison-table{
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+body.dark .comparison-table td{
+
+
+    color:#eee;
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+body.dark .comparison-table td:first-child{
+
+
+    color:#fff;
+
+
+}
+
+
+
+body.dark .comparison-table tbody tr:hover{
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+}
+
+
+
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+
+@media(max-width:768px){
+
+
+    .plan-comparison{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+    .comparison-table{
+
+
+        border-radius:22px;
+
+
+    }
+
+
+
+    .comparison-table th{
+
+
+        padding:18px 15px;
+
+
+        font-size:.9rem;
+
+
+    }
+
+
+
+    .comparison-table td{
+
+
+        padding:16px 14px;
+
+
+        font-size:.85rem;
+
+
+    }
+
+
+
+}==================================================
+        VITALNESS PREMIUM
+        PART 5B5
+        SUCCESS STORIES SECTION
+==================================================*/
+
+
+/*=====================================
+        TESTIMONIAL SECTION
+=====================================*/
+
+
+.premium-testimonials{
+
+    position:relative;
+
+    padding:110px 7%;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f3fff7
+    );
+
+
+    overflow:hidden;
+
+}
+
+
+
+.premium-testimonials::before{
+
+    content:"";
+
+    position:absolute;
+
+
+    width:400px;
+
+
+    height:400px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    filter:blur(120px);
+
+
+    left:-180px;
+
+
+    top:80px;
+
+
+}
+
+
+
+/*=====================================
+        TESTIMONIAL GRID
+=====================================*/
+
+
+.testimonial-grid{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/*=====================================
+        TESTIMONIAL CARD
+=====================================*/
+
+
+.testimonial-card{
+
+
+    position:relative;
+
+
+    padding:35px 30px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+
+    rgba(255,255,255,.80);
+
+
+    border:
+
+
+    1px solid
+
+    rgba(34,197,94,.15);
+
+
+    backdrop-filter:blur(18px);
+
+
+    box-shadow:
+
+
+    0 20px 45px
+
+    rgba(0,0,0,.06);
+
+
+    transition:.45s;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.testimonial-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:130px;
+
+
+    height:130px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    right:-60px;
+
+
+    top:-60px;
+
+
+}
+
+
+
+
+
+.testimonial-card:hover{
+
+
+    transform:
+
+    translateY(-12px);
+
+
+    border-color:#22c55e;
+
+
+    box-shadow:
+
+
+    0 35px 70px
+
+    rgba(34,197,94,.18);
+
+
+}
+
+
+
+
+
+/*=====================================
+        STARS
+=====================================*/
+
+
+.stars{
+
+
+    font-size:1.2rem;
+
+
+    letter-spacing:3px;
+
+
+    margin-bottom:22px;
+
+
+    animation:
+
+    starPulse 2s infinite;
+
+
+}
+
+
+
+@keyframes starPulse{
+
+
+    0%,100%{
+
+
+        transform:scale(1);
+
+
+    }
+
+
+    50%{
+
+
+        transform:scale(1.08);
+
+
+    }
+
+
+}
+
+
+
+
+
+/*=====================================
+        REVIEW TEXT
+=====================================*/
+
+
+.testimonial-card p{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    color:var(--text-light);
+
+
+    font-size:1rem;
+
 
     line-height:1.9;
+
+
+    margin-bottom:30px;
+
+
+    font-style:italic;
+
+
 }
 
 
 
-/* Footer -  */
-footer {
-    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-    color: #ccc;
-   padding: 70px 30px 30px;
+
+
+/*=====================================
+        USER
+=====================================*/
+
+
+.user{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
 
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto 2.5rem;
-    width: 100%;
-}
 
-.footer-section h3 {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
 
-.footer-section h4 {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
+.user img{
 
-.footer-section ul {
-    list-style: none;
-}
 
-.footer-section ul li {
-    margin-bottom: 0.75rem;
-}
+    width:60px;
 
-.footer-section a {
-    color: #999;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
-.footer-section a:hover {
-    color: #007bff;
-}
+    height:60px;
 
-.footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 0.9rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-}
+    border-radius:50%;
 
-.social-links a {
-    color: #999;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
 
-.social-links a:hover {
-    color: #fff;
-    transform: translateY(-1px);
+    object-fit:cover;
+
+
+    border:
+
+    3px solid #22c55e;
+
+
+    box-shadow:
+
+
+    0 10px 25px
+
+    rgba(34,197,94,.25);
+
+
 }
 
 
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-center {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #1a1a1a;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
+
+.user h4{
+
+
+    margin:0 0 5px;
+
+
+    font-size:1.05rem;
+
+
+    font-weight:800;
+
+
+    color:var(--text);
+
+
+}
+
+
+
+.user span{
+
+
+    color:#16a34a;
+
+
+    font-size:.85rem;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+
+body.dark .premium-testimonials{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #111,
+
+        #181818
+
+    );
+
+
+}
+
+
+
+
+body.dark .testimonial-card{
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+body.dark .testimonial-card p{
+
+
+    color:#ccc;
+
+
+}
+
+
+
+
+body.dark .user h4{
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+body.dark .user span{
+
+
+    color:#4ade80;
+
+
+}
+
+
+
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+
+@media(max-width:1100px){
+
+
+    .testimonial-grid{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
     }
 
-    .nav-center.active {
-        display: flex;
-    }
-    
-    .mobile-toggle {
-        display: flex;
-    }
-    
-    .nav-right {
-        gap: 0.5rem;
-    }
-    
-    .logo {
-        font-size: 1.5rem;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+    .premium-testimonials{
+
+
+        padding:80px 20px;
+
+
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+
+
+
+    .testimonial-grid{
+
+
+        grid-template-columns:1fr;
+
+
+        gap:22px;
+
+
     }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+
+
+
+    .testimonial-card{
+
+
+        padding:30px 25px;
+
+
     }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
+
+
+
 }
- 
+
+
+
+
+
+@media(max-width:480px){
+
+
+    .testimonial-card{
+
+
+        border-radius:24px;
+
+
+    }
+
+
+
+    .testimonial-card p{
+
+
+        font-size:.92rem;
+
+
+    }
+
+
+
+    .user img{
+
+
+        width:52px;
+
+
+        height:52px;
+
+
+    }
+
+
+
+}/*==================================================
+        VITALNESS PREMIUM
+        PART 5B6
+        FAQ SECTION
+==================================================*/
+
+
+/*=====================================
+        FAQ SECTION
+=====================================*/
+
+
+.premium-faq{
+
+    position:relative;
+
+    padding:100px 7%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #f8fffb,
+        #ffffff
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+.premium-faq::before{
+
+    content:"";
+
+    position:absolute;
+
+
+    width:350px;
+
+
+    height:350px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.12);
+
+
+    filter:blur(100px);
+
+
+    right:-150px;
+
+
+    bottom:50px;
+
+}
+
+
+
+
+/*=====================================
+        FAQ CONTAINER
+=====================================*/
+
+
+.faq-container{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    max-width:900px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+/*=====================================
+        FAQ ITEM
+=====================================*/
+
+
+.faq-item{
+
+
+    position:relative;
+
+
+    padding:25px 30px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+
+    rgba(255,255,255,.80);
+
+
+    border:
+
+
+    1px solid
+
+    rgba(34,197,94,.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+    box-shadow:
+
+
+    0 15px 35px
+
+    rgba(0,0,0,.05);
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.faq-item::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    top:0;
+
+
+    width:5px;
+
+
+    height:0;
+
+
+    background:
+
+
+    linear-gradient(
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+.faq-item:hover::before{
+
+
+    height:100%;
+
+
+}
+
+
+
+
+
+.faq-item:hover{
+
+
+    transform:
+
+    translateY(-6px);
+
+
+    border-color:#22c55e;
+
+
+    box-shadow:
+
+
+    0 25px 50px
+
+    rgba(34,197,94,.15);
+
+
+}
+
+
+
+
+
+/*=====================================
+        QUESTION
+=====================================*/
+
+
+.faq-item h3{
+
+
+    position:relative;
+
+
+    padding-right:40px;
+
+
+    margin:0;
+
+
+    font-size:1.15rem;
+
+
+    font-weight:800;
+
+
+    color:var(--text);
+
+
+}
+
+
+
+
+
+/* Plus Icon */
+
+
+.faq-item h3::after{
+
+
+    content:"+";
+
+
+    position:absolute;
+
+
+    right:0;
+
+
+    top:50%;
+
+
+    transform:
+
+    translateY(-50%);
+
+
+    width:30px;
+
+
+    height:30px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border-radius:50%;
+
+
+    background:
+
+
+    rgba(34,197,94,.12);
+
+
+    color:#16a34a;
+
+
+    font-size:1.3rem;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+/*=====================================
+        ANSWER
+=====================================*/
+
+
+.faq-item p{
+
+
+    color:var(--text-light);
+
+
+    line-height:1.8;
+
+
+    font-size:.95rem;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+/*=====================================
+        ACTIVE EFFECT
+=====================================*/
+
+
+.faq-item.active{
+
+
+    border-color:#22c55e;
+
+
+    background:
+
+    rgba(34,197,94,.08);
+
+
+}
+
+
+
+.faq-item.active h3::after{
+
+
+    content:"−";
+
+
+    background:#22c55e;
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+
+/*=====================================
+        DARK MODE
+=====================================*/
+
+
+body.dark .premium-faq{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #111,
+
+        #181818
+
+    );
+
+
+}
+
+
+
+
+body.dark .faq-item{
+
+
+    background:
+
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+body.dark .faq-item h3{
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+body.dark .faq-item p{
+
+
+    color:#ccc;
+
+
+}
+
+
+
+
+body.dark .faq-item.active{
+
+
+    background:
+
+
+    rgba(34,197,94,.12);
+
+
+}
+
+
+
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+
+@media(max-width:768px){
+
+
+    .premium-faq{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+    .faq-item{
+
+
+        padding:22px;
+
+
+        border-radius:22px;
+
+
+    }
+
+
+
+    .faq-item h3{
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+    .faq-item p{
+
+
+        font-size:.9rem;
+
+
+    }
+
+
+}
+
+
+
+
+@media(max-width:480px){
+
+
+    .faq-item{
+
+
+        padding:20px;
+
+
+    }
+
+
+
+    .faq-item h3{
+
+
+        padding-right:35px;
+
+
+    }
+
+
+
+}
+
+
+
+/*==================================================
+        VITALNESS PREMIUM
+        PART 5B7
+        FINAL CTA + FOOTER
+==================================================*/
+
+
+/*=====================================
+        FINAL CTA SECTION
+=====================================*/
+
+
+.premium-final-cta{
+
+    position:relative;
+
+    padding:120px 7%;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #f3fff7,
+        #ffffff
+    );
+
+}
+
+
+
+.premium-final-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(34,197,94,.18);
+
+
+    filter:blur(120px);
+
+
+    left:-200px;
+
+
+    top:-150px;
+
+
+}
+
+
+
+.premium-final-cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(74,222,128,.15);
+
+
+    filter:blur(120px);
+
+
+    right:-150px;
+
+
+    bottom:-150px;
+
+
+}
+
+
+
+/*=====================================
+        CTA BOX
+=====================================*/
+
+
+.cta-box{
+
+
+    position:relative;
+
+    z-index:2;
+
+
+    max-width:1000px;
+
+
+    margin:auto;
+
+
+    text-align:center;
+
+
+    padding:60px 45px;
+
+
+    border-radius:40px;
+
+
+    background:
+
+    rgba(255,255,255,.75);
+
+
+    border:
+
+    1px solid
+
+    rgba(34,197,94,.18);
+
+
+    backdrop-filter:blur(20px);
+
+
+    box-shadow:
+
+
+    0 30px 80px
+
+    rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+.cta-box h2{
+
+
+    margin:25px 0;
+
+
+    font-size:3.2rem;
+
+
+    font-weight:900;
+
+
+    line-height:1.2;
+
+
+    color:var(--text);
+
+
+}
+
+
+
+
+.cta-box h2 span{
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #22c55e,
+
+        #16a34a
+
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    -webkit-text-fill-color:transparent;
+
+
+}
+
+
+
+
+
+.cta-box p{
+
+
+    max-width:750px;
+
+
+    margin:auto;
+
+
+    color:var(--text-light);
+
+
+    font-size:1.05rem;
+
+
+    line-height:1.9;
+
+
+}
+
+
+
+/*=====================================
+        CTA BUTTONS
+=====================================*/
+
+
+.cta-buttons{
+
+
+    margin-top:40px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.cta-buttons .premium-btn{
+
+
+    padding:18px 45px;
+
+
+}
+
+
+
+.cta-buttons .premium-outline-btn{
+
+
+    padding:18px 45px;
+
+
+}
+
+
+
+
+
+/*=====================================
+        TRUST BADGES
+=====================================*/
+
+
+.trust-badges{
+
+
+    margin-top:50px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+.trust-badges div{
+
+
+    padding:15px;
+
+
+    border-radius:18px;
+
+
+    background:
+
+
+    rgba(34,197,94,.08);
+
+
+    border:
+
+    1px solid
+
+    rgba(34,197,94,.12);
+
+
+    color:var(--text);
+
+
+    font-size:.9rem;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+/*=====================================
+        FOOTER
+=====================================*/
+
+
+footer{
+
+
+    position:relative;
+
+
+    padding:70px 7% 25px;
+
+
+    background:
+
+    #0f0f0f;
+
+
+    color:white;
+
+
+}
+
+
+
+
+.footer-content{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    1.5fr 1fr 1fr 1fr;
+
+
+    gap:40px;
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+}
+
+
+
+
+
+.footer-section h3{
+
+
+    font-size:2rem;
+
+
+    font-weight:900;
+
+
+    color:#22c55e;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.footer-section h4{
+
+
+    font-size:1.1rem;
+
+
+    margin-bottom:20px;
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+
+.footer-section p{
+
+
+    color:#bdbdbd;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+.footer-section ul{
+
+
+    list-style:none;
+
+
+    padding:0;
+
+
+}
+
+
+
+
+.footer-section ul li{
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+.footer-section ul li a{
+
+
+    text-decoration:none;
+
+
+    color:#cfcfcf;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.footer-section ul li a:hover{
+
+
+    color:#22c55e;
+
+
+    padding-left:6px;
+
+
+}
+
+
+
+
+
+/*=====================================
+        FOOTER BOTTOM
+=====================================*/
+
+
+.footer-bottom{
+
+
+    max-width:1200px;
+
+
+    margin:50px auto 0;
+
+
+    padding-top:25px;
+
+
+    border-top:
+
+    1px solid
+
+    rgba(255,255,255,.12);
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+.footer-bottom p{
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+
+.social-links{
+
+
+    display:flex;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+.social-links a{
+
+
+    color:#ccc;
+
+
+    text-decoration:none;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.social-links a:hover{
+
+
+    color:#22c55e;
+
+
+}
+
+
+
+
+
+/*=====================================
+        DARK MODE CTA
+=====================================*/
+
+
+body.dark .premium-final-cta{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #111,
+
+        #181818
+
+    );
+
+
+}
+
+
+
+
+body.dark .cta-box{
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+body.dark .cta-box h2{
+
+
+    color:#fff;
+
+
+}
+
+
+
+body.dark .cta-box p{
+
+
+    color:#ccc;
+
+
+}
+
+
+
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+
+@media(max-width:1000px){
+
+
+    .footer-content{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+    .trust-badges{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+    .premium-final-cta{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+
+    .cta-box{
+
+
+        padding:40px 25px;
+
+
+        border-radius:30px;
+
+
+    }
+
+
+
+
+    .cta-box h2{
+
+
+        font-size:2.2rem;
+
+
+    }
+
+
+
+
+    .cta-buttons{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+
+    .cta-buttons a{
+
+
+        width:100%;
+
+
+    }
+
+
+
+    .footer-content{
+
+
+        grid-template-columns:1fr;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    .footer-bottom{
+
+
+        flex-direction:column;
+
+
+        gap:20px;
+
+
+        text-align:center;
+
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:480px){
+
+
+    .cta-box h2{
+
+
+        font-size:1.8rem;
+
+
+    }
+
+
+
+
+    .trust-badges{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+} 
     
 .popup-container{
 

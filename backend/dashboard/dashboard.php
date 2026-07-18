@@ -216,123 +216,232 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 <!-- PREMIUM MEMBERSHIP SECTION -->
-<section class="premium-section">
 
-    <!-- BACKGROUND GLOW -->
-    <div class="premium-glow"></div>
+<section class="premium-hero">
+
+    <div class="premium-bg-circle one"></div>
+    <div class="premium-bg-circle two"></div>
 
     <div class="premium-container">
 
-        <!-- LEFT CONTENT -->
+        <!-- LEFT -->
+
         <div class="premium-left">
 
-            <span class="premium-tag">
-                 VITALNESS PREMIUM
+            <span class="premium-badge">
+
+                <i class="fa-solid fa-crown"></i>
+
+                VITALNESS PREMIUM
+
             </span>
 
-            <h2>
-                Unlock The <span>Premium</span><br>
-                Fitness Experience
-            </h2>
+            <h1>
+
+                Stay
+                <span>Injury-Free</span>
+
+                <br>
+
+                Train Smarter
+
+                <br>
+
+                Live Healthier
+
+            </h1>
 
             <p>
-                Access advanced workout programs, AI diet plans,
-                personal coaching, premium trackers and exclusive
-                transformation tools with VitalNess Pro.
+
+                Unlock the complete VitalNess Premium experience with
+                AI-powered injury prevention, rehabilitation programs,
+                expert physiotherapists, recovery tracking, premium
+                workout plans and personalized health coaching.
+
             </p>
 
-            <!-- FEATURES -->
-            <div class="premium-features">
+            <div class="premium-highlights">
 
-                <div class="premium-feature">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>Unlimited Workout Programs</span>
+                <div class="highlight">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <div>
+
+                        <h4>Injury Prevention</h4>
+
+                        <span>Reduce injury risk with smart assessments.</span>
+
+                    </div>
+
                 </div>
 
-                <div class="premium-feature">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>Personal Diet Plans</span>
+                <div class="highlight">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    <div>
+
+                        <h4>Recovery Programs</h4>
+
+                        <span>Recover faster with guided rehab plans.</span>
+
+                    </div>
+
                 </div>
 
-                <div class="premium-feature">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>Advanced BMI & Calorie Tracker</span>
-                </div>
+                <div class="highlight">
 
-                <div class="premium-feature">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>Premium Meditation Sessions</span>
-                </div>
+                    <i class="fa-solid fa-user-doctor"></i>
 
-                <div class="premium-feature">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>Expert Live Guidance</span>
+                    <div>
+
+                        <h4>Expert Support</h4>
+
+                        <span>Certified physiotherapists & wellness experts.</span>
+
+                    </div>
+
                 </div>
 
             </div>
 
-            <!-- BUTTONS -->
             <div class="premium-buttons">
 
                 <a href="#" class="premium-btn">
-                    🚀 Upgrade Now
+
+                    Start Premium
+
                 </a>
 
                 <a href="#" class="premium-outline-btn">
-                    View Plans
+
+                    Explore Benefits
+
                 </a>
+
+            </div>
+
+            <div class="premium-stats">
+
+                <div>
+
+                    <h2>50K+</h2>
+
+                    <p>Premium Members</p>
+
+                </div>
+
+                <div>
+
+                    <h2>98%</h2>
+
+                    <p>Recovery Success</p>
+
+                </div>
+
+                <div>
+
+                    <h2>24/7</h2>
+
+                    <p>Expert Support</p>
+
+                </div>
 
             </div>
 
         </div>
 
-        <!-- RIGHT CARD -->
-        <div class="premium-right" id="bounce-heading">
+        <!-- RIGHT -->
 
-            <div class="premium-card">
+        <div class="premium-right">
 
-                <div class="premium-top">
-                    <span>Most Popular</span>
+            <div class="membership-card">
+
+                <div class="popular">
+
+                    MOST POPULAR
+
                 </div>
 
-                <h3>VitalNess Pro</h3>
+                <h3>
 
-                <div class="premium-price">
-                    ₹499
-                    <span>/month</span>
+                    VitalNess Pro+
+
+                </h3>
+
+                <div class="price">
+
+                    ₹799
+
+                    <span>/Month</span>
+
                 </div>
 
                 <ul>
 
                     <li>
+
                         <i class="fa-solid fa-check"></i>
-                        AI Fitness Dashboard
+
+                        AI Injury Risk Analysis
+
                     </li>
 
                     <li>
+
                         <i class="fa-solid fa-check"></i>
-                        Smart Health Reports
+
+                        Personalized Recovery Plans
+
                     </li>
 
                     <li>
+
                         <i class="fa-solid fa-check"></i>
-                        Premium Workout Videos
+
+                        Premium Workout Library
+
                     </li>
 
                     <li>
+
                         <i class="fa-solid fa-check"></i>
-                        Daily Diet Tracking
+
+                        Live Physiotherapist Sessions
+
                     </li>
 
                     <li>
+
                         <i class="fa-solid fa-check"></i>
-                        24/7 Expert Support
+
+                        Daily Progress Reports
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        AI Health Assistant
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Nutrition Guidance
+
                     </li>
 
                 </ul>
 
                 <a href="#" class="premium-card-btn">
-                    Start Premium
+
+                    Upgrade Now
+
                 </a>
 
             </div>
@@ -341,66 +450,222 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
     </div>
 
-</section>
-<!-- FEATURES -->
+</section><!--==================================
+        PREMIUM INJURY BENEFITS
+===================================-->
 
-<section class="features" id="features">
+<section class="premium-benefits">
 
-    <h2 class="title">
-        Exclusive Features
-    </h2>
+    <div class="section-title">
 
-    <div class="grid">
+        <span class="section-tag">
+            🛡 PREMIUM BENEFITS
+        </span>
 
-        <div class="card">
+        <h2>
 
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Why Choose
+            <span>VitalNess Premium?</span>
 
-            <h3>AI Design</h3>
+        </h2>
+
+        <p>
+
+            Train confidently with advanced injury prevention,
+            recovery guidance, AI health analysis and certified
+            experts—all in one premium membership.
+
+        </p>
+
+    </div>
+
+    <div class="benefits-grid">
+
+        <!-- Card -->
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+            <h3>
+
+                AI Injury Detection
+
+            </h3>
 
             <p>
-                Generate stunning layouts instantly with
-                next-generation AI design tools.
+
+                Smart movement analysis identifies potential
+                injury risks before they become serious.
+
             </p>
+
+            <span>
+
+                Prevention First
+
+            </span>
 
         </div>
 
-        <div class="card">
+        <!-- Card -->
 
-            <i class="fa-solid fa-mobile-screen"></i>
+        <div class="benefit-card">
 
-            <h3>Responsive UI</h3>
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+            </div>
+
+            <h3>
+
+                Physiotherapist Support
+
+            </h3>
 
             <p>
-                Modern responsive interfaces optimized
-                for every device.
+
+                Connect with certified physiotherapists for
+                personalized recovery guidance.
+
             </p>
+
+            <span>
+
+                Certified Experts
+
+            </span>
 
         </div>
 
-        <div class="card">
+        <!-- Card -->
 
-            <i class="fa-solid fa-rocket"></i>
+        <div class="benefit-card">
 
-            <h3>Fast Workflow</h3>
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+            <h3>
+
+                Injury Recovery Plans
+
+            </h3>
 
             <p>
-                Ultra smooth animations and lightning fast
-                performance system.
+
+                Personalized rehabilitation programs for
+                faster and safer recovery.
+
             </p>
+
+            <span>
+
+                Smart Rehab
+
+            </span>
 
         </div>
 
-        <div class="card">
+        <!-- Card -->
 
-            <i class="fa-solid fa-lock"></i>
+        <div class="benefit-card">
 
-            <h3>Secure Dashboard</h3>
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </div>
+
+            <h3>
+
+                Safe Workout Library
+
+            </h3>
 
             <p>
-                Only authenticated users can access
-                premium dashboard features.
+
+                Hundreds of expert-designed workouts
+                with injury-safe training techniques.
+
             </p>
+
+            <span>
+
+                Premium Training
+
+            </span>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+            <h3>
+
+                Recovery Analytics
+
+            </h3>
+
+            <p>
+
+                Track flexibility, strength,
+                recovery progress and mobility
+                with AI-powered reports.
+
+            </p>
+
+            <span>
+
+                Smart Reports
+
+            </span>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+            <h3>
+
+                Mental Wellness
+
+            </h3>
+
+            <p>
+
+                Guided meditation, breathing
+                exercises and stress management
+                for complete recovery.
+
+            </p>
+
+            <span>
+
+                Healthy Mind
+
+            </span>
 
         </div>
 
@@ -409,38 +674,754 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </section>
 
 
-<!-- CONTACT / FITNESS FORM -->
-<section class="section" id="contact-form">
+<!--==================================
+        RECOVERY TIMELINE
+===================================-->
 
-  <h2>📩 Get Personalized Fitness Plan</h2>
-  <p>Fill the form and we will suggest diet + workout plan for you</p>
+<section class="recovery-process">
 
-  <div class="grid">
+    <div class="section-title">
 
-    <div class="card" style="grid-column: span 2;">
-      
-      <input type="text" placeholder="Your Name">
-      <input type="text" placeholder="Age">
-      <input type="text" placeholder="Weight (kg)">
-      <input type="text" placeholder="Height (cm)">
-      
-      <select>
-        <option>Fitness Goal</option>
-        <option>Weight Loss</option>
-        <option>Muscle Gain</option>
-        <option>General Fitness</option>
-      </select>
+        <span class="section-tag">
 
-      <button>Get Plan</button>
+            ❤️ RECOVERY PROCESS
+
+        </span>
+
+        <h2>
+
+            Recover Smarter
+
+            <span>Every Week</span>
+
+        </h2>
 
     </div>
 
-  </div>
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="number">
+
+                01
+
+            </div>
+
+            <div class="content">
+
+                <h3>
+
+                    Injury Assessment
+
+                </h3>
+
+                <p>
+
+                    AI scans your symptoms and identifies
+                    recovery requirements.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="number">
+
+                02
+
+            </div>
+
+            <div class="content">
+
+                <h3>
+
+                    Expert Consultation
+
+                </h3>
+
+                <p>
+
+                    Certified physiotherapists review
+                    your condition and goals.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="number">
+
+                03
+
+            </div>
+
+            <div class="content">
+
+                <h3>
+
+                    Recovery Program
+
+                </h3>
+
+                <p>
+
+                    Receive a personalized rehabilitation
+                    and mobility improvement plan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="number">
+
+                04
+
+            </div>
+
+            <div class="content">
+
+                <h3>
+
+                    Return Stronger
+
+                </h3>
+
+                <p>
+
+                    Safely return to training with
+                    AI monitoring and weekly progress reports.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--==================================
+        PREMIUM PLANS
+===================================-->
+
+<section class="premium-plans">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            💎 MEMBERSHIP PLANS
+        </span>
+
+        <h2>
+            Choose Your
+            <span>Perfect Plan</span>
+        </h2>
+
+        <p>
+            Whether you're starting your fitness journey or recovering from an
+            injury, VitalNess has a membership tailored to your needs.
+        </p>
+
+    </div>
+
+    <div class="plans-grid">
+
+        <!-- STARTER -->
+
+        <div class="plan-card">
+
+            <div class="plan-header">
+
+                <h3>Starter</h3>
+
+                <p>For Beginners</p>
+
+            </div>
+
+            <div class="plan-price">
+
+                ₹299
+
+                <span>/Month</span>
+
+            </div>
+
+            <ul>
+
+                <li><i class="fa-solid fa-check"></i> Beginner Workout Library</li>
+
+                <li><i class="fa-solid fa-check"></i> Basic Meal Plans</li>
+
+                <li><i class="fa-solid fa-check"></i> BMI Calculator</li>
+
+                <li><i class="fa-solid fa-check"></i> Health Blog Access</li>
+
+                <li><i class="fa-solid fa-check"></i> Community Support</li>
+
+            </ul>
+
+            <a href="#" class="plan-btn">
+
+                Get Started
+
+            </a>
+
+        </div>
+
+        <!-- PRO -->
+
+        <div class="plan-card popular">
+
+            <div class="popular-badge">
+
+                ⭐ MOST POPULAR
+
+            </div>
+
+            <div class="plan-header">
+
+                <h3>VitalNess Pro</h3>
+
+                <p>Best For Active Members</p>
+
+            </div>
+
+            <div class="plan-price">
+
+                ₹799
+
+                <span>/Month</span>
+
+            </div>
+
+            <ul>
+
+                <li><i class="fa-solid fa-check"></i> AI Injury Detection</li>
+
+                <li><i class="fa-solid fa-check"></i> Personalized Diet Plans</li>
+
+                <li><i class="fa-solid fa-check"></i> Premium Workout Library</li>
+
+                <li><i class="fa-solid fa-check"></i> Recovery Tracking</li>
+
+                <li><i class="fa-solid fa-check"></i> Live Expert Sessions</li>
+
+                <li><i class="fa-solid fa-check"></i> Smart Health Reports</li>
+
+                <li><i class="fa-solid fa-check"></i> AI Health Assistant</li>
+
+            </ul>
+
+            <a href="#" class="plan-btn active">
+
+                Upgrade Now
+
+            </a>
+
+        </div>
+
+        <!-- ELITE -->
+
+        <div class="plan-card">
+
+            <div class="plan-header">
+
+                <h3>Elite Care</h3>
+
+                <p>Complete Transformation</p>
+
+            </div>
+
+            <div class="plan-price">
+
+                ₹1499
+
+                <span>/Month</span>
+
+            </div>
+
+            <ul>
+
+                <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+
+                <li><i class="fa-solid fa-check"></i> 1-on-1 Physiotherapist</li>
+
+                <li><i class="fa-solid fa-check"></i> Weekly Recovery Sessions</li>
+
+                <li><i class="fa-solid fa-check"></i> Personal Trainer</li>
+
+                <li><i class="fa-solid fa-check"></i> Injury Rehabilitation</li>
+
+                <li><i class="fa-solid fa-check"></i> Priority Support</li>
+
+                <li><i class="fa-solid fa-check"></i> Premium Certifications</li>
+
+            </ul>
+
+            <a href="#" class="plan-btn">
+
+                Join Elite
+
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
+<!--==================================
+        PLAN COMPARISON
+===================================-->
 
+<section class="plan-comparison">
 
+    <div class="section-title">
+
+        <span class="section-tag">
+
+            📊 COMPARE PLANS
+
+        </span>
+
+        <h2>
+
+            Compare Membership
+
+            <span>Features</span>
+
+        </h2>
+
+    </div>
+
+    <div class="comparison-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Features</th>
+
+                    <th>Starter</th>
+
+                    <th>Pro</th>
+
+                    <th>Elite</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Workout Programs</td>
+
+                    <td>✔</td>
+
+                    <td>✔</td>
+
+                    <td>✔</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>AI Injury Detection</td>
+
+                    <td>—</td>
+
+                    <td>✔</td>
+
+                    <td>✔</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Recovery Plans</td>
+
+                    <td>Basic</td>
+
+                    <td>Advanced</td>
+
+                    <td>Premium</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Physiotherapist</td>
+
+                    <td>—</td>
+
+                    <td>Monthly</td>
+
+                    <td>Weekly</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Diet Plans</td>
+
+                    <td>✔</td>
+
+                    <td>Personalized</td>
+
+                    <td>Fully Customized</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>AI Health Assistant</td>
+
+                    <td>—</td>
+
+                    <td>✔</td>
+
+                    <td>✔</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Priority Support</td>
+
+                    <td>—</td>
+
+                    <td>✔</td>
+
+                    <td>24×7 VIP</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+<!--==================================
+        SUCCESS STORIES
+===================================-->
+
+<section class="premium-testimonials">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            ⭐ SUCCESS STORIES
+        </span>
+
+        <h2>
+            Real People,
+            <span>Real Results</span>
+        </h2>
+
+        <p>
+            Thousands of members trust VitalNess Premium for injury prevention,
+            rehabilitation, and long-term fitness success.
+        </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+        <!-- Card -->
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+            <p>
+
+                "After my knee injury, the AI recovery plan and physiotherapist
+                guidance helped me return to training in just 8 weeks."
+
+            </p>
+
+            <div class="user">
+
+                <img src="https://i.pravatar.cc/100?img=12">
+
+                <div>
+
+                    <h4>Rahul Sharma</h4>
+
+                    <span>Premium Member</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+            <p>
+
+                "The recovery tracker kept me motivated every day. I avoided
+                another shoulder injury because of the personalized exercises."
+
+            </p>
+
+            <div class="user">
+
+                <img src="https://i.pravatar.cc/100?img=18">
+
+                <div>
+
+                    <h4>Priya Verma</h4>
+
+                    <span>Elite Member</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+            <p>
+
+                "Worth every rupee. Premium workouts, recovery plans and expert
+                support are all available in one place."
+
+            </p>
+
+            <div class="user">
+
+                <img src="https://i.pravatar.cc/100?img=33">
+
+                <div>
+
+                    <h4>Aman Gupta</h4>
+
+                    <span>Pro Member</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+            FAQ
+===================================-->
+
+<section class="premium-faq">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+
+            ❓ FAQ
+
+        </span>
+
+        <h2>
+
+            Frequently Asked
+
+            <span>Questions</span>
+
+        </h2>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <h3>
+
+                Is Premium suitable for beginners?
+
+            </h3>
+
+            <p>
+
+                Yes. Every workout and recovery plan is customized according to
+                your fitness level.
+
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>
+
+                Can I cancel anytime?
+
+            </h3>
+
+            <p>
+
+                Absolutely. You can upgrade, downgrade or cancel your
+                subscription whenever you want.
+
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>
+
+                Will I get injury recovery guidance?
+
+            </h3>
+
+            <p>
+
+                Yes. Premium members receive personalized recovery programs,
+                physiotherapist guidance and AI-based recovery monitoring.
+
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>
+
+                Do I get access to AI Health Assistant?
+
+            </h3>
+
+            <p>
+
+                Yes. Pro and Elite members receive unlimited access to the
+                VitalNess AI Health Assistant.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        FINAL CTA
+===================================-->
+
+<section class="premium-final-cta">
+
+    <div class="cta-box">
+
+        <span class="section-tag">
+
+            🚀 START TODAY
+
+        </span>
+
+        <h2>
+
+            Ready To Become
+
+            <span>Stronger & Injury-Free?</span>
+
+        </h2>
+
+        <p>
+
+            Join thousands of members who are already transforming their lives
+            with AI-powered fitness, injury prevention, expert physiotherapists,
+            personalized recovery plans and premium health tools.
+
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="#" class="premium-btn">
+
+                Join Premium
+
+            </a>
+
+            <a href="#" class="premium-outline-btn">
+
+                Compare Plans
+
+            </a>
+
+        </div>
+
+        <div class="trust-badges">
+
+            <div>
+
+                🛡 Secure Payment
+
+            </div>
+
+            <div>
+
+                ❤️ 7-Day Money Back
+
+            </div>
+
+            <div>
+
+                👨‍⚕ Certified Experts
+
+            </div>
+
+            <div>
+
+                ⭐ 50,000+ Happy Members
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- FOOTER -->
 
