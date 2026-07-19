@@ -7433,4 +7433,466 @@ body.dark .menu-icon{
 
     }
 
+}/*==========================================================
+            VITALNESS SIDEBAR CSS
+                    PART - 4
+        Premium Card + Upgrade Button + Animations
+==========================================================*/
+
+
+/*==========================================================
+                    PREMIUM CARD
+==========================================================*/
+
+.sidebar-premium{
+
+    position:relative;
+
+    margin:25px 22px 30px;
+
+    padding:30px 25px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #16a34a 0%,
+        #22c55e 50%,
+        #10b981 100%
+    );
+
+    color:#fff;
+
+    box-shadow:
+        0 20px 40px rgba(34,197,94,.30);
+
+    animation:premiumFloat 5s ease-in-out infinite;
+
+}
+
+
+/*=========================
+        Glow Effect
+=========================*/
+
+.sidebar-premium::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    top:-110px;
+
+    left:-90px;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+
+.sidebar-premium::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    bottom:-90px;
+
+    right:-70px;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+
+/*==========================================================
+                    PREMIUM ICON
+==========================================================*/
+
+.premium-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    border:2px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(8px);
+
+    font-size:32px;
+
+    color:#FFD54F;
+
+    animation:crownRotate 6s linear infinite;
+
+}
+
+
+/*==========================================================
+                    HEADING
+==========================================================*/
+
+.sidebar-premium h3{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+.sidebar-premium p{
+
+    position:relative;
+
+    z-index:2;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+
+    opacity:.95;
+
+    margin-bottom:28px;
+
+}
+
+
+/*==========================================================
+                    BUTTON
+==========================================================*/
+
+.premium-btn{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:15px 22px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    color:#16a34a;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+
+}
+
+
+/* Ripple */
+
+.premium-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.15);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.45s;
+
+}
+
+
+.premium-btn:hover::before{
+
+    width:380px;
+
+    height:380px;
+
+}
+
+
+.premium-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(255,255,255,.30);
+
+}
+
+
+.premium-btn i{
+
+    transition:.35s;
+
+}
+
+
+.premium-btn:hover i{
+
+    transform:translateX(5px);
+
+}
+
+
+/*==========================================================
+                    HOVER EFFECT
+==========================================================*/
+
+.sidebar-premium:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 28px 55px rgba(34,197,94,.40);
+
+}
+
+
+/*==========================================================
+                    DARK MODE
+==========================================================*/
+
+body.dark .sidebar-premium{
+
+    background:linear-gradient(
+        135deg,
+        #15803d,
+        #16a34a,
+        #22c55e
+    );
+
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.45);
+
+}
+
+
+body.dark .premium-btn{
+
+    background:#101828;
+
+    color:#22c55e;
+
+}
+
+
+body.dark .premium-btn:hover{
+
+    background:#fff;
+
+    color:#16a34a;
+
+}
+
+
+/*==========================================================
+                    ANIMATIONS
+==========================================================*/
+
+@keyframes premiumFloat{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+@keyframes crownRotate{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    15%{
+
+        transform:rotate(-10deg);
+
+    }
+
+    30%{
+
+        transform:rotate(10deg);
+
+    }
+
+    45%{
+
+        transform:rotate(-8deg);
+
+    }
+
+    60%{
+
+        transform:rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+/*==========================================================
+                    RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .sidebar-premium{
+
+        margin:22px 18px 25px;
+
+        padding:25px 20px;
+
+    }
+
+    .premium-icon{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:28px;
+
+    }
+
+    .sidebar-premium h3{
+
+        font-size:1.35rem;
+
+    }
+
+    .sidebar-premium p{
+
+        font-size:.88rem;
+
+        line-height:1.7;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .sidebar-premium{
+
+        margin:18px 15px 20px;
+
+        padding:22px 18px;
+
+        border-radius:20px;
+
+    }
+
+    .premium-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
+
+    .sidebar-premium h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .premium-btn{
+
+        padding:13px 18px;
+
+        font-size:14px;
+
+    }
+
 }
