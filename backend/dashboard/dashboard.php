@@ -1484,114 +1484,220 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </footer>
 
 
-<!-- OVERLAY -->
+<!-- =========================
+        SIDEBAR OVERLAY
+========================= -->
+<div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
 
-<div class="sidebar-overlay" id="overlay"
-onclick="closeSidebar()"></div>
+<!-- =========================
+        PROFILE SIDEBAR
+========================= -->
+<aside class="profile-sidebar" id="profileSidebar">
 
+    <!-- Cover -->
+    <div class="sidebar-cover">
+        <div class="cover-overlay"></div>
+    </div>
 
-
-
-<!-- SIDEBAR -->
-
-<div class="profile-sidebar"
-id="profileSidebar">
-
-    <div class="sidebar-cover"></div>
-
+    <!-- User Profile -->
     <div class="sidebar-profile">
 
-        <img src="https://i.pravatar.cc/150?img=12">
+        <div class="profile-image">
 
-        <h2>
-            <?php echo $_SESSION['name']; ?>
-        </h2>
+            <img src="https://i.pravatar.cc/150?img=12" alt="Profile">
 
-        <p>
-        <?php echo $_SESSION['email']; ?>
-        </p>
+            <span class="online-status"></span>
 
-    </div>
+        </div>
 
-    <div class="sidebar-menu">
+        <div class="profile-details">
 
-        <a href="#">
-            <i class="fa-solid fa-user"></i>
-            My Profile
-        </a>
+            <h2>
+                <?php echo $_SESSION['name']; ?>
+            </h2>
 
-        <a href="#">
-            <i class="fa-solid fa-dumbbell"></i>
-            My Workouts
-        </a>
+            <p>
+                <?php echo $_SESSION['email']; ?>
+            </p>
 
-        <a href="#">
-            <i class="fa-solid fa-chart-line"></i>
-            Analytics
-        </a>
+            <div class="profile-badge">
+                <i class="fa-solid fa-shield-heart"></i>
+                Active Member
+            </div>
 
-        <a href="#">
-            <i class="fa-solid fa-heart-pulse"></i>
-            Health Reports
-        </a>
-
-        <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            Settings
-        </a>
-
-        <a href="../logout.php">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            Logout
-        </a>
+        </div>
 
     </div>
 
-    <div class="sidebar-premium" id ="bounce-heading"
-    
- >
+    <!-- Divider -->
+    <div class="sidebar-divider"></div>
 
-        <h3>
-            Upgrade Premium 🚀
-        </h3>
+    <!-- Navigation -->
+    <nav class="sidebar-menu">
+
+        <a href="#" class="active">
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="menu-text">
+                <span>My Profile</span>
+                <small>Personal Information</small>
+            </div>
+
+            <i class="fa-solid fa-angle-right menu-arrow"></i>
+
+        </a>
+
+        <a href="#">
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-dumbbell"></i>
+            </div>
+
+            <div class="menu-text">
+                <span>My Workouts</span>
+                <small>Training History</small>
+            </div>
+
+            <i class="fa-solid fa-angle-right menu-arrow"></i>
+
+        </a>
+
+        <a href="#">
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="menu-text">
+                <span>Analytics</span>
+                <small>Performance Stats</small>
+            </div>
+
+            <i class="fa-solid fa-angle-right menu-arrow"></i>
+
+        </a>
+
+        <a href="#">
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div class="menu-text">
+                <span>Health Reports</span>
+                <small>Medical & Fitness</small>
+            </div>
+
+            <i class="fa-solid fa-angle-right menu-arrow"></i>
+
+        </a>
+
+        <a href="#">
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="menu-text">
+                <span>Settings</span>
+                <small>Account Preferences</small>
+            </div>
+
+            <i class="fa-solid fa-angle-right menu-arrow"></i>
+
+        </a>
+
+        <a href="../logout.php" class="logout-btn">
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <div class="menu-text">
+                <span>Logout</span>
+                <small>Secure Sign Out</small>
+            </div>
+
+            <i class="fa-solid fa-angle-right menu-arrow"></i>
+
+        </a>
+
+    </nav>
+
+    <!-- Premium Card -->
+    <div class="sidebar-premium" id="bounce-heading">
+
+        <div class="premium-icon">
+            <i class="fa-solid fa-crown"></i>
+        </div>
+
+        <h3>Upgrade to Premium</h3>
 
         <p>
-            Unlock more advanced features.
+            Unlock AI Coach, Diet Plans, Advanced Analytics,
+            Premium Workouts and Exclusive Features.
         </p>
 
-        <button>
+        <button class="premium-btn">
+            <i class="fa-solid fa-bolt"></i>
             Upgrade Now
         </button>
 
     </div>
 
-</div>
-<!-- LOGIN SUCCESS POPUP -->
+</aside>
+
+<!-- =========================
+        LOGIN SUCCESS POPUP
+========================= -->
 
 <div id="loginPopup" class="popup-container">
 
     <div class="popup-box">
 
-        <div class="check-icon">✓</div>
+        <div class="popup-icon success">
+
+            <div class="check-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+        </div>
 
         <h2>Login Successful</h2>
 
-        <p>Welcome Back</p>
+        <p>
+            Welcome Back,
+            <strong><?php echo $_SESSION['name']; ?></strong>
+        </p>
 
     </div>
 
 </div>
-<!-- SIGNUP SUCCESS POPUP -->
+
+<!-- =========================
+        SIGNUP SUCCESS POPUP
+========================= -->
 
 <div id="signupPopup" class="popup-container">
 
     <div class="popup-box">
 
-        <div class="check-icon">✓</div>
+        <div class="popup-icon success">
+
+            <div class="check-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+        </div>
 
         <h2>Signup Successful</h2>
 
-        <p>Your account has been created</p>
+        <p>
+            Your account has been created successfully.
+        </p>
 
     </div>
 
