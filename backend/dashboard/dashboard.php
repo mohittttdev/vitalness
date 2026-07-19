@@ -202,15 +202,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
     
 
-    <div class="nav-right">
+  <div class="nav-right">
 
-        <div class="profile-btn" onclick="openSidebar()">
-
-            <img src="https://i.pravatar.cc/150?img=12">
-
-        </div>
-
+    <div class="nav-profile" onclick="openSidebar()">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Profile">
     </div>
+
+</div>
 
 </nav>
 
