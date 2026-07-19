@@ -6613,3 +6613,824 @@ button{
     }
 
 }
+/*==========================================================
+            VITALNESS SIDEBAR CSS
+                    PART - 2
+        Profile Card + Avatar + Badge + Dark Mode
+==========================================================*/
+
+
+/*==========================================================
+                    PROFILE SECTION
+==========================================================*/
+
+.sidebar-profile{
+
+    position:relative;
+
+    margin-top:-75px;
+
+    padding:0 30px 10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+/*==========================================================
+                    PROFILE IMAGE
+==========================================================*/
+
+.profile-image{
+
+    position:relative;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    padding:6px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #10b981,
+        #34d399
+    );
+
+    box-shadow:
+        0 15px 35px rgba(34,197,94,.35);
+
+    animation:profileFloat 4s ease-in-out infinite;
+
+}
+
+
+/* Avatar */
+
+.profile-image img{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid var(--white);
+
+    transition:.4s;
+
+}
+
+
+/* Hover */
+
+.profile-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==========================================================
+                ONLINE INDICATOR
+==========================================================*/
+
+.online-status{
+
+    position:absolute;
+
+    right:8px;
+
+    bottom:12px;
+
+    width:22px;
+
+    height:22px;
+
+    background:#22c55e;
+
+    border:4px solid var(--white);
+
+    border-radius:50%;
+
+    animation:pulseOnline 2s infinite;
+
+}
+
+
+/*==========================================================
+                PROFILE DETAILS
+==========================================================*/
+
+.profile-details{
+
+    margin-top:22px;
+
+    width:100%;
+
+}
+
+
+.profile-details h2{
+
+    font-size:1.65rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+    word-break:break-word;
+
+}
+
+
+.profile-details p{
+
+    color:var(--text-light);
+
+    font-size:.95rem;
+
+    margin-bottom:18px;
+
+    word-break:break-all;
+
+}
+
+
+/*==========================================================
+                MEMBER BADGE
+==========================================================*/
+
+.profile-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--primary-dark);
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    border:1px solid rgba(34,197,94,.25);
+
+    transition:.35s;
+
+}
+
+
+.profile-badge i{
+
+    font-size:15px;
+
+}
+
+
+.profile-badge:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--primary);
+
+    color:#fff;
+
+    box-shadow:
+        0 12px 25px rgba(34,197,94,.35);
+
+}
+
+
+/*==========================================================
+                PROFILE CARD HOVER
+==========================================================*/
+
+.sidebar-profile:hover .profile-image{
+
+    transform:translateY(-4px);
+
+    transition:.4s;
+
+}
+
+
+/*==========================================================
+                    DARK MODE
+==========================================================*/
+
+body.dark .profile-image img{
+
+    border-color:#182233;
+
+}
+
+
+body.dark .online-status{
+
+    border-color:#182233;
+
+}
+
+
+body.dark .profile-badge{
+
+    background:rgba(34,197,94,.18);
+
+    border:1px solid rgba(34,197,94,.35);
+
+    color:#7CFFB2;
+
+}
+
+
+body.dark .profile-badge:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/*==========================================================
+                    ANIMATIONS
+==========================================================*/
+
+@keyframes profileFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes pulseOnline{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(34,197,94,.7);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 12px rgba(34,197,94,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(34,197,94,0);
+
+    }
+
+}
+
+
+/*==========================================================
+                RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .sidebar-profile{
+
+        margin-top:-65px;
+
+        padding:0 22px;
+
+    }
+
+    .profile-image{
+
+        width:110px;
+
+        height:110px;
+
+    }
+
+    .profile-details h2{
+
+        font-size:1.35rem;
+
+    }
+
+    .profile-details p{
+
+        font-size:.88rem;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .profile-image{
+
+        width:95px;
+
+        height:95px;
+
+    }
+
+    .online-status{
+
+        width:18px;
+
+        height:18px;
+
+        border-width:3px;
+
+    }
+
+    .profile-details h2{
+
+        font-size:1.2rem;
+
+    }
+
+    .profile-badge{
+
+        padding:8px 15px;
+
+        font-size:.8rem;
+
+    }
+
+}/*==========================================================
+            VITALNESS SIDEBAR CSS
+                    PART - 3
+        Sidebar Menu + Logout + Hover + Responsive
+==========================================================*/
+
+
+/*==========================================================
+                    SIDEBAR MENU
+==========================================================*/
+
+.sidebar-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    padding:0 22px 28px;
+
+}
+
+
+/*==========================================================
+                    MENU LINK
+==========================================================*/
+
+.sidebar-menu a{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border-radius:18px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+
+}
+
+
+/* Left Highlight */
+
+.sidebar-menu a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:4px;
+
+    height:0;
+
+    border-radius:20px;
+
+    background:var(--primary);
+
+    transform:translateY(-50%);
+
+    transition:.35s;
+
+}
+
+
+/* Hover */
+
+.sidebar-menu a:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(34,197,94,.08);
+
+    border-color:rgba(34,197,94,.35);
+
+    box-shadow:0 12px 28px rgba(34,197,94,.15);
+
+}
+
+
+.sidebar-menu a:hover::before{
+
+    height:70%;
+
+}
+
+
+/*==========================================================
+                    ACTIVE MENU
+==========================================================*/
+
+.sidebar-menu a.active{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #10b981
+    );
+
+    color:#fff;
+
+    border:none;
+
+    box-shadow:0 18px 35px rgba(34,197,94,.30);
+
+}
+
+
+.sidebar-menu a.active::before{
+
+    height:75%;
+
+    background:#fff;
+
+}
+
+
+/*==========================================================
+                    MENU ICON
+==========================================================*/
+
+.menu-icon{
+
+    width:48px;
+
+    height:48px;
+
+    min-width:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+
+.sidebar-menu a:hover .menu-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+.sidebar-menu a.active .menu-icon{
+
+    background:rgba(255,255,255,.18);
+
+    color:#fff;
+
+}
+
+
+/*==========================================================
+                    MENU TEXT
+==========================================================*/
+
+.menu-text{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.menu-text span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+
+.menu-text small{
+
+    margin-top:4px;
+
+    font-size:12px;
+
+    color:var(--text-light);
+
+}
+
+
+.sidebar-menu a.active .menu-text span,
+.sidebar-menu a.active .menu-text small{
+
+    color:#fff;
+
+}
+
+
+/*==========================================================
+                    MENU ARROW
+==========================================================*/
+
+.menu-arrow{
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+    transition:.35s;
+
+}
+
+
+.sidebar-menu a:hover .menu-arrow{
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
+}
+
+
+.sidebar-menu a.active .menu-arrow{
+
+    color:#fff;
+
+}
+
+
+/*==========================================================
+                    LOGOUT BUTTON
+==========================================================*/
+
+.logout-btn{
+
+    margin-top:12px;
+
+    border:1px solid rgba(239,68,68,.25) !important;
+
+}
+
+
+.logout-btn .menu-icon{
+
+    background:rgba(239,68,68,.12);
+
+    color:#ef4444;
+
+}
+
+
+.logout-btn:hover{
+
+    background:rgba(239,68,68,.08) !important;
+
+    border-color:#ef4444 !important;
+
+    box-shadow:0 15px 28px rgba(239,68,68,.15);
+
+}
+
+
+.logout-btn:hover .menu-icon{
+
+    background:#ef4444;
+
+    color:#fff;
+
+}
+
+
+.logout-btn:hover .menu-arrow{
+
+    color:#ef4444;
+
+}
+
+
+/*==========================================================
+                    DARK MODE
+==========================================================*/
+
+body.dark .sidebar-menu a{
+
+    background:#1b2738;
+
+    border-color:rgba(255,255,255,.06);
+
+}
+
+
+body.dark .sidebar-menu a:hover{
+
+    background:rgba(34,197,94,.10);
+
+}
+
+
+body.dark .menu-text span{
+
+    color:#f8fafc;
+
+}
+
+
+body.dark .menu-text small{
+
+    color:#94a3b8;
+
+}
+
+
+body.dark .menu-arrow{
+
+    color:#94a3b8;
+
+}
+
+
+body.dark .menu-icon{
+
+    background:rgba(34,197,94,.15);
+
+}
+
+
+/*==========================================================
+                    RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .sidebar-menu{
+
+        padding:0 18px 22px;
+
+        gap:12px;
+
+    }
+
+    .sidebar-menu a{
+
+        padding:14px 15px;
+
+    }
+
+    .menu-icon{
+
+        width:42px;
+
+        height:42px;
+
+        min-width:42px;
+
+        font-size:16px;
+
+    }
+
+    .menu-text span{
+
+        font-size:14px;
+
+    }
+
+    .menu-text small{
+
+        font-size:11px;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .sidebar-menu{
+
+        padding:0 15px 18px;
+
+    }
+
+    .sidebar-menu a{
+
+        border-radius:15px;
+
+        gap:12px;
+
+        padding:12px;
+
+    }
+
+    .menu-icon{
+
+        width:40px;
+
+        height:40px;
+
+        min-width:40px;
+
+    }
+
+    .menu-arrow{
+
+        font-size:13px;
+
+    }
+
+}
