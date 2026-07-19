@@ -7895,4 +7895,1192 @@ body.dark .premium-btn:hover{
 
     }
 
+}/*==========================================================
+            VITALNESS SIDEBAR CSS
+                    PART - 5
+        Login & Signup Success Popup
+==========================================================*/
+
+
+/*==========================================================
+                    POPUP CONTAINER
+==========================================================*/
+
+.popup-container{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transition:all .35s ease;
+
+    z-index:9999;
+
+}
+
+
+/* Show Popup */
+
+.popup-container.show{
+
+    visibility:visible;
+
+    opacity:1;
+
+}
+
+
+/*==========================================================
+                    POPUP BOX
+==========================================================*/
+
+.popup-box{
+
+    position:relative;
+
+    width:420px;
+
+    max-width:92%;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    background:var(--card);
+
+    border-radius:28px;
+
+    border:1px solid var(--border);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    transform:scale(.75);
+
+    opacity:0;
+
+    transition:all .4s ease;
+
+}
+
+
+/* Animation */
+
+.popup-container.show .popup-box{
+
+    transform:scale(1);
+
+    opacity:1;
+
+}
+
+
+/*==========================================================
+                    TOP GLOW
+==========================================================*/
+
+.popup-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    left:-60px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+}
+
+
+.popup-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-80px;
+
+    bottom:-80px;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.08);
+
+}
+
+
+/*==========================================================
+                    SUCCESS ICON
+==========================================================*/
+
+.popup-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    width:95px;
+
+    height:95px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+    border:2px solid rgba(34,197,94,.20);
+
+}
+
+
+.check-icon{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    color:#fff;
+
+    font-size:30px;
+
+    animation:popupBounce .8s ease;
+
+}
+
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.popup-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+}
+
+
+/*==========================================================
+                    TEXT
+==========================================================*/
+
+.popup-box p{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:1rem;
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+
+/*==========================================================
+                    DARK MODE
+==========================================================*/
+
+body.dark .popup-box{
+
+    background:#182233;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+}
+
+
+body.dark .popup-box h2{
+
+    color:#fff;
+
+}
+
+
+body.dark .popup-box p{
+
+    color:#b8c4d6;
+
+}
+
+
+body.dark .popup-icon{
+
+    background:rgba(34,197,94,.18);
+
+    border-color:rgba(34,197,94,.25);
+
+}
+
+
+/*==========================================================
+                    ANIMATIONS
+==========================================================*/
+
+@keyframes popupBounce{
+
+    0%{
+
+        transform:scale(0);
+
+    }
+
+    60%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*==========================================================
+                AUTO FADE ANIMATION
+==========================================================*/
+
+.popup-container.hide{
+
+    animation:popupFade .35s forwards;
+
+}
+
+
+@keyframes popupFade{
+
+    to{
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+
+/*==========================================================
+                    RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .popup-box{
+
+        width:360px;
+
+        padding:35px 25px;
+
+    }
+
+    .popup-icon{
+
+        width:85px;
+
+        height:85px;
+
+    }
+
+    .check-icon{
+
+        width:62px;
+
+        height:62px;
+
+        font-size:26px;
+
+    }
+
+    .popup-box h2{
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .popup-box{
+
+        width:94%;
+
+        padding:30px 20px;
+
+        border-radius:22px;
+
+    }
+
+    .popup-icon{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .check-icon{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:22px;
+
+    }
+
+    .popup-box h2{
+
+        font-size:1.35rem;
+
+    }
+
+    .popup-box p{
+
+        font-size:.9rem;
+
+    }
+
+}/*==========================================================
+            VITALNESS SIDEBAR CSS
+                    PART - 6
+        Complete Responsive Layout
+==========================================================*/
+
+
+/*==========================================================
+                    LARGE DESKTOP
+==========================================================*/
+@media (min-width:1600px){
+
+    .profile-sidebar{
+        width:430px;
+    }
+
+}
+
+
+/*==========================================================
+                    LAPTOP
+==========================================================*/
+@media (max-width:1200px){
+
+    .profile-sidebar{
+
+        width:380px;
+
+    }
+
+}
+
+
+/*==========================================================
+                    TABLET
+==========================================================*/
+@media (max-width:992px){
+
+    .profile-sidebar{
+
+        width:360px;
+
+    }
+
+    .sidebar-cover{
+
+        height:170px;
+
+    }
+
+    .sidebar-profile{
+
+        margin-top:-70px;
+
+    }
+
+}
+
+
+/*==========================================================
+                    MOBILE
+==========================================================*/
+@media (max-width:768px){
+
+    .profile-sidebar{
+
+        width:100%;
+
+        right:-100%;
+
+        border-radius:0;
+
+    }
+
+    .profile-sidebar.active{
+
+        right:0;
+
+    }
+
+    .sidebar-cover{
+
+        height:170px;
+
+    }
+
+    .sidebar-divider{
+
+        width:92%;
+
+    }
+
+}
+
+
+/*==========================================================
+                SMALL MOBILE
+==========================================================*/
+@media (max-width:576px){
+
+    .profile-sidebar{
+
+        width:100%;
+
+    }
+
+    .sidebar-cover{
+
+        height:155px;
+
+    }
+
+    .sidebar-profile{
+
+        margin-top:-60px;
+
+        padding:0 18px;
+
+    }
+
+    .profile-image{
+
+        width:95px;
+
+        height:95px;
+
+    }
+
+    .profile-details h2{
+
+        font-size:1.2rem;
+
+    }
+
+    .profile-details p{
+
+        font-size:.85rem;
+
+    }
+
+    .sidebar-menu{
+
+        padding:0 14px 20px;
+
+    }
+
+    .sidebar-premium{
+
+        margin:20px 14px;
+
+    }
+
+}
+
+
+/*==========================================================
+                EXTRA SMALL DEVICES
+==========================================================*/
+@media (max-width:400px){
+
+    .profile-sidebar{
+
+        width:100%;
+
+    }
+
+    .sidebar-cover{
+
+        height:145px;
+
+    }
+
+    .profile-image{
+
+        width:85px;
+
+        height:85px;
+
+    }
+
+    .profile-details h2{
+
+        font-size:1.05rem;
+
+    }
+
+    .profile-details p{
+
+        font-size:.8rem;
+
+    }
+
+    .menu-icon{
+
+        width:38px;
+
+        height:38px;
+
+        min-width:38px;
+
+        font-size:15px;
+
+    }
+
+    .menu-text span{
+
+        font-size:13px;
+
+    }
+
+    .menu-text small{
+
+        font-size:10px;
+
+    }
+
+    .sidebar-premium{
+
+        padding:20px 16px;
+
+    }
+
+    .premium-btn{
+
+        font-size:13px;
+
+        padding:12px;
+
+    }
+
+}
+
+
+/*==========================================================
+            LANDSCAPE MOBILE FIX
+==========================================================*/
+@media (max-height:600px){
+
+    .profile-sidebar{
+
+        overflow-y:auto;
+
+    }
+
+    .sidebar-cover{
+
+        height:120px;
+
+    }
+
+    .sidebar-profile{
+
+        margin-top:-45px;
+
+    }
+
+    .profile-image{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+}
+
+
+/*==========================================================
+                TOUCH DEVICES
+==========================================================*/
+@media (hover:none){
+
+    .sidebar-menu a:hover{
+
+        transform:none;
+
+    }
+
+    .premium-btn:hover{
+
+        transform:none;
+
+    }
+
+    .sidebar-premium:hover{
+
+        transform:none;
+
+    }
+
+}
+
+
+/*==========================================================
+            SAFE AREA (iPhone Notch)
+==========================================================*/
+.profile-sidebar{
+
+    padding-bottom:env(safe-area-inset-bottom);
+
+}
+
+
+/*==========================================================
+                SMOOTH SCROLL
+==========================================================*/
+.profile-sidebar{
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+
+/*==========================================================
+                IMAGE SAFETY
+==========================================================*/
+.profile-image img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+
+/*==========================================================
+                BUTTON TAP FIX
+==========================================================*/
+button,
+.sidebar-menu a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/*==========================================================
+                REDUCE MOTION
+==========================================================*/
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}/*==========================================================
+            VITALNESS SIDEBAR CSS
+                    PART - 7
+        Advanced Dark Mode + Light Mode Polish
+==========================================================*/
+
+
+/*==========================================================
+                    LIGHT MODE
+==========================================================*/
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+
+/*==========================================================
+                    DARK MODE
+==========================================================*/
+
+body.dark{
+
+    background:#0b1120;
+    color:#f8fafc;
+
+}
+
+
+/*==========================================================
+                    SIDEBAR
+==========================================================*/
+
+body.dark .profile-sidebar{
+
+    background:linear-gradient(
+        180deg,
+        #111827,
+        #0f172a,
+        #020617
+    );
+
+    border-left:1px solid rgba(255,255,255,.08);
+
+}
+
+
+/*==========================================================
+                    COVER
+==========================================================*/
+
+body.dark .sidebar-cover{
+
+    background:linear-gradient(
+        135deg,
+        #065f46,
+        #15803d,
+        #22c55e
+    );
+
+}
+
+
+body.dark .cover-overlay{
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.25),
+
+        rgba(0,0,0,.45)
+
+    );
+
+}
+
+
+/*==========================================================
+                    PROFILE
+==========================================================*/
+
+body.dark .profile-details h2{
+
+    color:#ffffff;
+
+}
+
+
+body.dark .profile-details p{
+
+    color:#a8b3c7;
+
+}
+
+
+body.dark .profile-image{
+
+    box-shadow:
+        0 18px 45px rgba(34,197,94,.30);
+
+}
+
+
+/*==========================================================
+                    DIVIDER
+==========================================================*/
+
+body.dark .sidebar-divider{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/*==========================================================
+                    MENU
+==========================================================*/
+
+body.dark .sidebar-menu a{
+
+    background:#182233;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+
+body.dark .sidebar-menu a:hover{
+
+    background:rgba(34,197,94,.12);
+
+    border-color:rgba(34,197,94,.25);
+
+}
+
+
+body.dark .sidebar-menu a.active{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #16a34a,
+
+        #22c55e
+
+    );
+
+}
+
+
+body.dark .menu-icon{
+
+    background:rgba(34,197,94,.15);
+
+    color:#7CFFB2;
+
+}
+
+
+body.dark .sidebar-menu a:hover .menu-icon{
+
+    background:#22c55e;
+
+    color:#fff;
+
+}
+
+
+body.dark .menu-text span{
+
+    color:#f8fafc;
+
+}
+
+
+body.dark .menu-text small{
+
+    color:#94a3b8;
+
+}
+
+
+body.dark .menu-arrow{
+
+    color:#94a3b8;
+
+}
+
+
+/*==========================================================
+                    LOGOUT
+==========================================================*/
+
+body.dark .logout-btn{
+
+    border-color:rgba(239,68,68,.20) !important;
+
+}
+
+
+body.dark .logout-btn:hover{
+
+    background:rgba(239,68,68,.10) !important;
+
+}
+
+
+body.dark .logout-btn .menu-icon{
+
+    background:rgba(239,68,68,.12);
+
+    color:#ff7b7b;
+
+}
+
+
+/*==========================================================
+                PREMIUM CARD
+==========================================================*/
+
+body.dark .sidebar-premium{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #166534,
+
+        #15803d,
+
+        #22c55e
+
+    );
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+
+body.dark .premium-icon{
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+body.dark .premium-btn{
+
+    background:#101828;
+
+    color:#22c55e;
+
+}
+
+
+body.dark .premium-btn:hover{
+
+    background:#ffffff;
+
+    color:#15803d;
+
+}
+
+
+/*==========================================================
+                    POPUP
+==========================================================*/
+
+body.dark .popup-container{
+
+    background:rgba(0,0,0,.70);
+
+}
+
+
+body.dark .popup-box{
+
+    background:#182233;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+body.dark .popup-box h2{
+
+    color:#ffffff;
+
+}
+
+
+body.dark .popup-box p{
+
+    color:#b8c4d6;
+
+}
+
+
+/*==========================================================
+                    SCROLLBAR
+==========================================================*/
+
+body.dark ::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+body.dark ::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+
+body.dark ::-webkit-scrollbar-thumb{
+
+    background:#22c55e;
+
+    border-radius:20px;
+
+}
+
+
+body.dark ::-webkit-scrollbar-thumb:hover{
+
+    background:#16a34a;
+
+}
+
+
+/*==========================================================
+                INPUTS (Future Support)
+==========================================================*/
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+
+    background:#1e293b;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+
+/*==========================================================
+                SELECTION
+==========================================================*/
+
+::selection{
+
+    background:#22c55e;
+
+    color:#ffffff;
+
+}
+
+
+body.dark ::selection{
+
+    background:#22c55e;
+
+    color:#ffffff;
+
+}
+
+
+/*==========================================================
+                FOCUS EFFECT
+==========================================================*/
+
+body.dark a:focus,
+body.dark button:focus{
+
+    outline:2px solid rgba(34,197,94,.5);
+
+    outline-offset:3px;
+
+}
+
+
+/*==========================================================
+                TRANSITIONS
+==========================================================*/
+
+body,
+.profile-sidebar,
+.sidebar-menu a,
+.sidebar-premium,
+.popup-box,
+.menu-icon,
+.premium-btn{
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border .35s ease,
+        box-shadow .35s ease,
+        transform .35s ease;
+
 }
