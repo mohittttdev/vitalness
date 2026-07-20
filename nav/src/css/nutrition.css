@@ -972,4 +972,378 @@ width:100%;
     height:52px;
 }
 
+}/*=========================================
+        VITALNESS NUTRITION CSS
+              PART 3
+   Super Foods • Tips • FAQ • CTA • Footer
+=========================================*/
+
+/*==========================
+      SUPER FOODS
+==========================*/
+
+.superfoods-section{
+    background:#0f172a;
+}
+
+.superfood-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.superfood-card{
+    background:#16213e;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    transition:.35s;
+}
+
+.superfood-card:hover{
+    transform:translateY(-10px);
+    border-color:#22c55e;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.food-icon{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.superfood-card h3{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.superfood-card p{
+    color:#d4d4d4;
+    line-height:1.8;
+}
+
+/*==========================
+      NUTRITION TIPS
+==========================*/
+
+.nutrition-tips{
+    background:#111827;
+}
+
+.tips-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.tip-card{
+    background:#16213e;
+    padding:35px;
+    border-radius:20px;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.tip-card:hover{
+    transform:translateY(-10px);
+    border-color:#22c55e;
+}
+
+.tip-card i{
+    font-size:2.5rem;
+    color:#22c55e;
+    margin-bottom:20px;
+}
+
+.tip-card h3{
+    margin-bottom:15px;
+}
+
+.tip-card p{
+    color:#d4d4d4;
+    line-height:1.8;
+}
+
+/*==========================
+      HEALTH STATS
+==========================*/
+
+.health-stats{
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    padding:80px 8%;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+}
+
+.stat-item{
+    text-align:center;
+    color:#fff;
+}
+
+.stat-item h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.stat-item p{
+    font-size:1rem;
+}
+
+/*==========================
+          FAQ
+==========================*/
+
+.nutrition-faq{
+    background:#0f172a;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:60px auto 0;
+}
+
+.faq-item{
+    margin-bottom:20px;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    background:#16213e;
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    color:#fff;
+    padding:22px 25px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1rem;
+    font-weight:600;
+}
+
+.faq-question i{
+    transition:.35s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.faq-answer p{
+    padding:0 25px 22px;
+    color:#d4d4d4;
+    line-height:1.8;
+}
+
+.faq-item.active .faq-answer{
+    max-height:250px;
+}
+
+.faq-item.active .faq-question i{
+    transform:rotate(180deg);
+}
+
+/*==========================
+      CTA
+==========================*/
+
+.nutrition-cta{
+    background:linear-gradient(135deg,#08131f,#16213e);
+    text-align:center;
+}
+
+.cta-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.cta-content h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta-content p{
+    color:#d4d4d4;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/*==========================
+      FOOTER
+==========================*/
+
+.nutrition-footer{
+    background:#08111f;
+    color:#fff;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+    padding:70px 8%;
+}
+
+.footer-brand h3{
+    color:#22c55e;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.footer-brand p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+.footer-links h4,
+.footer-contact h4{
+    margin-bottom:20px;
+}
+
+.footer-links a{
+    display:block;
+    color:#d4d4d4;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#22c55e;
+    padding-left:8px;
+}
+
+.footer-contact p{
+    margin-bottom:15px;
+    color:#d4d4d4;
+}
+
+.footer-contact i{
+    color:#22c55e;
+    margin-right:10px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    padding:25px;
+    color:#bfbfbf;
+}
+
+/*==========================
+      SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#22c55e;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#16a34a;
+}
+
+/*==========================
+      SELECTION
+==========================*/
+
+::selection{
+    background:#22c55e;
+    color:#fff;
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+.footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.footer-links a:hover{
+    padding-left:0;
+}
+
+}
+
+@media(max-width:768px){
+
+.cta-content h2{
+    font-size:2.2rem;
+}
+
+.stat-item h2{
+    font-size:2.4rem;
+}
+
+.faq-question{
+    font-size:.95rem;
+    padding:18px;
+}
+
+.faq-answer p{
+    padding:0 18px 18px;
+}
+
+.cta-buttons{
+    flex-direction:column;
+}
+
+.cta-buttons a{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.food-icon{
+    font-size:3rem;
+}
+
+.tip-card,
+.superfood-card{
+    padding:25px 20px;
+}
+
+.footer-brand h3{
+    font-size:1.8rem;
+}
+
+.cta-content h2{
+    font-size:1.8rem;
+}
+
+.section-title h2{
+    font-size:2rem;
+}
+
 }
