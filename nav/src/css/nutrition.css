@@ -648,3 +648,328 @@ width:100%;
 }
 
 }
+/*=========================================
+        VITALNESS NUTRITION CSS
+               PART 2
+    Meal Plan • BMI • Calories • Water
+=========================================*/
+
+/*==========================
+      MEAL PLAN
+==========================*/
+
+.meal-plan{
+    background:#08131f;
+}
+
+.meal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.meal-card{
+    background:#16213e;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:35px 28px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.meal-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#22c55e,#16a34a);
+}
+
+.meal-card:hover{
+    transform:translateY(-10px);
+    border-color:#22c55e;
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+
+.meal-icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:rgba(34,197,94,.12);
+    color:#22c55e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.meal-card h3{
+    font-size:1.5rem;
+    margin-bottom:20px;
+}
+
+.meal-card ul{
+    list-style:none;
+}
+
+.meal-card ul li{
+    padding:12px 0;
+    color:#d5d5d5;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.meal-card ul li:last-child{
+    border:none;
+}
+
+.meal-card span{
+    display:inline-block;
+    margin-top:25px;
+    background:#22c55e;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+/*==========================
+      BMI SECTION
+==========================*/
+
+.bmi-section{
+    background:#111827;
+}
+
+.calculator-box{
+    max-width:650px;
+    margin:50px auto 0;
+    background:#16213e;
+    border-radius:25px;
+    padding:45px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.input-box{
+    margin-bottom:25px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#fff;
+}
+
+.input-box input{
+    width:100%;
+    height:58px;
+    padding:0 18px;
+    border:none;
+    outline:none;
+    border-radius:14px;
+    background:#0f172a;
+    color:#fff;
+    font-size:1rem;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.input-box input:focus{
+    border-color:#22c55e;
+}
+
+#calculateBMI{
+    width:100%;
+    height:58px;
+    border:none;
+    cursor:pointer;
+    border-radius:14px;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:#fff;
+    font-size:1rem;
+    font-weight:600;
+    transition:.35s;
+}
+
+#calculateBMI:hover{
+    transform:translateY(-4px);
+}
+
+#bmiResult{
+    margin-top:30px;
+    text-align:center;
+    color:#22c55e;
+    font-size:1.5rem;
+}
+
+/*==========================
+      CALORIES
+==========================*/
+
+.calorie-section{
+    background:#08131f;
+}
+
+.calorie-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.calorie-card{
+    background:#16213e;
+    text-align:center;
+    padding:40px 25px;
+    border-radius:22px;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.calorie-card:hover{
+    transform:translateY(-10px);
+    border-color:#22c55e;
+}
+
+.calorie-card i{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:rgba(34,197,94,.15);
+    color:#22c55e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.calorie-card h3{
+    margin-bottom:12px;
+    font-size:1.4rem;
+}
+
+.calorie-card p{
+    color:#ddd;
+    font-size:1.05rem;
+}
+
+/*==========================
+      WATER SECTION
+==========================*/
+
+.water-section{
+    background:#111827;
+}
+
+.water-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.water-card{
+    background:#16213e;
+    text-align:center;
+    padding:40px 30px;
+    border-radius:22px;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.water-card:hover{
+    transform:translateY(-10px);
+    border-color:#22c55e;
+}
+
+.water-card i{
+    font-size:3rem;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.water-card h3{
+    margin-bottom:10px;
+}
+
+.water-card h2{
+    color:#22c55e;
+    font-size:2.2rem;
+    margin-bottom:12px;
+}
+
+.water-card p{
+    color:#d5d5d5;
+    line-height:1.7;
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+.calculator-box{
+    padding:35px;
+}
+
+}
+
+@media(max-width:768px){
+
+.meal-grid,
+.calorie-grid,
+.water-wrapper{
+    grid-template-columns:1fr;
+}
+
+.calculator-box{
+    padding:30px 22px;
+}
+
+#bmiResult{
+    font-size:1.3rem;
+}
+
+.meal-card,
+.calorie-card,
+.water-card{
+    padding:30px 22px;
+}
+
+}
+
+@media(max-width:480px){
+
+.meal-icon{
+    width:70px;
+    height:70px;
+    font-size:1.6rem;
+}
+
+.calorie-card i{
+    width:70px;
+    height:70px;
+    font-size:1.6rem;
+}
+
+.water-card i{
+    font-size:2.4rem;
+}
+
+.calculator-box{
+    padding:25px 18px;
+}
+
+.input-box input,
+#calculateBMI{
+    height:52px;
+}
+
+}
