@@ -1347,3 +1347,25 @@ width:100%;
 }
 
 }
+
+
+.meal-card,
+.superfood-card,
+.tip-card,
+.intro-card,
+.calorie-card,
+.water-card{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .7s ease;
+}
+
+.meal-card.show,
+.superfood-card.show,
+.tip-card.show,
+.intro-card.show,
+.calorie-card.show,
+.water-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
